@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RPAD website mockup – DocuShare example (CSD)</title>
+<style>
+body{margin:0}
+</style>
+<style>
+#rpad-mockup-bar{position:fixed;left:0;right:0;bottom:0;z-index:9000;background:#1c1c1c;color:#fff;font:13px Montserrat,Arial,sans-serif;padding:6px 14px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+#rpad-mockup-bar a{color:#9ecbff}
+#rpad-options{position:fixed;right:14px;bottom:44px;z-index:9001;font:13px Montserrat,Arial,sans-serif;background:#fff;border:2px solid #b88a00;box-shadow:0 2px 10px rgba(0,0,0,.25);padding:8px 12px;max-width:320px}
+#rpad-options-toggle{font:inherit;font-weight:700;background:#fff4d6;border:none;cursor:pointer;padding:4px 6px;color:#4a3500}
+#rpad-options select{font:inherit}
+body{padding-bottom:40px}
+</style>
+</head>
+<body>
+<template id="rpad-template">
+<div style="width: 1280px; height: 920px; box-sizing: border-box; background: #e9ebee; font-family: Arial, Helvetica, sans-serif; color: #222222; padding: 32px; display: flex; flex-direction: column; gap: 16px">
+<div style="background: #e3f2e5; border: 1px solid #8fc29a; padding: 12px 16px; font-size: 14px; line-height: 1.5">
+<strong>Real example:</strong> the City's DocuShare page that CSD's "Department &amp; Agency Reports" page links to (Collection-2299, screenshot 10/29/2026). This is what visitors would land on if RPAD's older Statewide Reports moved to DocuShare.
+</div>
+<img src="img/62d29d1ef445cabac6d97651e2931d20.png" alt="Screenshot of the City DocuShare collection listing Departmental and Agency Reports of the City and County of Honolulu as PDF files with owner, modified date and size" style="width: 1216px; height: auto; border: 1px solid #b9bec6; background: #ffffff">
+<div style="display: flex; gap: 16px; font-size: 14px; line-height: 1.5">
+<div style="flex: 1; background: #ffffff; border: 1px solid #b9bec6; padding: 12px 14px"><strong>What it shows:</strong> one flat list of PDFs (58 files, 20 per page), newest first, with owner, modified date and size. Location path across the top; search box; cookie notice.</div>
+<div style="flex: 1; background: #ffffff; border: 1px solid #b9bec6; padding: 12px 14px"><strong>For RPAD:</strong> ~370 report PDFs in one flat list would be ~19 pages to click through. One folder per tax year (8 files each) would be much easier to browse.</div>
+</div>
+</div>
+</template>
+<div id="rpad-root"></div>
+<div id="rpad-mockup-bar"><strong>RPAD website mockup – draft for DIT review</strong><span>Pages:</span><a href="index.html">Home</a> <a href="tax-relief-forms.html">Tax Relief & Forms</a> <a href="statewide-reports.html">Statewide Reports</a> <a href="appeals.html">Appeals</a> <a href="help-resources.html">Help & Resources</a> <a href="contact-us.html">Contact Us</a> <a href="template.html">One template (all building blocks)</a></div>
+<script src="js/rpad-runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+rpadMount(Component, {}, {});
+</script>
+</body>
+</html>

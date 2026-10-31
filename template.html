@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RPAD website mockup – One template (all building blocks)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.d-banner{background-color:#2c4a7a;background-image:linear-gradient(to right,#2c4a7a 0%,#2c4a7a 45%,rgba(44,74,122,0) 70%),url(img/61b81ed58c63f363e66136f243271a23.jpg);background-repeat:no-repeat,no-repeat;background-position:left top,right center;background-size:100% 100%,auto 100%}
+a{color:#1f5a9a}a:hover{color:#0b3b5c}
+.t-card:hover{border-color:#2c4a7a;box-shadow:0 2px 10px rgba(11,59,92,0.12)}
+</style>
+<style>
+#rpad-mockup-bar{position:fixed;left:0;right:0;bottom:0;z-index:9000;background:#1c1c1c;color:#fff;font:13px Montserrat,Arial,sans-serif;padding:6px 14px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+#rpad-mockup-bar a{color:#9ecbff}
+#rpad-options{position:fixed;right:14px;bottom:44px;z-index:9001;font:13px Montserrat,Arial,sans-serif;background:#fff;border:2px solid #b88a00;box-shadow:0 2px 10px rgba(0,0,0,.25);padding:8px 12px;max-width:320px}
+#rpad-options-toggle{font:inherit;font-weight:700;background:#fff4d6;border:none;cursor:pointer;padding:4px 6px;color:#4a3500}
+#rpad-options select{font:inherit}
+body{padding-bottom:40px}
+</style>
+</head>
+<body>
+<template id="rpad-template">
+<div style="font-family: Montserrat, Arial, sans-serif; color: #1c1c1c; background: #ffffff; width: 100%">
+
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="background: #ffffff; padding: 8px 24px 0"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">1</span><strong>Header, main menu &amp; photo banner</strong> · used on: every inner page</div></div></sc-if>
+<header style="background: #ffffff; border-bottom: 1px solid #dddddd">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<div style="display: flex; align-items: center; gap: 10px">
+<img src="img/60702182f58644eded21bbac4225260b.png" alt="City and County of Honolulu seal" style="width: 52px; height: 52px; object-fit: contain">
+<div style="line-height: 1.1"><div style="font-size: 10px; letter-spacing: 1px">CITY AND COUNTY OF</div><div style="font-size: 18px; font-weight: 800">HONOLULU</div></div>
+</div>
+<nav aria-label="Main menu" style="display: flex; flex-wrap: wrap; gap: 14px 20px; font-size: 14px; font-weight: 600">
+<a href="index.html" style="text-decoration: none; color: #0b3b5c">Home</a>
+<a href="tax-relief-forms.html" style="text-decoration: none; color: #0b3b5c">Tax Relief &amp; Forms</a>
+<a href="statewide-reports.html" style="text-decoration: none; color: #0b3b5c">Statewide Reports</a>
+<a href="appeals.html" style="text-decoration: none; color: #0b3b5c">Appeals</a>
+<a href="help-resources.html" style="text-decoration: none; color: #0b3b5c">Help &amp; Resources</a>
+<a href="contact-us.html" style="text-decoration: none; color: #0b3b5c">Contact Us</a>
+</nav>
+</div>
+</header>
+
+<section class="{{bannerClass}}" style="background-color: #2c4a7a; color: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: flex; align-items: center; gap: 16px">
+<img src="img/250bc961682ebb096452e7fce7a9e114.png" alt="" style="width: 72px; height: 72px; object-fit: contain">
+<div>
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 1px">REAL PROPERTY ASSESSMENT DIVISION · SECTION NAME</div>
+<div style="font-size: 34px; font-weight: 800; margin: 4px 0 0">Section Name</div>
+</div>
+</div>
+</section>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px 0; font-size: 13px; color: #555555">
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px; display: block; width: fit-content"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">2</span><strong>Breadcrumb</strong> · used on: every inner page</div></sc-if>
+<a href="index.html">Home</a> › Section Name › Page Title
+</div>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px 56px; display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
+
+<sc-if value="{{showLeft}}" hint-placeholder-val="{{ true }}">
+<aside aria-label="Left pane" style="flex: 1 1 220px; max-width: 280px; display: flex; flex-direction: column; gap: 18px">
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">3</span><strong>Side menu (3 levels)</strong> · used on: Tax Relief &amp; Forms (Exemptions › For homeowners), Help (FAQ › sections), Appeals</div></sc-if>
+<nav aria-label="Section pages" style="border: 1px solid #d6d6d6; display: flex; flex-direction: column">
+<a href="#" style="background: #2c4a7a; color: #ffffff; padding: 12px 16px; font-size: 15px; font-weight: 800; text-decoration: underline; text-underline-offset: 3px">Section Name</a>
+<sc-for list="{{menu}}" as="m" hint-placeholder-count="5">
+<button type="button" onClick="{{m.go}}" aria-expanded="{{m.expanded}}" style="{{m.style}}">{{m.label}}</button>
+</sc-for>
+</nav>
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">4</span><strong>Gray side box</strong> · used on: Key dates, Popular forms, Downloads (Tax Relief, Appeals)</div></sc-if>
+<div style="background: #f2f2f2; padding: 16px">
+<div style="font-size: 15px; font-weight: 800; margin-bottom: 10px">Key dates</div>
+<div style="font-size: 14px; line-height: 1.7"><strong>[Date]</strong> – [What happens]<br><strong>[Date]</strong> – [What happens]</div>
+</div>
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">5</span><strong>“Need help?” box</strong> · used on: Tax Relief &amp; Forms, Appeals, Help &amp; Resources, Statewide Reports</div></sc-if>
+<div style="background: #f2f2f2; padding: 16px">
+<div style="font-size: 15px; font-weight: 800; margin-bottom: 10px">Need help?</div>
+<div style="font-size: 14px; line-height: 1.7"><strong>(808) 768-3799</strong><br><a href="#">bfsrpmailbox@honolulu.gov</a><br><a href="contact-us.html">Contact Us »</a></div>
+</div>
+</aside>
+</sc-if>
+
+<main style="flex: 999 1 520px; min-width: 0; display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+<div style="flex: 999 1 400px; min-width: 0">
+
+<sc-if value="{{btnAbove}}" hint-placeholder-val="{{ true }}">
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">6</span><strong>Button spot 1 – ABOVE the title</strong> · used on: Appeals › Appeal Information (green File Online box + PDF buttons)</div></sc-if>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; background: #e9f3ea; border: 1px solid #9cc7a3; padding: 16px 18px; margin: 0 0 14px">
+<a href="#" style="background: #2e7d4f; color: #ffffff; padding: 13px 22px; font-size: 16px; font-weight: 800; text-decoration: none">File Online</a>
+<span style="font-size: 14px; line-height: 1.5">[When it’s open, e.g. Dec 15 – Jan 15. After that, see <a href="#">Late filing</a>.]</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 14px">
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; background: #ffffff; color: #0b3b5c; border: 2px solid #2c4a7a; padding: 10px 18px; min-height: 44px; box-sizing: border-box; text-decoration: none"><span style="font-size: 10px; font-weight: 800; padding: 2px 5px; color: #ffffff; background: #2c4a7a">PDF</span>[Form name and number]</a>
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; background: #ffffff; color: #0b3b5c; border: 2px solid #2c4a7a; padding: 10px 18px; min-height: 44px; box-sizing: border-box; text-decoration: none"><span style="font-size: 10px; font-weight: 800; padding: 2px 5px; color: #ffffff; background: #2c4a7a">PDF</span>[Brochure]</a>
+</div>
+</sc-if>
+
+<div style="font-size: 13px; color: #555555">Section Name</div>
+<h1 style="font-size: 30px; font-weight: 800; color: #0b3b5c; margin: 4px 0 14px">Page Title</h1>
+
+<sc-if value="{{btnUnder}}" hint-placeholder-val="{{ true }}">
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">7</span><strong>Button spot 2 – UNDER the title</strong> · used on: Tax Relief › Home Exemption, Remission, Charitable (File Online)</div></sc-if>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; background: #e9f3ea; border: 1px solid #9cc7a3; padding: 16px 18px; margin: 0 0 14px">
+<a href="#" style="background: #2e7d4f; color: #ffffff; padding: 13px 22px; font-size: 16px; font-weight: 800; text-decoration: none">File Online</a>
+<span style="font-size: 14px; line-height: 1.5">[When it’s open, e.g. Dec 15 – Jan 15. After that, see <a href="#">Late filing</a>.]</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 20px">
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; background: #ffffff; color: #0b3b5c; border: 2px solid #2c4a7a; padding: 10px 18px; min-height: 44px; box-sizing: border-box; text-decoration: none"><span style="font-size: 10px; font-weight: 800; padding: 2px 5px; color: #ffffff; background: #2c4a7a">PDF</span>[Form name and number]</a>
+<a href="#" style="display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; background: #ffffff; color: #0b3b5c; border: 2px solid #2c4a7a; padding: 10px 18px; min-height: 44px; box-sizing: border-box; text-decoration: none"><span style="font-size: 10px; font-weight: 800; padding: 2px 5px; color: #ffffff; background: #2c4a7a">PDF</span>[Brochure]</a>
+</div>
+</sc-if>
+
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">8</span><strong>Summary box (optional)</strong> · used on: Tax Relief &amp; Forms main page</div></sc-if>
+<div style="background: #f2f2f2; padding: 16px 20px; margin: 0 0 20px">
+<div style="font-size: 15px; font-weight: 800; color: #0b3b5c; margin-bottom: 6px">Summary</div>
+<div style="font-size: 15px; line-height: 1.7">[2–3 plain-language sentences: who this is for, what it does, the deadline.]</div>
+</div>
+
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">9</span><strong>Legal disclaimer box</strong> · used on: Exemptions, Dedications, Help &amp; Resources › FAQ</div></sc-if>
+<div style="background: #f6ecdf; border: 1px solid #e6d4bd; padding: 14px 18px; margin: 0 0 20px">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 4px">LEGAL DISCLAIMER</div>
+<div style="font-size: 14px; line-height: 1.6">[RPAD provides general information… not legal or professional advice. Mahalo.]</div>
+</div>
+<h2 style="font-size: 20px; font-weight: 800; color: #0b3b5c; margin: 0 0 8px">Information</h2>
+<p style="font-size: 15px; line-height: 1.7; margin: 0 0 12px">[Main information from the current page. Links to a law open the ordinance text inside this page – see “ROH § 8-10.3” below.] Under <a href="#" onClick="{{openRoh}}" style="font-weight: 700">ROH § 8-10.3</a>, [example sentence that cites City law].</p>
+
+<sc-if value="{{rohOpen}}" hint-placeholder-val="{{ false }}">
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">10</span><strong>Law opens inside the page (ROH)</strong> · used on: Every page with a “Revised Ordinances of Honolulu” link</div></sc-if>
+<section aria-label="Ordinance text" style="border: 1px solid #b8c6d9; border-top: 5px solid #2c4a7a; margin: 0 0 20px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: #eef3f9; padding: 12px 16px">
+<div><span style="font-size: 10px; font-weight: 800; padding: 3px 5px; color: #ffffff; background: #2c4a7a">ROH</span> <strong style="font-size: 15px; color: #0b3b5c">Revised Ordinances of Honolulu § 8-10.3</strong></div>
+<button type="button" onClick="{{closeRoh}}" style="font: inherit; font-size: 14px; font-weight: 700; background: #ffffff; color: #0b3b5c; border: 1px solid #2c4a7a; padding: 8px 14px; min-height: 40px; cursor: pointer">Close ✕</button>
+</div>
+<div style="padding: 16px; font-size: 14px; line-height: 1.7">[The law’s text shows here – a page within the page – so people stay on our site.]<br>Sec. 8-10.3 … (a) … (b) …</div>
+<div style="padding: 10px 16px; border-top: 1px solid #e3e3e3; font-size: 13px"><a href="#">Open the full Revised Ordinances of Honolulu ↗</a></div>
+</section>
+</sc-if>
+
+<sc-if value="{{btnInside}}" hint-placeholder-val="{{ true }}">
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">11</span><strong>Button spot 3 – IN THE TEXT</strong> · used on: Appeals › To File an Appeal</div></sc-if>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px; background: #e9f3ea; border: 1px solid #9cc7a3; padding: 16px 18px; margin: 0 0 20px">
+<a href="#" style="background: #2e7d4f; color: #ffffff; padding: 13px 22px; font-size: 16px; font-weight: 800; text-decoration: none">File Online</a>
+<span style="font-size: 14px; line-height: 1.5">[When it’s open, e.g. Dec 15 – Jan 15. After that, see <a href="#">Late filing</a>.]</span>
+</div>
+</sc-if>
+
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">12</span><strong>Program cards</strong> · used on: Tax Relief &amp; Forms main page (Exemptions, Dedications, Affordable Housing, Miscellaneous Forms)</div></sc-if>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin: 0 0 22px">
+<a href="#" class="t-card" style="text-decoration: none; color: #1c1c1c; border: 1px solid #d5dde8; border-top: 5px solid #2c4a7a; padding: 16px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 17px; font-weight: 800; color: #0b3b5c">[Program]</span><span style="font-size: 13px; line-height: 1.5">[One-line description]</span><span style="font-size: 13px; font-weight: 700; color: #1f4f8a">See [program] »</span></a>
+<a href="#" class="t-card" style="text-decoration: none; color: #1c1c1c; border: 1px solid #d5dde8; border-top: 5px solid #2c4a7a; padding: 16px; display: flex; flex-direction: column; gap: 6px"><span style="font-size: 17px; font-weight: 800; color: #0b3b5c">[Program]</span><span style="font-size: 13px; line-height: 1.5">[One-line description]</span><span style="font-size: 13px; font-weight: 700; color: #1f4f8a">See [program] »</span></a>
+</div>
+<sc-if value="{{showCards}}" hint-placeholder-val="{{ true }}">
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">13</span><strong>Online-form cards</strong> · used on: Change of Status, Remission, Tax Relief program cards</div></sc-if>
+<h2 style="font-size: 18px; font-weight: 800; color: #2c4a7a; margin: 6px 0 10px">Online forms (cards)</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin: 0 0 22px">
+<sc-for list="{{cards}}" as="c" hint-placeholder-count="3">
+<a href="#" class="t-card" style="display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1c1c1c; border: 1px solid #d5dde8; border-top: 5px solid #2c4a7a; padding: 14px 16px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 0.5px; color: #555555">ONLINE FORM</span>
+<span style="font-size: 16px; font-weight: 800; color: #0b3b5c">{{c}}</span>
+<span style="font-size: 13px; font-weight: 700; color: #1f4f8a; margin-top: auto">File online »</span>
+</a>
+</sc-for>
+</div>
+</sc-if>
+
+<sc-if value="{{showTable}}" hint-placeholder-val="{{ false }}">
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">14</span><strong>Searchable table</strong> · used on: Exemption Forms (one or two groups), Dedication Forms</div></sc-if>
+<h2 style="font-size: 18px; font-weight: 800; color: #2c4a7a; margin: 6px 0 10px">PDF forms (searchable table)</h2>
+<label style="display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; margin: 0 0 10px">Search
+<input type="search" placeholder="Form number or keyword" style="font: inherit; font-size: 15px; font-weight: 400; padding: 9px 12px; min-height: 42px; border: 1px solid #999999; width: 240px; max-width: 100%; box-sizing: border-box">
+</label>
+<div style="overflow-x: auto; margin: 0 0 22px">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 420px">
+<thead><tr style="background: #2c4a7a; color: #ffffff; text-align: left"><th scope="col" style="padding: 10px 12px; width: 120px">Form</th><th scope="col" style="padding: 10px 12px">Description</th><th scope="col" style="padding: 10px 12px; width: 100px">Download</th></tr></thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="3">
+<tr style="{{r.style}}"><td style="padding: 10px 12px; font-weight: 700">{{r.no}}</td><td style="padding: 10px 12px">{{r.desc}}</td><td style="padding: 10px 12px"><a href="#" style="font-weight: 700">PDF</a></td></tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</sc-if>
+
+<h2 style="font-size: 18px; font-weight: 800; color: #2c4a7a; margin: 26px 0 10px">More building blocks</h2>
+
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">15</span><strong>Bordered info boxes, side by side</strong> · used on: Appeals › Appeal Information (Second Appeal, Tax Payment); Late Appeals (In-Person, By Mail)</div></sc-if>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; margin: 0 0 22px">
+<div style="flex: 1 1 220px; border: 1px solid #d6d6d6; padding: 16px"><div style="font-size: 16px; font-weight: 800; margin-bottom: 6px">[Box heading]</div><div style="font-size: 14px; line-height: 1.6">[Short detail, e.g. “Second Appeal”.]</div></div>
+<div style="flex: 1 1 220px; border: 1px solid #d6d6d6; padding: 16px"><div style="font-size: 16px; font-weight: 800; margin-bottom: 6px">[Box heading]</div><div style="font-size: 14px; line-height: 1.6">[Short detail, e.g. “Tax Payment”.]</div></div>
+</div>
+
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">16</span><strong>Gray list boxes, three across</strong> · used on: Appeals › Board of Review Members</div></sc-if>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; margin: 0 0 22px">
+<div style="flex: 1 1 160px; background: #f2f2f2; padding: 14px"><div style="font-weight: 800; margin-bottom: 6px">[Group name]</div><div style="font-size: 14px; line-height: 1.7">[Name], Chair<br>[Name]<br>[Name]</div></div>
+<div style="flex: 1 1 160px; background: #f2f2f2; padding: 14px"><div style="font-weight: 800; margin-bottom: 6px">[Group name]</div><div style="font-size: 14px; line-height: 1.7">[Name], Chair<br>[Name]<br>[Name]</div></div>
+<div style="flex: 1 1 160px; background: #f2f2f2; padding: 14px"><div style="font-weight: 800; margin-bottom: 6px">[Group name]</div><div style="font-size: 14px; line-height: 1.7">[Name], Chair<br>[Name]<br>[Name]</div></div>
+</div>
+
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">17</span><strong>Side-by-side example calculations</strong> · used on: Help › Residential A (How the tax is calculated)</div></sc-if>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; margin: 0 0 22px">
+<div style="flex: 1 1 240px; border: 1px solid #d5dde8; display: flex; flex-direction: column">
+<div style="background: #e8eef6; padding: 10px 14px; font-weight: 800; font-size: 15px">Example 1: [label]</div>
+<div style="display: flex; justify-content: space-between; padding: 8px 14px; border-top: 1px solid #e3e3e3; font-size: 14px"><span>[Item]</span><span>[$ amount]</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 14px; border-top: 1px solid #e3e3e3; font-size: 14px"><span>[Item]</span><span>[$ amount]</span></div>
+<div style="padding: 10px 14px; border-top: 1px solid #e3e3e3; font-size: 13px; text-align: center; flex: 1">[Value] − [Exemption] = [Net taxable]</div>
+<div style="background: #2c4a7a; color: #ffffff; text-align: center; padding: 12px; font-weight: 800">Taxes = [$ total]</div>
+</div>
+<div style="flex: 1 1 240px; border: 1px solid #d5dde8; display: flex; flex-direction: column">
+<div style="background: #f6ecdf; padding: 10px 14px; font-weight: 800; font-size: 15px">Example 2: [label]</div>
+<div style="display: flex; justify-content: space-between; padding: 8px 14px; border-top: 1px solid #e3e3e3; font-size: 14px"><span>[Item]</span><span>[$ amount]</span></div>
+<div style="display: flex; justify-content: space-between; padding: 8px 14px; border-top: 1px solid #e3e3e3; font-size: 14px"><span>[Item]</span><span>[$ amount]</span></div>
+<div style="padding: 10px 14px; border-top: 1px solid #e3e3e3; font-size: 13px; text-align: center; flex: 1">[Value] − [Exemption] = [Net taxable]</div>
+<div style="background: #2c4a7a; color: #ffffff; text-align: center; padding: 12px; font-weight: 800">Taxes = [$ total]</div>
+</div>
+</div>
+
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">18</span><strong>Dropdown box</strong> · used on: Statewide Reports (Tax year)</div></sc-if>
+<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; background: #f2f2f2; padding: 16px 20px; margin: 0 0 22px">
+<label for="tmpl-year" style="font-size: 16px; font-weight: 700">[Choose]</label>
+<select id="tmpl-year" style="font-family: inherit; font-size: 16px; padding: 10px 14px; min-height: 44px; border: 1px solid #999999; background: #ffffff; min-width: 180px"><option>2026-27</option><option>2025-26</option><option>2024-25</option></select>
+<span style="font-size: 14px; color: #555555">[Short hint, e.g. “Reports available back to 1981-82”]</span>
+</div>
+
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">19</span><strong>Document cover buttons</strong> · used on: Help › Informational Guides and Brochures (a picture of the real cover is the button)</div></sc-if>
+<div style="display: flex; flex-wrap: wrap; gap: 20px; margin: 0 0 22px">
+<sc-for list="{{covers}}" as="cv" hint-placeholder-count="4">
+<a href="#" style="flex: 0 1 150px; text-decoration: none; color: #1c1c1c; display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center">
+<span style="width: 130px; height: 170px; background: {{cv.color}}; color: #ffffff; box-shadow: 0 3px 8px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: space-between; padding: 14px 12px; box-sizing: border-box; text-align: left">
+<img src="img/250bc961682ebb096452e7fce7a9e114.png" alt="" style="width: 34px; height: 34px; object-fit: contain">
+<span style="font-size: 13px; font-weight: 800; line-height: 1.3">[Cover title]</span>
+<span style="font-size: 10px">PDF</span>
+</span>
+<span style="font-size: 14px; font-weight: 700; color: #1f5a9a; text-decoration: underline">[Document name]</span>
+</a>
+</sc-for>
+</div>
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">20</span><strong>List of PDF links</strong> · used on: Statewide Reports (statewide and county reports); Help &amp; Resources › City Laws &amp; Rules (rules chapters)</div></sc-if>
+<div style="border-top: 1px solid #dddddd; margin: 0 0 22px">
+<a href="#" style="display: flex; align-items: center; gap: 12px; padding: 12px 4px; border-bottom: 1px solid #dddddd; text-decoration: none; color: #1c1c1c"><span style="flex: none; background: #b3261e; color: #ffffff; font-size: 11px; font-weight: 800; padding: 4px 6px">PDF</span><span style="font-size: 15px; font-weight: 600; color: #1f5a9a; text-decoration: underline">[Report or document name]</span></a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; padding: 12px 4px; border-bottom: 1px solid #dddddd; text-decoration: none; color: #1c1c1c"><span style="flex: none; background: #b3261e; color: #ffffff; font-size: 11px; font-weight: 800; padding: 4px 6px">PDF</span><span style="font-size: 15px; font-weight: 600; color: #1f5a9a; text-decoration: underline">[Report or document name]</span></a>
+</div>
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">21</span><strong>Numbered FAQ with arrows</strong> · used on: Help &amp; Resources › FAQ (all 10 sections)</div></sc-if>
+<div style="margin: 0 0 22px">
+<div style="font-size: 18px; font-weight: 800; color: #0b3b5c; margin-bottom: 6px">[Section name] <span style="font-size: 13px; color: #666666; font-weight: 600">([n] questions)</span></div>
+<div style="display: flex; gap: 10px; padding: 6px 2px; font-size: 15px; font-weight: 700"><span aria-hidden="true" style="width: 16px; font-size: 13px; color: #0f6b74">▼</span><span style="min-width: 24px; font-weight: 800">1.</span><span>[Question]</span></div>
+<div style="padding: 0 2px 10px 60px; font-size: 14px; line-height: 1.6; color: #333333">[Answer]</div>
+<div style="display: flex; gap: 10px; padding: 6px 2px; font-size: 15px; font-weight: 700"><span aria-hidden="true" style="width: 16px; font-size: 13px; color: #0f6b74">▶</span><span style="min-width: 24px; font-weight: 800">2.</span><span>[Question]</span></div>
+</div>
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">22</span><strong>Tabs</strong> · used on: Help &amp; Resources › City Laws &amp; Rules (ROH / Charter / Rules)</div></sc-if>
+<div style="display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 22px">
+<span style="font-size: 14px; font-weight: 700; padding: 10px 16px; background: #2c4a7a; color: #ffffff">[Tab one]</span>
+<span style="font-size: 14px; font-weight: 700; padding: 10px 16px; background: #eef3f9; color: #0b3b5c; border: 1px solid #d5dde8">[Tab two]</span>
+<span style="font-size: 14px; font-weight: 700; padding: 10px 16px; background: #eef3f9; color: #0b3b5c; border: 1px solid #d5dde8">[Tab three]</span>
+</div>
+</div>
+
+<sc-if value="{{showRight}}" hint-placeholder-val="{{ true }}">
+<aside aria-label="Right pane" style="flex: 1 1 240px; max-width: 320px; display: flex; flex-direction: column; gap: 18px">
+<sc-if value="{{showLabels}}" hint-placeholder-val="{{ true }}"><div style="display: inline-block; font-size: 12px; line-height: 1.4; color: #4a3500; background: #fff4d6; border: 1px dashed #b88a00; padding: 3px 8px; margin: 0 0 6px"><span style="display: inline-flex; align-items: center; justify-content: center; min-width: 22px; height: 22px; border-radius: 11px; background: #0b3b5c; color: #ffffff; font-size: 12px; font-weight: 800; margin-right: 6px; padding: 0 5px; box-sizing: border-box">23</span><strong>Right pane: At a glance + Forms &amp; Documents</strong> · used on: Every exemption, dedication and form page</div></sc-if>
+<div style="background: #eef3f9; border-top: 4px solid #2c4a7a; padding: 16px 18px">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 0.5px; color: #0b3b5c; margin-bottom: 8px">AT A GLANCE</div>
+<div style="padding: 7px 0; border-bottom: 1px solid #d5dde8"><div style="font-size: 12px; color: #555555">[Fact]</div><div style="font-size: 15px; font-weight: 700">[Value]</div></div>
+<div style="padding: 7px 0; border-bottom: 1px solid #d5dde8"><div style="font-size: 12px; color: #555555">Deadline</div><div style="font-size: 15px; font-weight: 700">[Date]</div></div>
+</div>
+<div style="border: 1px solid #d5dde8; padding: 16px 18px">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 0.5px; color: #0b3b5c; margin-bottom: 6px">FORMS &amp; DOCUMENTS</div>
+<a href="#" style="display: flex; gap: 10px; padding: 9px 0; border-bottom: 1px solid #ececec; text-decoration: none; color: #1c1c1c"><span style="flex: none; font-size: 10px; font-weight: 800; padding: 2px 5px; color: #2c4a7a; border: 1px solid #2c4a7a">PDF</span><span style="font-size: 14px; font-weight: 600">[Form name and number]</span></a>
+<a href="#" style="display: flex; gap: 10px; padding: 9px 0; border-bottom: 1px solid #ececec; text-decoration: none; color: #1c1c1c"><span style="flex: none; font-size: 10px; font-weight: 800; padding: 2px 5px; color: #2c4a7a; border: 1px solid #2c4a7a">PDF</span><span style="font-size: 14px; font-weight: 600">[Brochure]</span></a>
+<a href="#" onClick="{{openRoh}}" style="display: flex; gap: 10px; padding: 9px 0; text-decoration: none; color: #1c1c1c"><span style="flex: none; font-size: 10px; font-weight: 800; padding: 2px 5px; color: #ffffff; background: #2c4a7a; border: 1px solid #2c4a7a">ROH</span><span style="font-size: 14px; font-weight: 600">Revised Ordinances of Honolulu 8-10.3</span></a>
+</div>
+</aside>
+</sc-if>
+</main>
+</div>
+
+<footer style="background: #111111; color: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 28px 24px; display: flex; flex-wrap: wrap; gap: 24px; justify-content: space-between; font-size: 13px; line-height: 1.7">
+<div><strong>[Name]</strong><br>Administrator</div>
+<div><strong>Honolulu Office</strong> · 842 Bethel St., Basement<br><strong>Kapolei Office</strong> · 1000 Uluʻōhiʻa St., #206<br>(808) 768-3799</div>
+</div>
+<div style="background: #2c4a7a">
+<div style="max-width: 1200px; margin: 0 auto; padding: 12px 24px; display: flex; flex-wrap: wrap; gap: 12px 18px; font-size: 13px"><a href="#" style="color: #ffffff">Policy</a><a href="#" style="color: #ffffff">Privacy Statement</a><a href="#" style="color: #ffffff">Accessibility Policy</a><a href="#" style="color: #ffffff">Site Map</a></div>
+</div>
+</footer>
+
+</div>
+</template>
+<div id="rpad-root"></div>
+<div id="rpad-mockup-bar"><strong>RPAD website mockup – draft for DIT review</strong><span>Pages:</span><a href="index.html">Home</a> <a href="tax-relief-forms.html">Tax Relief & Forms</a> <a href="statewide-reports.html">Statewide Reports</a> <a href="appeals.html">Appeals</a> <a href="help-resources.html">Help & Resources</a> <a href="contact-us.html">Contact Us</a> <a href="template.html">One template (all building blocks)</a></div>
+<script src="js/rpad-runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { open: 'a', sub: 's1', page: 'Page one', roh: false };
+  }
+  renderVals() {
+    const p = this.props;
+    const btn = p.buttons ?? 'All three spots';
+    const all = btn === 'All three spots';
+    const mid = p.middle ?? 'Cards and table';
+    const base = 'width: 100%; text-align: left; font: inherit; cursor: pointer; border: none; border-top: 1px solid #e3e3e3; min-height: 44px; ';
+    const on = 'background: #e8eef6; color: #0b3b5c; font-weight: 700; border-left: 4px solid #2c4a7a; ';
+    const off = 'background: #ffffff; color: #1c1c1c; border-left: 4px solid transparent; ';
+    const S = this.state;
+    const groups = [
+      { id: 'a', label: 'Group (e.g. Exemptions)', subs: [
+        { id: 's1', label: 'Sub-list (e.g. For homeowners)', pages: ['Page one', 'Page two', 'Page three', 'Page four'] },
+        { id: 's2', label: 'Sub-list (e.g. For organizations, businesses & land)', pages: ['Page five', 'Page six'] }
+      ], pages: ['Page (e.g. Exemption Forms)', 'Page (e.g. Exemption FAQ)'] },
+      { id: 'b', label: 'Group (e.g. Dedications)', subs: [], pages: ['Page seven', 'Page eight'] },
+      { id: 'c', label: 'Group (e.g. Affordable Housing)', subs: [], pages: ['Page nine'] }
+    ];
+    const menu = [];
+    groups.forEach((g) => {
+      const isOpen = S.open === g.id;
+      menu.push({ label: (isOpen ? '−  ' : '+  ') + g.label, expanded: isOpen ? 'true' : 'false', style: base + 'font-size: 15px; padding: 12px 16px; ' + (isOpen ? 'background: #e8eef6; color: #0b3b5c; font-weight: 700; border-left: 4px solid transparent; ' : off), go: () => this.setState({ open: isOpen ? null : g.id }) });
+      if (!isOpen) return;
+      g.subs.forEach((sb) => {
+        const subOpen = S.sub === sb.id;
+        menu.push({ label: (subOpen ? '−  ' : '+  ') + sb.label, expanded: subOpen ? 'true' : 'false', style: base + 'font-size: 14px; font-weight: 700; padding: 10px 16px 10px 32px; min-height: 40px; ' + off, go: () => this.setState({ sub: subOpen ? null : sb.id }) });
+        if (subOpen) sb.pages.forEach((pg) => menu.push({ label: pg, expanded: '', style: base + 'font-size: 13px; padding: 8px 16px 8px 50px; min-height: 40px; ' + (S.page === pg ? on : off), go: () => this.setState({ page: pg }) }));
+      });
+      g.pages.forEach((pg) => menu.push({ label: pg, expanded: '', style: base + 'font-size: 14px; padding: 9px 16px 9px 32px; min-height: 40px; ' + (S.page === pg ? on : off), go: () => this.setState({ page: pg }) }));
+    });
+    return {
+      menu: menu,
+      showLabels: this.props.showLabels ?? true,
+      covers: [{ color: '#2c4a7a' }, { color: '#0f6b74' }, { color: '#5e2f6a' }, { color: '#2d4a78' }],
+      showLeft: p.leftPane ?? true,
+      showRight: p.rightPane ?? true,
+      bannerClass: (p.bannerPhoto ?? true) ? 'd-banner' : '',
+      btnAbove: all || btn === 'Above the title', btnUnder: all || btn === 'Under the title', btnInside: all || btn === 'Inside the information',
+      showCards: mid !== 'Table', showTable: mid !== 'Cards',
+      cards: ['Change mailing address', 'Remove exemption', 'Change care of address'],
+      rows: [['E-8-10.3', 'Home Exemption'], ['E-8-10.5', 'Totally Disabled Veterans'], ['M-8-2.1C', 'Change of Status']].map((r, i) => ({ no: r[0], desc: r[1], style: 'border-bottom: 1px solid #d9d9d9; background: ' + (i % 2 ? '#f5f8fb' : '#ffffff') + ';' })),
+      rohOpen: this.state.roh,
+      openRoh: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ roh: true }); },
+      closeRoh: () => this.setState({ roh: false })
+    };
+  }
+}
+rpadMount(Component, {"showLabels": true, "buttons": "All three spots", "leftPane": true, "rightPane": true, "middle": "Cards and table", "bannerPhoto": true}, {"showLabels": {"editor": "boolean", "default": true, "section": "Optional parts"}, "buttons": {"editor": "enum", "options": ["All three spots", "Above the title", "Under the title", "Inside the information", "None"], "default": "All three spots", "section": "Optional parts"}, "leftPane": {"editor": "boolean", "default": true, "section": "Optional parts"}, "rightPane": {"editor": "boolean", "default": true, "section": "Optional parts"}, "middle": {"editor": "enum", "options": ["Cards", "Table", "Cards and table"], "default": "Cards and table", "section": "Optional parts"}, "bannerPhoto": {"editor": "boolean", "default": true, "section": "Optional parts"}});
+</script>
+</body>
+</html>

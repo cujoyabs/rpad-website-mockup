@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RPAD website mockup – Tax Relief & Forms</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.d-banner{background-color:#2c4a7a;background-image:linear-gradient(to right,#2c4a7a 0%,#2c4a7a 45%,rgba(44,74,122,0) 70%),url(img/61b81ed58c63f363e66136f243271a23.jpg);background-repeat:no-repeat,no-repeat;background-position:left top,right center;background-size:100% 100%,auto 100%}
+a{color:#1f5a9a}a:hover{color:#0b3b5c}
+.tr-banner{background-color:#2c4a7a;background-image:linear-gradient(to right,#2c4a7a 0%,#2c4a7a 45%,rgba(44,74,122,0) 68%),url(img/61b81ed58c63f363e66136f243271a23.jpg);background-repeat:no-repeat,no-repeat;background-position:left top,right center;background-size:100% 100%,auto 100%}
+.tr-card:hover{border-color:#2c4a7a;box-shadow:0 2px 10px rgba(11,59,92,0.12)}
+.tr-row:hover{background:#f3f6fa}
+</style>
+<style>
+#rpad-mockup-bar{position:fixed;left:0;right:0;bottom:0;z-index:9000;background:#1c1c1c;color:#fff;font:13px Montserrat,Arial,sans-serif;padding:6px 14px;display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center}
+#rpad-mockup-bar a{color:#9ecbff}
+#rpad-options{position:fixed;right:14px;bottom:44px;z-index:9001;font:13px Montserrat,Arial,sans-serif;background:#fff;border:2px solid #b88a00;box-shadow:0 2px 10px rgba(0,0,0,.25);padding:8px 12px;max-width:320px}
+#rpad-options-toggle{font:inherit;font-weight:700;background:#fff4d6;border:none;cursor:pointer;padding:4px 6px;color:#4a3500}
+#rpad-options select{font:inherit}
+body{padding-bottom:40px}
+</style>
+</head>
+<body>
+<template id="rpad-template">
+<div style="font-family: Montserrat, Arial, sans-serif; color: #1c1c1c; background: #ffffff; width: 100%">
+
+<header style="background: #ffffff; border-bottom: 1px solid #dddddd">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
+<div style="display: flex; align-items: center; gap: 10px">
+<img src="img/60702182f58644eded21bbac4225260b.png" alt="City and County of Honolulu seal" style="width: 52px; height: 52px; object-fit: contain">
+<div style="line-height: 1.1"><div style="font-size: 10px; letter-spacing: 1px">CITY AND COUNTY OF</div><div style="font-size: 18px; font-weight: 800">HONOLULU</div></div>
+</div>
+<nav aria-label="Main menu" style="display: flex; flex-wrap: wrap; gap: 20px; font-size: 14px; font-weight: 600">
+<a href="index.html" style="text-decoration: none; color: #0b3b5c">Home</a>
+<a href="tax-relief-forms.html" style="text-decoration: none; color: #0b3b5c; border-bottom: 2px solid #0f6b74; padding-bottom: 4px">Tax Relief &amp; Forms</a>
+<a href="statewide-reports.html" style="text-decoration: none; color: #0b3b5c">Statewide Reports</a>
+<a href="appeals.html" style="text-decoration: none; color: #0b3b5c">Appeals</a>
+<a href="help-resources.html" style="text-decoration: none; color: #0b3b5c">Help &amp; Resources</a>
+<a href="contact-us.html" style="text-decoration: none; color: #0b3b5c">Contact Us</a>
+</nav>
+</div>
+</header>
+
+<section class="d-banner" style="color: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: flex; align-items: center; gap: 16px">
+<img src="img/250bc961682ebb096452e7fce7a9e114.png" alt="" style="width: 72px; height: 72px; object-fit: contain">
+<div>
+<div style="font-size: 13px; font-weight: 700; letter-spacing: 1px">REAL PROPERTY ASSESSMENT DIVISION · TAX RELIEF &amp; FORMS</div>
+<h1 style="font-size: 34px; font-weight: 800; margin: 4px 0 0">Tax Relief &amp; Forms</h1>
+</div>
+</div>
+</section>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 16px 24px 0; font-size: 13px; color: #555555">
+<a href="index.html">Home</a> › <a href="#" onClick="{{goMain}}">Tax Relief &amp; Forms</a>{{crumb}}
+</div>
+
+<div style="max-width: 1200px; margin: 0 auto; padding: 20px 24px 56px; display: flex; flex-wrap: wrap; gap: 36px; align-items: flex-start">
+
+<aside style="flex: 1 1 220px; max-width: 280px; display: flex; flex-direction: column; gap: 18px">
+<nav aria-label="Tax Relief and Forms pages" style="border: 1px solid #d6d6d6; display: flex; flex-direction: column">
+<button type="button" onClick="{{goMain}}" aria-current="{{mainCurrent}}" style="{{menuHeadStyle}}">Tax Relief &amp; Forms</button>
+<sc-for list="{{menu}}" as="m" hint-placeholder-count="10">
+<button type="button" onClick="{{m.go}}" aria-expanded="{{m.expanded}}" style="{{m.style}}">{{m.label}}</button>
+</sc-for>
+</nav>
+<div style="background: #f2f2f2; padding: 16px">
+<div style="font-size: 15px; font-weight: 800; margin-bottom: 10px">Key dates</div>
+<div style="font-size: 14px; line-height: 1.7"><strong>Sep 30</strong> – Home exemption claims due (approved claims take effect the following tax year)<br><strong>Jul 1, 2027</strong> – New home exemption amounts take effect<br><span style="color: #666666">[Add dedication deadlines]</span></div>
+</div>
+<div style="background: #f2f2f2; padding: 16px">
+<div style="font-size: 15px; font-weight: 800; margin-bottom: 10px">Popular forms</div>
+<a href="#" style="display: block; font-size: 14px; padding: 4px 0">Home Exemption Form E-8-10.3 (PDF)</a>
+<a href="#" style="display: block; font-size: 14px; padding: 4px 0">Change of Status Form M-8-2.1C (PDF)</a>
+<a href="#" style="display: block; font-size: 14px; padding: 4px 0">Remission of Taxes Form M-8-4.2 (PDF)</a>
+<a href="#" onClick="{{goXf}}" style="display: block; font-size: 14px; padding: 4px 0">All Exemption Forms</a>
+<a href="#" onClick="{{goD4}}" style="display: block; font-size: 14px; padding: 4px 0">All Dedication Forms</a>
+</div>
+<div style="background: #f2f2f2; padding: 16px">
+<div style="font-size: 15px; font-weight: 800; margin-bottom: 10px">Need help?</div>
+<div style="font-size: 14px; line-height: 1.7"><strong>(808) 768-3799</strong><br><a href="#">bfsrpmailbox@honolulu.gov</a><br><a href="contact-us.html">Contact Us »</a></div>
+</div>
+</aside>
+
+<main style="flex: 999 1 560px; min-width: 0">
+<div style="font-size: 13px; color: #555555">{{kicker}}</div>
+<h1 style="font-size: 30px; font-weight: 800; color: #0b3b5c; margin: 4px 0 16px">{{title}}</h1>
+
+<!-- LANDING -->
+<sc-if value="{{isMain}}" hint-placeholder-val="{{ true }}">
+<p style="font-size: 16px; line-height: 1.7; margin: 0 0 14px; max-width: 760px"><strong>Tax relief programs</strong> offer a reduction in property taxes due to various qualified exemptions and dedications. Choose a program type below.</p>
+<sc-if value="{{showSummary}}" hint-placeholder-val="{{ true }}">
+<div style="background: #f2f2f2; padding: 16px 20px; margin: 0 0 26px; max-width: 760px">
+<div style="font-size: 15px; font-weight: 800; color: #0b3b5c; margin-bottom: 8px">Summary</div>
+<ul style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 1.7">
+<li><strong>Exemptions</strong> lower the taxable value of your property (for example, the home exemption for an owner-occupied home).</li>
+<li><strong>Dedications</strong> lower your taxes when you commit your land to a use (agriculture, residential use, long-term rental) for a set number of years.</li>
+<li><strong>Affordable Housing</strong> and <strong>Miscellaneous Forms</strong> cover rental housing projects, address/status changes, disaster remission and Enterprise Zones.</li>
+</ul>
+</div>
+</sc-if>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px">
+<sc-for list="{{groupCards}}" as="g" hint-placeholder-count="4">
+<button type="button" class="tr-card" onClick="{{g.go}}" style="text-align: left; font: inherit; color: #1c1c1c; background: #ffffff; border: 1px solid #d5dde8; border-top: 5px solid #2c4a7a; padding: 20px; cursor: pointer; display: flex; flex-direction: column; gap: 8px">
+<span style="font-size: 19px; font-weight: 800; color: #0b3b5c">{{g.label}}</span>
+<span style="font-size: 14px; line-height: 1.6">{{g.desc}}</span>
+<span style="font-size: 13px; color: #555555">{{g.count}}</span>
+<span style="font-size: 14px; font-weight: 700; color: #1f4f8a; margin-top: 4px">See {{g.short}} »</span>
+</button>
+</sc-for>
+</div>
+
+<div style="margin-top: 30px; padding: 16px 20px; border-left: 4px solid #2c4a7a; background: #eef3f9; font-size: 15px; line-height: 1.6; max-width: 760px">
+<strong>Deadline:</strong> Home exemption claims submitted by <strong>September 30</strong> and approved take effect in the following tax year. [Add other key deadlines – e.g., dedication petitions – confirm dates.]
+</div>
+</sc-if>
+
+<!-- GROUP OVERVIEW -->
+<sc-if value="{{isGroup}}" hint-placeholder-val="{{ false }}">
+<sc-if value="{{groupHead}}" hint-placeholder-val="{{ false }}">
+<h2 style="font-size: 18px; font-weight: 800; color: #2c4a7a; margin: 0 0 8px">{{groupHead}}</h2>
+</sc-if>
+<p style="font-size: 16px; line-height: 1.7; margin: 0 0 12px; max-width: 760px">{{groupDesc}}</p>
+<sc-if value="{{groupExtra}}" hint-placeholder-val="{{ false }}">
+<p style="font-size: 16px; line-height: 1.7; margin: 0 0 12px; max-width: 760px">{{groupExtra}}</p>
+</sc-if>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 22px">
+<sc-for list="{{groupLaws}}" as="gl" hint-placeholder-count="0">
+<a href="#" style="display: inline-flex; gap: 8px; align-items: center; font-size: 14px; font-weight: 700; text-decoration: none"><span style="font-size: 10px; font-weight: 800; padding: 3px 5px; color: #ffffff; background: #2c4a7a">ROH</span>{{gl}}</a>
+</sc-for>
+</div>
+<sc-for list="{{groupSections}}" as="s" hint-placeholder-count="2">
+<section style="margin-bottom: 26px">
+<sc-if value="{{s.heading}}" hint-placeholder-val="{{ true }}">
+<h2 style="font-size: 18px; font-weight: 800; color: #2c4a7a; margin: 0 0 6px">{{s.heading}}</h2>
+</sc-if>
+<div style="border-top: 1px solid #d9d9d9">
+<sc-for list="{{s.items}}" as="it" hint-placeholder-count="4">
+<button type="button" class="tr-row" onClick="{{it.go}}" style="width: 100%; text-align: left; font: inherit; background: none; border: none; border-bottom: 1px solid #d9d9d9; padding: 12px 6px; min-height: 48px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px">
+<span style="font-size: 15px; font-weight: 700; color: #1f4f8a">{{it.label}}</span>
+<span style="flex: none; font-size: 13px; color: #555555">{{it.form}}  ›</span>
+</button>
+</sc-for>
+</div>
+</section>
+</sc-for>
+<sc-if value="{{groupCallout}}" hint-placeholder-val="{{ false }}">
+<div style="border-left: 4px solid #2c4a7a; background: #eef3f9; padding: 16px 20px; margin-top: 8px; max-width: 760px; font-size: 15px; line-height: 1.6">
+<strong>{{groupCallout}}</strong><br><a href="#" style="font-weight: 700">Go to DPP Affordable Housing ↗</a> <span style="font-size: 13px; color: #555555">(honolulu.gov/dpp/planning/affordable-housing)</span>
+</div>
+</sc-if>
+<sc-if value="{{groupDisclaimer}}" hint-placeholder-val="{{ false }}">
+<div style="background: #f6ecdf; border: 1px solid #e6d4bd; padding: 16px 20px; margin-top: 8px; max-width: 760px">
+<div style="font-size: 14px; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 6px">LEGAL DISCLAIMER</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.6">{{groupDisclaimer}}</p>
+</div>
+</sc-if>
+</sc-if>
+
+<!-- DETAIL PAGE -->
+<sc-if value="{{isDetail}}" hint-placeholder-val="{{ false }}">
+<div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
+<div style="flex: 999 1 420px; min-width: 0">
+<sc-if value="{{d.onlineBtn}}" hint-placeholder-val="{{ true }}">
+<a href="#" style="display: inline-block; font-size: 15px; font-weight: 700; background: #2c4a7a; color: #ffffff; text-decoration: none; padding: 13px 22px; margin-bottom: 20px">{{d.onlineLabel}} »</a>
+</sc-if>
+<sc-if value="{{d.onlineCard}}" hint-placeholder-val="{{ false }}">
+<a href="#" class="tr-card" style="display: flex; flex-direction: column; gap: 6px; max-width: 320px; text-decoration: none; color: #1c1c1c; border: 1px solid #d5dde8; border-top: 5px solid #2c4a7a; padding: 14px 16px; margin-bottom: 20px">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 0.5px; color: #555555">ONLINE FORM</span>
+<span style="font-size: 16px; font-weight: 800; color: #0b3b5c">{{d.onlineLabel}}</span>
+<span style="font-size: 13px; font-weight: 700; color: #1f4f8a">File online »</span>
+</a>
+</sc-if>
+<sc-for list="{{d.links}}" as="lk" hint-placeholder-count="1">
+<p style="margin: 0 0 14px"><a href="#" style="display: inline-flex; gap: 8px; align-items: center; font-size: 15px; font-weight: 700"><sc-if value="{{lk.hasTag}}" hint-placeholder-val="{{ true }}"><span style="{{lk.tagStyle}}">{{lk.tag}}</span></sc-if>{{lk.t}}</a></p>
+</sc-for>
+<sc-if value="{{d.noDesc}}" hint-placeholder-val="{{ false }}">
+<div style="border: 2px dashed #b8c6d9; background: #f7f9fc; padding: 14px 16px; font-size: 14px; line-height: 1.6; margin-bottom: 14px">[No description on the current page – suggest adding 1–2 sentences on who qualifies and what the dedication does (e.g., from the brochure).]</div>
+</sc-if>
+<sc-if value="{{d.hasChoices}}" hint-placeholder-val="{{ false }}">
+<div style="font-size: 15px; font-weight: 800; color: #0b3b5c; margin: 0 0 10px">What do you need to change? File online:</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-bottom: 20px">
+<sc-for list="{{d.choices}}" as="ch" hint-placeholder-count="3">
+<a href="#" class="tr-card" style="display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1c1c1c; border: 1px solid #d5dde8; border-top: 5px solid #2c4a7a; padding: 14px 16px">
+<span style="font-size: 16px; font-weight: 800; color: #0b3b5c">{{ch.t}}</span>
+<span style="font-size: 13px; font-weight: 700; color: #1f4f8a; margin-top: auto">File online »</span>
+</a>
+</sc-for>
+</div>
+</sc-if>
+<sc-if value="{{rohOpen}}" hint-placeholder-val="{{ false }}">
+<section aria-label="Ordinance text" style="border: 1px solid #b8c6d9; border-top: 5px solid #2c4a7a; background: #ffffff; margin: 0 0 22px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: #eef3f9; padding: 12px 16px">
+<div><span style="font-size: 10px; font-weight: 800; padding: 3px 5px; color: #ffffff; background: #2c4a7a">ROH</span> <strong style="font-size: 15px; color: #0b3b5c">{{rohTitle}}</strong></div>
+<button type="button" onClick="{{closeRoh}}" style="font: inherit; font-size: 14px; font-weight: 700; background: #ffffff; color: #0b3b5c; border: 1px solid #2c4a7a; padding: 8px 14px; min-height: 40px; cursor: pointer">Close ✕</button>
+</div>
+<div style="padding: 16px; font-size: 14px; line-height: 1.7; max-height: 260px; overflow-y: auto">
+<p style="margin: 0 0 10px">[The ordinance text shows here, inside our page, so people don't leave the RPAD site. DIT to confirm: embed from the City Clerk / Municode ROH, or copy the section text onto the page.]</p>
+<p style="margin: 0; color: #555555">Sec. … (a) … (b) … (c) …</p>
+</div>
+<div style="padding: 10px 16px; border-top: 1px solid #e3e3e3; font-size: 13px"><a href="#">Open the full Revised Ordinances of Honolulu ↗</a></div>
+</section>
+</sc-if>
+<sc-if value="{{d.sub}}" hint-placeholder-val="{{ false }}">
+<h2 style="font-size: 18px; font-weight: 800; color: #2c4a7a; margin: 0 0 8px">{{d.sub}}</h2>
+</sc-if>
+<sc-for list="{{d.paras}}" as="p" hint-placeholder-count="3">
+<p style="font-size: 15px; line-height: 1.7; margin: 0 0 12px">{{p}}</p>
+</sc-for>
+<sc-if value="{{d.howTo}}" hint-placeholder-val="{{ true }}">
+<p style="font-size: 15px; line-height: 1.7; margin: 14px 0 0; font-weight: 700">{{d.howTo}}</p>
+</sc-if>
+<sc-if value="{{d.learn}}" hint-placeholder-val="{{ false }}">
+<p style="font-size: 15px; margin: 14px 0 0"><a href="help-resources.html" style="font-weight: 700">Learn more about home exemptions (FAQ) »</a></p>
+</sc-if>
+</div>
+
+<aside style="flex: 1 1 260px; max-width: 320px; display: flex; flex-direction: column; gap: 18px">
+<sc-if value="{{d.hasFacts}}" hint-placeholder-val="{{ true }}">
+<div style="background: #eef3f9; border-top: 4px solid #2c4a7a; padding: 16px 18px">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 0.5px; color: #0b3b5c; margin-bottom: 8px">AT A GLANCE</div>
+<sc-for list="{{d.facts}}" as="f" hint-placeholder-count="3">
+<div style="padding: 7px 0; border-bottom: 1px solid #d5dde8"><div style="font-size: 12px; color: #555555">{{f.k}}</div><div style="font-size: 15px; font-weight: 700">{{f.v}}</div></div>
+</sc-for>
+</div>
+</sc-if>
+<div style="border: 1px solid #d5dde8; padding: 16px 18px">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 0.5px; color: #0b3b5c; margin-bottom: 6px">FORMS &amp; DOCUMENTS</div>
+<sc-for list="{{d.docs}}" as="doc" hint-placeholder-count="3">
+<a href="#" onClick="{{doc.open}}" style="display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid #ececec; text-decoration: none; color: #1c1c1c">
+<span style="{{doc.tagStyle}}">{{doc.tag}}</span>
+<span style="font-size: 14px; font-weight: 600; line-height: 1.4">{{doc.label}}</span>
+</a>
+</sc-for>
+<div style="font-size: 11px; color: #555555; margin-top: 10px; line-height: 1.6">PDF = opens a PDF · ROH = City ordinance · WEB ↗ = another website</div>
+</div>
+</aside>
+</div>
+</sc-if>
+
+<!-- EXEMPTION FORMS: searchable table -->
+<sc-if value="{{isForms}}" hint-placeholder-val="{{ false }}">
+<p style="font-size: 15px; line-height: 1.6; margin: 0 0 16px; max-width: 760px">{{formIntro}}</p>
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px">
+<label style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700">Search
+<input type="search" value="{{formQ}}" onInput="{{setFormQ}}" placeholder="Form number or keyword" style="font: inherit; font-size: 15px; font-weight: 400; padding: 9px 12px; min-height: 42px; border: 1px solid #999999; width: 260px; max-width: 60vw">
+</label>
+<div style="font-size: 13px; color: #555555">Showing {{formCount}} of {{formTotal}} forms</div>
+</div>
+<sc-for list="{{formGroups}}" as="fg" hint-placeholder-count="2">
+<sc-if value="{{fg.show}}" hint-placeholder-val="{{ true }}">
+<h2 style="font-size: 18px; font-weight: 800; color: #2c4a7a; margin: 18px 0 4px">{{fg.head}}</h2>
+<div style="font-size: 13px; color: #555555; margin: 0 0 8px">{{fg.sub}}</div>
+<div style="overflow-x: auto">
+<table style="width: 100%; border-collapse: collapse; font-size: 14px; min-width: 520px">
+<thead><tr style="background: #2c4a7a; color: #ffffff; text-align: left">
+<th scope="col" style="padding: 10px 12px; width: 150px">Form</th>
+<th scope="col" style="padding: 10px 12px">Description</th>
+<th scope="col" style="padding: 10px 12px; width: 110px">Download</th>
+</tr></thead>
+<tbody>
+<sc-for list="{{fg.rows}}" as="f" hint-placeholder-count="6">
+<tr style="{{f.rowStyle}}">
+<td style="padding: 10px 12px; font-weight: 700; white-space: nowrap">{{f.no}}</td>
+<td style="padding: 10px 12px; line-height: 1.45">{{f.desc}}</td>
+<td style="padding: 10px 12px"><a href="#" style="display: inline-flex; gap: 6px; align-items: center; font-weight: 700; text-decoration: none"><span style="font-size: 10px; font-weight: 800; padding: 2px 5px; color: #2c4a7a; background: #ffffff; border: 1px solid #2c4a7a">PDF</span>Download</a></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</sc-if>
+</sc-for>
+<sc-if value="{{noForms}}" hint-placeholder-val="{{ false }}">
+<p style="font-size: 15px; padding: 14px 4px; margin: 0">No forms match “{{formQ}}”.</p>
+</sc-if>
+<sc-if value="{{isXf}}" hint-placeholder-val="{{ true }}">
+<p style="font-size: 13px; color: #555555; margin: 14px 0 0">** [Footnote – the current page marks two forms with ** but doesn’t say what it means. Add the explanation or remove the marks.]</p>
+</sc-if>
+</sc-if>
+
+<!-- EXEMPTION FAQ = link to FAQ anchor -->
+<sc-if value="{{isFaqLink}}" hint-placeholder-val="{{ false }}">
+<div style="border: 1px solid #d5dde8; border-left: 5px solid #2c4a7a; background: #eef3f9; padding: 20px 22px; max-width: 760px">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 0.5px; color: #0b3b5c; margin-bottom: 6px">THIS MENU ITEM IS A LINK, NOT A PAGE</div>
+<p style="font-size: 15px; line-height: 1.7; margin: 0 0 14px">On the live site, clicking <strong>{{faqItem}}</strong> jumps straight to <strong>Help &amp; Resources › FAQ</strong>, scrolled to the <strong>{{faqSection}}</strong> section{{faqToday}}. The answers live in one place, the FAQ, so they never have to be updated twice.</p>
+<a href="help-resources.html" style="display: inline-block; font-size: 15px; font-weight: 700; background: #2c4a7a; color: #ffffff; text-decoration: none; padding: 12px 20px">Go to FAQ – {{faqSection}} section »</a>
+</div>
+</sc-if>
+
+<!-- NOT MOCKED YET -->
+<sc-if value="{{isTodo}}" hint-placeholder-val="{{ false }}">
+<div style="border: 2px dashed #b8c6d9; background: #f7f9fc; padding: 22px; font-size: 15px; line-height: 1.7; max-width: 760px">
+Same layout as <strong>Home Exemption</strong>: File Online button (if available) → description from the current page → “At a glance” box and Forms &amp; Documents list on the right. Content would carry over from <em>realproperty.honolulu.gov</em>.
+</div>
+</sc-if>
+
+</main>
+</div>
+
+<footer style="background: #111111; color: #ffffff">
+<div style="max-width: 1200px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; font-size: 13px; line-height: 1.7">
+<div><strong>[Name]</strong><br>Administrator<br><em>([Hawaiian title])</em></div>
+<div><strong>Honolulu Office</strong> · 842 Bethel St., Basement, Honolulu, HI 96813<br><strong>Kapolei Office</strong> · 1000 Uluʻōhiʻa St., #206, Kapolei, HI 96707<br>(808) 768-3799</div>
+<div><a href="#" style="color: #ffffff">Bureau of Conveyances</a><br><a href="#" style="color: #ffffff">Bureau Grantor/Grantee Search</a><br><a href="#" style="color: #ffffff">State Land Survey DAGS Map Search</a><br><a href="#" style="color: #ffffff">Honolulu Board of REALTORS®</a><br><a href="#" style="color: #ffffff">Honolulu Departments &amp; Agencies</a></div>
+</div>
+<div style="background: #2c4a7a">
+<div style="max-width: 1200px; margin: 0 auto; padding: 14px 24px; display: flex; flex-wrap: wrap; gap: 12px 20px; justify-content: space-between; font-size: 13px">
+<div style="display: flex; flex-wrap: wrap; gap: 18px"><a href="#" style="color: #ffffff">Policy</a><a href="#" style="color: #ffffff">Privacy Statement</a><a href="#" style="color: #ffffff">Accessibility Policy</a><a href="#" style="color: #ffffff">Diversity Statement</a><a href="#" style="color: #ffffff">Site Map</a></div>
+<div>Copyright © 2026 Real Property Assessment Division</div>
+</div>
+</div>
+</footer>
+
+</div>
+</template>
+<div id="rpad-root"></div>
+<div id="rpad-mockup-bar"><strong>RPAD website mockup – draft for DIT review</strong><span>Pages:</span><a href="index.html">Home</a> <a href="tax-relief-forms.html">Tax Relief & Forms</a> <a href="statewide-reports.html">Statewide Reports</a> <a href="appeals.html">Appeals</a> <a href="help-resources.html">Help & Resources</a> <a href="contact-us.html">Contact Us</a> <a href="template.html">One template (all building blocks)</a></div>
+<script src="js/rpad-runtime.js"></script>
+<script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { view: 'main', open: null, roh: null };
+  }
+  renderVals() {
+    const S = this.state;
+    const groups = {
+      ex: { label: 'Exemptions', short: 'exemptions', laws: ['Revised Ordinances of Honolulu 8-10'], head: 'Purpose', purpose: 'To assist Oahu property owners seeking information on home exemptions and other common tax relief programs. It explains how to qualify for exemptions which reduce the net taxable assessed value of the property used in determining the property tax.', disclaimer: 'The Real Property Assessment Division (RPAD) provides general information regarding real property tax assessments. RPAD does not give legal or other professional advice, and persons with specific inquiries regarding ownership, real property tax law and the appraisal process are urged to consult with an attorney or appropriate professional. Mahalo.', desc: 'Reduces the valuation on which taxes are computed by decreasing the real property tax base and lessening the real property tax liability for the taxpayer.',
+        sections: [
+          { heading: 'For homeowners', items: [['home', 'Home Exemption', 'E-8-10.3'], ['vet', 'Totally Disabled Veterans', 'E-8-10.5'], ['lep', 'Persons Affected with Leprosy', 'E-8-10.6'], ['sight', 'Persons with Impaired Sight or Hearing and Persons Totally Disabled', 'E-8-10.6 & .7']] },
+          { heading: 'For organizations, businesses & land', items: [['x1', 'Charitable Purposes', 'E-8-10.9'], ['x2', 'Historic Residential Real Property Dedicated to Preservation', 'D-8-10.19'], ['x3', 'Historic Commercial Real Property Dedicated for Preservation', 'E-8-10.27'], ['x4', 'Lands in Urban Districts', 'E-8-10.11'], ['x5', 'Renewable Energy', 'E-8-10.12'], ['x6', 'Public Property', 'E-8-10.14'], ['x7', 'Off-Base Military Housing Projects on Federal Property', 'E-8-10.15'], ['x8', 'Low-Income Rental Housing', 'E-8-10.17'], ['x9', 'Credit Unions', 'E-8-10.21'], ['x10', 'Slaughterhouse', 'E-8-10.22'], ['x11', 'Public Service', 'E-8-10.24'], ['x12', 'Qualifying Agricultural Improvements on Vacant Agricultural Land', 'E-8-10.28'], ['x13', 'Kuleana Land', 'E-8-10.29'], ['x14', 'For-Profit Group Child Care Centers', 'E-8-10.30'], ['x15', 'Film Studio Facility', 'E-8-10.35 / 10.36']] },
+          { heading: 'All exemptions', items: [['xf', 'Exemption Forms'], ['xq', 'Exemption FAQ', '→ FAQ: Home Exemption']] }
+        ] },
+      de: { label: 'Dedications', short: 'dedications', desc: 'Property owner commits to certain conditions for a stated period of time in return for reduced taxes.',
+        extra: 'May change class or gross valuation or may be applied as an exemption to the portion that qualifies.',
+        laws: ['Revised Ordinances of Honolulu 8-7', 'Revised Ordinances of Honolulu 8-10'],
+        disclaimer: 'The Real Property Assessment Division (RPAD) provides general information regarding real property tax assessments. RPAD does not give legal or other professional advice, and persons with specific inquiries regarding ownership, real property tax law and the appraisal process are urged to consult with an attorney or appropriate professional. Mahalo.',
+        sections: [{ heading: '', items: [['d1', 'Agricultural Dedication', 'D-8-7.3'], ['d2', 'Property Dedicated for Residential Use', 'D-8-7.5'], ['d3', 'Affordable Long-Term Residential Rental Use', 'D-8-7.6'], ['d4', 'Dedication Forms']] }] },
+      ah: { label: 'Affordable Housing', short: 'affordable housing', desc: 'Information and forms for Affordable Rental Housing projects.',
+        laws: ['Revised Ordinances of Honolulu 8-10.33 & 8-10.34'],
+        callout: 'Visit the Department of Planning and Permitting website for Affordable Housing information.',
+        sections: [{ heading: '', items: [['a1', 'Affordable Rental Housing FAQ', '→ FAQ: Affordable Rental Housing'], ['a2', 'Declaration of Restrictive Covenants', 'M-32'], ['a3', 'Affordable Rental Housing – During Construction', 'E-8-10.34'], ['a4', 'Affordable Rental Housing – Initial and Annual', 'E-8-10.33']] }] },
+      mf: { label: 'Miscellaneous Forms', short: 'forms', desc: 'Other forms and requests for property owners: updating your exemption status or mailing address, tax relief after a natural disaster, and Enterprise Zone rebates.',
+        sections: [{ heading: '', items: [['m1', 'Change of Status – Exemption Claims & Mailing Address', 'M-8-2.1C'], ['m2', 'Remission of Taxes in Case of Natural Disasters', 'M-8-4.2'], ['m3', 'For Enterprise Zoned Areas and Information', 'M-31.2']] }] }
+    };
+    const pageGroup = {}; const pageLabel = {}; const pageForm = {};
+    Object.keys(groups).forEach((g) => groups[g].sections.forEach((s) => s.items.forEach(([id, label, form]) => { pageGroup[id] = g; pageLabel[id] = label; pageForm[id] = form || ''; })));
+
+    const go = (v) => () => this.setState({ formQ: '', roh: null, view: v, open: groups[v] ? v : (pageGroup[v] || S.open) });
+    const toggle = (g) => () => this.setState({ openSub: g === 'ex' ? 'For homeowners' : S.openSub, view: g, open: S.open === g && S.view === g ? null : g });
+
+    const base = 'width: 100%; text-align: left; font: inherit; cursor: pointer; border: none; border-top: 1px solid #e3e3e3; min-height: 44px; ';
+    const on = 'background: #e8eef6; color: #0b3b5c; font-weight: 700; border-left: 4px solid #2c4a7a; ';
+    const off = 'background: #ffffff; color: #1c1c1c; border-left: 4px solid transparent; ';
+    const menu = [];
+    Object.keys(groups).forEach((g) => {
+      const isOpen = S.open === g;
+      menu.push({ label: (isOpen ? '−  ' : '+  ') + groups[g].label, go: toggle(g), expanded: isOpen ? 'true' : 'false', style: base + 'font-size: 15px; padding: 12px 16px; ' + (S.view === g ? on : off) });
+      const nested = g === 'ex' && (this.props.exemptionMenu ?? 'Sub-lists') === 'Sub-lists';
+      if (isOpen) groups[g].sections.forEach((s) => {
+        const sub = nested && s.heading && s.heading !== 'All exemptions';
+        if (sub) {
+          const hasView = s.items.some(([id]) => id === S.view);
+          const subOpen = S.openSub === s.heading || (S.openSub === undefined && hasView);
+          menu.push({ label: (subOpen ? '−  ' : '+  ') + s.heading, go: () => this.setState({ openSub: subOpen ? null : s.heading }), expanded: subOpen ? 'true' : 'false', style: base + 'font-size: 14px; font-weight: 700; padding: 10px 16px 10px 32px; min-height: 40px; ' + off });
+          if (subOpen) s.items.forEach(([id, label]) => menu.push({ label: label, go: go(id), expanded: '', style: base + 'font-size: 13px; padding: 8px 16px 8px 50px; min-height: 40px; ' + (S.view === id ? on : off) }));
+        } else s.items.forEach(([id, label]) => {
+          menu.push({ label: label, go: go(id), expanded: '', style: base + 'font-size: 14px; padding: 9px 16px 9px 32px; min-height: 40px; ' + (S.view === id ? on : off) });
+        });
+      });
+    });
+
+    const tag = (t) => 'flex: none; font-size: 10px; font-weight: 800; padding: 2px 5px; margin-top: 1px; ' + (t === 'PDF' ? 'color: #2c4a7a; background: #ffffff; border: 1px solid #2c4a7a' : t === 'ROH' ? 'color: #ffffff; background: #2c4a7a; border: 1px solid #2c4a7a' : 'color: #ffffff; background: #0f6b74; border: 1px solid #0f6b74') + ';';
+    const lnk = (t, type) => ({ t: t, tag: type || '', hasTag: !!type, tagStyle: tag(type) });
+    const ART = { 1: 'Administration', 2: 'Notice of Assessments – Assessment Lists', 3: 'Tax Bills, Payments and Penalties', 4: 'Remissions', 5: 'Liens – Foreclosures', 6: 'Rate – Levy', 7: 'Valuations', 8: 'Wasteland Development', 9: 'Nontaxable Property – Assessment', 10: 'Exemptions', 11: 'Determination of Rates', 12: 'Appeals', 13: 'County Tax Credit', 14: 'Tax Credit for Automatic Sprinkler System', 15: 'Severability', 16: 'Tax Credit for Septic Tank to Replace Household Cesspool' };
+    const roh = (label) => { const m = /Honolulu (8-(\d+)(\.[\d.]+)?(.*))$/.exec(label); if (!m) return label; const a = ART[+m[2]]; return a ? 'ROH Chapter 8, Article ' + m[2] + ' – ' + a + ' (§ ' + m[1].trim() + ')' : label; };
+    const doc = (t, label0) => { const label = t === 'ROH' ? roh(label0) : label0; return ({ tag: t, label: label, tagStyle: tag(t), open: (e) => { if (e && e.preventDefault) e.preventDefault(); if (t === 'ROH') this.setState({ roh: label }); } }); };
+    const details = {
+      home: { online: true, learn: true, howTo: '',
+        paras: [
+          'The home exemption reduces the taxable value of an owner-occupied principal residence by $120,000, or $160,000 if the owner is 65 or older, and the exemption applies only to property owned and occupied as the owner’s primary home. Portions used for commercial purposes do not qualify.',
+          '*Effective July 1, 2027, the home exemption amounts change to $140,000, or $180,000 if the owner is 65 or older.',
+          'If you already have a home exemption, you do not need to refile if there are no changes to the ownership or use of the property. If you provided proof of age when you initially filed, your exemption amount will automatically adjust to the higher amount when you become of age.',
+          'We encourage all occupants on title to file for the home exemption in case something happens to the primary applicant.',
+          'Claims submitted by September 30 and approved will take effect in the following tax year.'
+        ],
+        facts: [{ k: 'Exemption amount', v: '$120,000 ($160,000 if 65+)' }, { k: 'Starting July 1, 2027', v: '$140,000 ($180,000 if 65+)' }, { k: 'Filing deadline', v: 'September 30' }],
+        docs: [doc('PDF', 'Initial Form E-8-10.3'), doc('PDF', 'Continuance – Relocation to Care Home or Facility E-8-10.3A'), doc('PDF', 'Continuance – Temporary Relocation E-8-10.3B'), doc('PDF', 'Reoccupation from Temporary Relocation E-8-10.3C'), doc('PDF', 'Home Exemption Brochure'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.3')] },
+      vet: { online: true, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['If you are a totally disabled veteran due to injuries sustained while on active duty with the U.S. Armed Forces, your home may be eligible for an exemption from real property taxes, except for the minimum tax. For this special exemption, veterans must file a claim on form E-8-10.5. The exemption shall take effect beginning with the next tax payment date, provided that the claimant shall have filed with the department a claim for a disability exemption along with a copy of a physician’s certificate of disability on such form as the department shall prescribe on or before June 30 for the first payment or December 31 for the second payment. The exemption will remain in effect as long as the veteran claiming the exemption remains totally disabled or the widow or widower of the totally disabled veteran remains unmarried.'],
+        facts: [{ k: 'Exemption', v: 'All real property tax except the minimum tax' }, { k: 'File by', v: 'June 30 (1st payment) or Dec. 31 (2nd payment)' }, { k: 'Include', v: 'Physician’s certificate of disability' }],
+        docs: [doc('PDF', 'Initial Form E-8-10.5'), doc('PDF', 'Continuance Form E-8-10.5A'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.5')] },
+      lep: { online: true, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['If you have Hansen’s Disease and are confined because of the illness, you may qualify for an exemption from real property taxes on your real property, up to but not exceeding a taxable value of $25,000. This is in addition to your regular home exemption. If you are on a temporary release status, you can retain your exemption during that period.', 'Claims for this special exemption must be filed on form E-8-10.6 and E-8-10.7 on or before September 30.'],
+        facts: [{ k: 'Exemption amount', v: 'Up to $25,000 taxable value' }, { k: 'In addition to', v: 'Regular home exemption' }, { k: 'Filing deadline', v: 'September 30' }],
+        docs: [doc('PDF', 'Form E-8-10.6'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.6')] },
+      sight: { online: true, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['If you have impaired sight or hearing or are totally disabled, you may file a claim on form E-8-10.6 and .7 to qualify for a $25,000 real property tax exemption on property you own. This claim is in addition to the regular or multiple home exemption. Your condition must be certified by an authorized physician who is licensed to practice medicine in the State of Hawaii. “Certification” will be determined on the basis of a written report resulting from an examination performed by the authorized physician.'],
+        facts: [{ k: 'Exemption amount', v: '$25,000' }, { k: 'In addition to', v: 'Regular or multiple home exemption' }, { k: 'Requires', v: 'Certification by a Hawaii-licensed physician' }],
+        docs: [doc('PDF', 'Form E-8-10.6 & E-8-10.7'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.7')] },
+      x1: { online: true, onlineLabel: 'File Online – Charitable Non-Profit', howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['The exemption for charitable purposes provides tax relief for properties used exclusively for nonprofit activities, including accredited educational programs, licensed child-care centers, hospitals and nursing homes, churches and cemeteries, land dedicated to public use, certain labor-related or credit-union nonprofits, and charitable or patriotic organizations whose assets must remain dedicated to public or charitable purposes. Only the qualifying portion of a property may be exempt, and no part of the property may provide monetary or economic benefit to private individuals or members.'],
+        facts: [{ k: 'Who', v: 'Nonprofits using the property exclusively for qualifying purposes' }, { k: 'Exempt', v: 'Only the qualifying portion of the property' }],
+        docs: [doc('PDF', 'Form E-8-10.9'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.9')] },
+      x2: { online: false, links: [lnk('Historic Residential Dedication Tax Benefit List', 'PDF')], howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['Owners of homes listed on the Hawaiʻi Register of Historic Places may qualify for a real property tax exemption by dedicating all or part of their residential property for historic preservation, which requires maintaining the home in at least average condition and providing the public with either continuous visual access from a public way or, if that is not possible, scheduled on-site viewing opportunities. The owner of an approved historic home must install and maintain a city-approved historic plaque on the property. Once an application is approved, the dedication lasts a minimum of 10 years and renews automatically. Failure to meet the program requirements will result in cancellation and a rollback tax with penalties.'],
+        facts: [{ k: 'Who', v: 'Homes on the Hawaiʻi Register of Historic Places' }, { k: 'Minimum term', v: '10 years, renews automatically' }, { k: 'Requires', v: 'City-approved historic plaque; public visual access' }],
+        docs: [doc('PDF', 'Form D-8-10.19'), doc('PDF', 'Sample of Plaque for Historic Residential Property'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.19')] },
+      x3: { online: false, links: [lnk('Historic Commercial Dedication Tax Benefit List', 'PDF')], howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['Owners of commercial properties listed on the National or Hawaiʻi Register of Historic Places may be eligible for a real property tax exemption by dedicating the property for historic preservation, which requires recording a covenant, maintaining the building under an approved maintenance agreement, and ensuring reasonable public visual access. Once approved, 50% of the property’s taxable value is exempt for a minimum 10-year period that renews automatically. Failure to meet the program requirements will result in cancellation and a retroactive tax assessment with interest.'],
+        facts: [{ k: 'Exemption amount', v: '50% of taxable value' }, { k: 'Minimum term', v: '10 years, renews automatically' }, { k: 'Requires', v: 'Recorded covenant + approved maintenance agreement' }],
+        docs: [doc('PDF', 'Form E-8-10.27'), doc('PDF', 'Historic Commercial Property Maintenance Agreement'), doc('PDF', 'Short Form Historic Commercial Property Maintenance Agreement'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.27')] },
+      x4: { online: false, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['Portions of urban-district property may be exempt from real property taxes when an owner formally dedicates specific areas for landscaping, open spaces, public recreation, or similar public-benefit uses, and the director determines that the public benefit of the dedication is at least equal to the value of the taxes being waived. Once approved, the owner must maintain the dedicated land for at least 10 years, with automatic renewals. Any failure to maintain or preserve the dedicated use triggers cancellation and rollback taxes, with interest, applied retroactively to the original dedication date.'],
+        facts: [{ k: 'For', v: 'Landscaping, open space, public recreation' }, { k: 'Minimum term', v: '10 years, renews automatically' }],
+        docs: [doc('PDF', 'Continuance Form E-8-10.11'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.11')] },
+      x5: { online: false, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['Improvements used exclusively for a renewable energy improvement may qualify for a full exemption from real property taxes, and the portion of land in physical contact with renewable-energy structures is 80% exempt, but only when the facility operates under any required special or conditional use permits and produces or stores energy primarily for public utilities or public consumption under a power-purchase agreement; the exemption must be claimed by September 30, lasts for the term of the power-purchase contract, cannot be combined with other exemptions or dedications on the same land portion, does not apply to systems used mainly for personal or private business purposes or to solar devices already excluded from taxation, and may be denied or canceled if documentation is not provided or if renewable-energy production stops.'],
+        facts: [{ k: 'Improvements', v: '100% exempt' }, { k: 'Land in contact with structures', v: '80% exempt' }, { k: 'Filing deadline', v: 'September 30' }, { k: 'Lasts', v: 'Term of the power-purchase agreement' }],
+        docs: [doc('PDF', 'Form E-8-10.12'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.12')] },
+      x6: { online: false, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['Public property may qualify for an exemption from real property taxes, with taxes instead assessed to private tenants or occupants when government-owned land is leased, used commercially, or held under agreements for future conveyance. Additional exemptions include land subject to eminent domain, property taken into possession for future public use, parcels rendered unusable by setback requirements, and any property exempt under federal or other applicable laws.'],
+        facts: [],
+        docs: [doc('PDF', 'Form E-8-10.14'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.14')] },
+      x7: { online: false, heading: 'Lessees of Exempt Real Property', howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['Off-base military housing developed and operated under the Military Housing Privatization Initiative may be exempt from real property taxes if the federal land is leased to a private company specifically to develop, rehabilitate, maintain, and operate a military housing project, and the project does not use county refuse, road maintenance, or routine police, fire, and ambulance services.'],
+        facts: [{ k: 'Who', v: 'Private lessees of federal land under the Military Housing Privatization Initiative' }, { k: 'Condition', v: 'No county refuse, road maintenance, or routine police, fire & ambulance services' }],
+        docs: [doc('PDF', 'Form E-8-10.15'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.15')] },
+      x8: { online: false, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['Low-income rental housing that is regulated for at least 15 years under a government-approved agreement—and reserves at least 20% of its units for households earning no more than 80% of area median income—may qualify for an exemption from real property taxes for the entire regulated period. The exemption applies only to the residential portion of the project.'],
+        facts: [{ k: 'Regulated for', v: 'At least 15 years' }, { k: 'Units reserved', v: 'At least 20% for households at or below 80% AMI' }, { k: 'Exempt', v: 'Residential portion only' }],
+        docs: [doc('PDF', 'Initial Form E-8-10.17'), doc('PDF', 'Annual Certification Form E-8-10.17A'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.17')] },
+      x9: { online: false, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['Real property owned or long-term leased by a federal or state credit union may qualify for an exemption from real property taxes exceeding $1,000, provided it is actually and exclusively used for credit union purposes. Any portion of the property used for commercial or income-producing activities is taxable, but the remaining qualifying portion may be exempt.'],
+        facts: [{ k: 'Exemption', v: 'Taxes exceeding $1,000' }, { k: 'Who', v: 'Federal or state credit unions (owned or long-term leased)' }],
+        docs: [doc('PDF', 'Form E-8-10.21'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.21')] },
+      x10: { online: false, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['All real property in the city used exclusively by the owner or lessee thereof for purposes of slaughtering or butchering cattle, pigs, poultry animals, or other domestic livestock for commercial slaughterhouse purposes may be exempt from real property taxes for a period of 10 years. In the case of newly constructed slaughterhouses, the exemption shall apply to the tax year following October 1 following commencement of construction of such slaughterhouse.'],
+        facts: [{ k: 'Term', v: '10 years' }, { k: 'New construction', v: 'Tax year after the Oct. 1 following start of construction' }],
+        docs: [doc('PDF', 'Form E-8-10.22'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.22')] },
+      x11: { online: false, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['A public service company may receive a property tax exemption for any real property it owns or leases and actually uses for its public-service operations. Only the portion used for the company’s primary public-service purpose qualifies; any non-qualifying portion is taxed proportionally, but the eligible portion keeps the exemption and may still qualify for other exemptions if applicable.'],
+        facts: [],
+        docs: [doc('PDF', 'Form E-8-10.24'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.24')] },
+      x12: { online: false, heading: 'Exemption – Qualifying Agricultural Improvements for Dedicated Vacant Agricultural Lands', howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['Qualifying improvements made to dedicated vacant agricultural land—such as irrigation, drainage, roads, soil conservation, fire protection, or animal-control measures costing at least $10,000—may qualify for an exemption from property taxes for seven years, with the exemption applying only to the increase in property value created by those improvements.'],
+        facts: [{ k: 'Minimum cost of improvements', v: '$10,000' }, { k: 'Term', v: '7 years' }, { k: 'Exempt', v: 'Only the increase in value from the improvements' }],
+        docs: [doc('PDF', 'Form E-8-10.28'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.28')] },
+      x13: { online: false, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['Real property that contains kuleana land may qualify for the kuleana exemption and pay only the minimum real property tax as long as the property is owned wholly or in part by a lineal descendant of the original awardee of that kuleana parcel. Owners must provide genealogy verification, such as confirmation from the Office of Hawaiian Affairs or a court order. “Kuleana land” refers to the original native tenant awards from the 1850 Kuleana Act.'],
+        facts: [{ k: 'Tax owed', v: 'Minimum tax only' }, { k: 'Who', v: 'Lineal descendants of the original awardee' }, { k: 'Requires', v: 'Genealogy verification (e.g., OHA or court order)' }],
+        docs: [doc('PDF', 'Form E-8-10.29'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.29')], links: [lnk('Kuleana Land Exemption List', 'PDF')] },
+      x14: { online: false, howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['A for-profit group child care center may qualify for a full property tax exemption when the property is used exclusively for child care, meets state licensing requirements, is owned or leased long-term, and, if leased, has a recorded lease. The exemption applies only to non-residential facilities serving infants, toddlers, and preschool-age children, and the property cannot receive any other exemption at the same time.'],
+        facts: [{ k: 'Exemption', v: 'Full' }, { k: 'Requires', v: 'State license; recorded lease if leased' }, { k: 'Note', v: 'Can’t be combined with other exemptions' }],
+        docs: [doc('PDF', 'Form E-8-10.30'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.30')] },
+      x15: { online: false, heading: 'Exemption – Film Studio Facilities', howTo: '',
+        paras: ['This exemption was established to encourage the development of eligible film studio facilities to boost economic growth, promote diversification, and support local workforce development. The exemption program grants 20 years of property tax relief on the assessed building value of a qualifying studio. To qualify, an owner must invest at least $100 million, build on 10+ acres of government-owned land, stay in good standing with the State, and meet ongoing commitments to local workforce development, prevailing wages, and crediting the studio name in all productions made onsite.'],
+        facts: [{ k: 'Term', v: '20 years' }, { k: 'Exempt', v: 'Assessed building value' }, { k: 'Minimum investment', v: '$100 million' }, { k: 'Land', v: '10+ acres of government-owned land' }],
+        docs: [doc('PDF', 'Qualifying Construction Film Studio Facility Form E-8-10.35'), doc('PDF', 'Film Studio Facility Claim Form E-8-10.36 Initial'), doc('PDF', 'Film Studio Facility Claim Form E-8-10.36 Annual'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.35 & 8-10.36')] },
+      d1: { online: false, noDesc: true, links: [lnk('Dedicated Agricultural List', 'PDF')], howTo: 'To apply, download the form, complete it, and submit to our office.', paras: [], facts: [],
+        docs: [doc('PDF', 'Initial Form D-8-7.3'), doc('PDF', 'Annual Form D-8-7.3A'), doc('PDF', 'Agricultural Use Land Dedications Brochure'), doc('ROH', 'Revised Ordinances of Honolulu 8-7.3')] },
+      d2: { online: false, noDesc: true, links: [lnk('Residential Use List', 'PDF'), lnk('Condominium Projects Impacted by Ord 17-13 (updated 2025-3-12)', 'PDF')], howTo: 'To apply, download the form, complete it, and submit to our office.', paras: [], facts: [],
+        docs: [doc('PDF', 'Form D-8-7.5'), doc('PDF', 'Residential Use Dedication Brochure'), doc('ROH', 'Revised Ordinances of Honolulu 8-7.5')] },
+      d3: { online: false, noDesc: true, links: [lnk('Ordinance 26-3, which amended ROH § 8-7.6', 'WEB ↗')], howTo: '', paras: [], facts: [],
+        docs: [doc('PDF', 'Form D-8-7.6'), doc('PDF', 'Annual Form D-8-7.6A'), doc('ROH', 'Revised Ordinances of Honolulu 8-7.6')] },
+      a2: { online: false, noDesc: true, howTo: '', paras: [], facts: [],
+        docs: [doc('PDF', 'Form M-32'), doc('ROH', 'Revised Ordinances of Honolulu Chapter 32 (Affordable Rental Housing)')] },
+      a3: { online: false, noDesc: true, howTo: 'To apply, download the form, complete it, and submit to our office.', paras: [], facts: [],
+        docs: [doc('PDF', 'Form E-8-10.34'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.34')] },
+      a4: { online: false, noDesc: true, howTo: 'To apply, download the form, complete it, and submit to our office.', paras: [], facts: [],
+        docs: [doc('PDF', 'Initial Form E-8-10.33'), doc('PDF', 'Annual Form E-8-10.33A'), doc('ROH', 'Revised Ordinances of Honolulu 8-10.33')] },
+      m1: { online: false, heading: 'Changing the Status of Exemption Claims, Mailing Addresses, and Care of Addresses', howTo: '',
+        choices: [{ t: 'Change mailing address' }, { t: 'Remove exemption' }, { t: 'Change care of address' }],
+        paras: ['Click the appropriate online form above. Or, you may download the form, complete it, and submit it to our office.'], facts: [],
+        docs: [doc('PDF', 'Form M-8-2.1C'), doc('ROH', 'Revised Ordinances of Honolulu 8-2.1')] },
+      m2: { online: true, onlineLabel: 'File Online – Remission of Taxes', heading: 'Remission of Taxes in Cases of Natural Disasters', sub: 'What is a Property Tax Remission?', howTo: '',
+        paras: ['If your home or land is damaged by a natural disaster, you may be eligible for a property tax remission, which is a reduction or refund of your property taxes.', 'Property taxes are based on the assessed value of your property. Damage to your property may reduce its value and lower your real property taxes.', 'Please note: A remission is a tax adjustment, not an insurance payment. While it reduces the taxes you owe or have paid on land and buildings, it does not reimburse you for the cost of repairs or the loss of personal property (like furniture, equipment, or vehicles).', 'To apply for remission of property taxes, complete the online submission above or download and complete the form, then submit it to our office by mail or in person.'],
+        facts: [{ k: 'What it is', v: 'A reduction or refund of property taxes' }, { k: 'Covers', v: 'Land and buildings – not repairs or personal property' }],
+        docs: [doc('PDF', 'Remission of Tax Form M-8-4.2'), doc('WEB ↗', 'Emergency Proclamation'), doc('ROH', 'Revised Ordinances of Honolulu 8-4.2')] },
+      m3: { online: false, heading: 'Enterprise Zone – Real Property Tax Rebate', howTo: 'To apply, download the form, complete it, and submit to our office.',
+        paras: ['Property tax rebates may be available to owners of qualified businesses operating in designated enterprise zones if authorized by council resolution; claims must be filed in the following tax year and apply only to property the business owns and uses within the zone.'],
+        facts: [{ k: 'Who', v: 'Qualified businesses in designated enterprise zones' }, { k: 'File', v: 'In the following tax year' }],
+        docs: [doc('PDF', 'Form M-31.2'), doc('ROH', 'Revised Ordinances of Honolulu 31-2')] }
+    };
+    Object.keys(details).forEach((k) => { const d = details[k]; d.hasFacts = d.facts.length > 0; d.onlineLabel = d.onlineLabel || 'File Online'; d.links = d.links || []; d.noDesc = !!d.noDesc; d.choices = d.choices || []; d.hasChoices = d.choices.length > 0; d.sub = d.sub || ''; const fg = pageGroup[k]; d.onlineCard = !!d.online && (fg === 'ah' || fg === 'mf'); d.onlineBtn = !!d.online && !d.onlineCard; });
+
+    const v = S.view;
+    const isMain = v === 'main';
+    const isGroup = !!groups[v];
+    const isDetail = !!details[v];
+    const g = isGroup ? groups[v] : groups[pageGroup[v]];
+    let title = 'Programs and Information', crumb = '', kicker = 'Tax Relief & Forms';
+    if (isGroup) { title = g.label; crumb = ' › ' + g.label; }
+    else if (!isMain) { title = pageLabel[v]; crumb = ' › ' + g.label + ' › ' + pageLabel[v]; kicker = g.label; }
+    if (isDetail && g === groups.ex) title = details[v].heading || ('Exemption – ' + pageLabel[v]);
+    else if (isDetail && details[v].heading) title = details[v].heading;
+
+    const allForms = [
+      ['E-8-10.3', 'Home Exemption'], ['E-8-10.3A', 'Home Exemption Continuance – Relocation to Care Home or Facility'], ['E-8-10.3B', 'Home Exemption Continuance – Temporary Relocation'], ['E-8-10.3C', 'Home Exemption Reoccupation from Temporary Relocation'],
+      ['E-8-10.5', 'Homes of Totally Disabled Veterans Exemption **'], ['E-8-10.6 and 7', 'Hansen’s Disease, Hearing, Eyesight, Total Disability with State of Hawaii Form N-172 **'], ['E-8-10.9', 'Charitable (Nonprofit)'],
+      ['E-8-10.11', 'Lands in Urban Districts'], ['E-8-10.12', 'Renewable Energy'], ['E-8-10.14', 'Public Property – Setback Lines – Annual'], ['E-8-10.15', 'Off-Base Military Housing Projects on Federal Property'],
+      ['E-8-10.17', 'Low-Income Rental Housing – Initial Claim'], ['E-8-10.17A', 'Low-Income Rental Housing – Annual Certification'], ['E-8-10.21', 'Credit Union'], ['E-8-10.22', 'Slaughterhouse'], ['E-8-10.24', 'Public Service Company'],
+      ['E-8-10.28', 'Qualifying Agricultural Improvements on Vacant Agricultural Land'], ['E-8-10.29', 'Kuleana Land'], ['E-8-10.30', 'For-Profit Group Child Care Centers'],
+      ['E-8-10.A', 'Film Studio Facility Qualifying Construction'], ['E-8-10.B.INITIAL', 'Film Studio Facility Initial Claim'], ['E-8-10.B.ANNUAL', 'Film Studio Facility Annual Claim']
+    ];
+    const dedForms = [
+      ['D-8-7.3', 'For Agricultural Use – New Application'], ['D-8-7.3A', 'For Agricultural Use – Annual Report'], ['D-8-7.3B', 'For Vacant Agricultural Land for a 10-Year Period'],
+      ['D-8-7.3C', 'For Government-Owned Land as a Vacant Agricultural Land for a 24-Month Period'], ['D-8-7.5', 'For Residential Use'],
+      ['D-8-7.6', 'For Low-Income Rental Housing – Related to Residential A Classification'], ['D-8-7.6A', 'For Low-Income Rental Housing Annual – Related to Residential A Classification'],
+      ['E-8-10.19', 'For Historic Residential Property'], ['—', 'Historic Residential Plaque Specifications and Rules'],
+      ['E-8-10.27', 'For Historic Commercial Property'], ['—', 'Historic Commercial Property Maintenance Agreement'], ['—', 'Short Form for Historic Commercial Property Maintenance Agreement']
+    ];
+    const formSet = S.view === 'd4' ? dedForms : allForms;
+    const fq = (S.formQ || '').trim().toLowerCase();
+    const shownForms = fq ? formSet.filter((f) => (f[0] + ' ' + f[1]).toLowerCase().includes(fq)) : formSet;
+    const empty = { onlineBtn: false, onlineCard: false, online: false, onlineLabel: '', links: [], noDesc: false, choices: [], hasChoices: false, sub: '', learn: false, howTo: '', paras: [], facts: [], hasFacts: false, docs: [] };
+    return {
+      menu: menu,
+      showSummary: this.props.summaryBox ?? true,
+      mainCurrent: S.view === 'main' ? 'page' : 'false',
+      menuHeadStyle: 'width: 100%; text-align: left; font: inherit; cursor: pointer; border: none; min-height: 44px; padding: 12px 16px; font-size: 15px; font-weight: 800; color: #ffffff; background: ' + (S.view === 'main' ? '#0b3b5c' : '#2c4a7a') + '; text-decoration: underline; text-underline-offset: 3px;',
+      rohOpen: !!S.roh && isDetail, rohTitle: S.roh || '', closeRoh: () => this.setState({ roh: null }),
+      title: title, crumb: crumb, kicker: kicker,
+      goXf: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'xf', open: 'ex', formQ: '' }); },
+      goD4: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'd4', open: 'de', formQ: '' }); },
+      goMain: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'main', open: null, roh: null }); },
+      isMain: isMain, isGroup: isGroup, isDetail: isDetail, isTodo: !isMain && !isGroup && !isDetail && v !== 'xf' && v !== 'xq' && v !== 'a1' && v !== 'd4', isForms: v === 'xf' || v === 'd4', isXf: v === 'xf',
+      formIntro: v === 'd4' ? 'All dedication forms in one place, including the historic property forms. Type a form number or a word (e.g. “agricultural”, “annual”, “historic”) to filter the list.' : 'All exemption claim forms in one place. Type a form number or a word (e.g. “veteran”, “annual”) to filter the list.', isFaqLink: v === 'xq' || v === 'a1', faqItem: v === 'a1' ? 'Affordable Rental Housing FAQ' : 'Exemption FAQ', faqSection: v === 'a1' ? 'Affordable Rental Housing Project' : 'Home Exemption', faqToday: v === 'a1' ? '' : ' (same as today’s /help-resources/faq/#exemptions)',
+      formQ: S.formQ || '', setFormQ: (e) => this.setState({ formQ: e.target.value }),
+      formTotal: formSet.length, formCount: shownForms.length, noForms: shownForms.length === 0,
+      formGroups: (() => {
+        const row = (f, i) => ({ no: f[0], desc: f[1], rowStyle: 'border-bottom: 1px solid #d9d9d9; background: ' + (i % 2 ? '#f5f8fb' : '#ffffff') + ';' });
+        if ((this.props.exemptionForms ?? 'Two tables (groups)') === 'One table' && S.view !== 'd4') return [{ head: 'All exemption forms', sub: '', show: shownForms.length > 0, rows: shownForms.map(row) }];
+        if (S.view === 'd4') return [{ head: 'Dedication forms', sub: '', show: shownForms.length > 0, rows: shownForms.map(row) }];
+        const isG1 = (f) => /^E-8-10\.(2|3|4|5|6|7)\b|^E-8-10\.(3[ABC])$|^E-8-10\.6 and 7$/.test(f[0]);
+        const g1 = shownForms.filter(isG1), g2 = shownForms.filter((f) => !isG1(f));
+        return [
+          { head: 'Group 1 – Individuals (ROH 8-10.2 to 8-10.7)', sub: 'Home exemption, totally disabled veterans, blind / impaired sight or hearing, totally disabled, Hansen’s disease', show: g1.length > 0, rows: g1.map(row) },
+          { head: 'Group 2 – All other exemptions', sub: 'Organizations, businesses, land and special programs', show: g2.length > 0, rows: g2.map(row) }
+        ];
+      })(),
+      quick: [{ label: 'File for a Home Exemption', go: go('home') }, { label: 'Change Mailing Address / Status', go: go('m1') }, { label: 'All Exemption Forms', go: go('xf') }],
+      groupCards: Object.keys(groups).map((k) => {
+        const n = groups[k].sections.reduce((a, s) => a + s.items.length, 0);
+        return { label: groups[k].label, short: groups[k].short, desc: groups[k].desc, count: n + ' pages', go: go(k) };
+      }),
+      groupDesc: isGroup ? (g.purpose || g.desc) : '', groupHead: isGroup ? (g.head || '') : '', groupExtra: isGroup ? (g.extra || '') : '', groupLaws: isGroup ? (g.laws || []).map(roh) : [], groupDisclaimer: isGroup ? (g.disclaimer || '') : '', groupCallout: isGroup ? (g.callout || '') : '',
+      groupSections: isGroup ? g.sections.map((s) => ({ heading: s.heading, items: s.items.map(([id, label, form]) => ({ label: label, form: form ? (form[0] === '→' ? form : 'Form ' + form) : '', go: go(id) })) })) : [],
+      d: isDetail ? details[v] : empty
+    };
+  }
+}
+rpadMount(Component, {"summaryBox": true, "exemptionMenu": "Sub-lists", "exemptionForms": "Two tables (groups)"}, {"summaryBox": {"editor": "boolean", "default": true, "section": "Options to compare"}, "exemptionMenu": {"editor": "enum", "options": ["Sub-lists", "One list"], "default": "Sub-lists", "section": "Options to compare"}, "exemptionForms": {"editor": "enum", "options": ["Two tables (groups)", "One table"], "default": "Two tables (groups)", "section": "Options to compare"}});
+</script>
+</body>
+</html>
