@@ -65,8 +65,48 @@
     if (el.__value !== undefined) el.value = el.__value;
     out.appendChild(el);
   }
-  function renderChildren(node, scope, out) {
-    for (var c = node.firstChild; c; c = c.nextSibling) render(c, scope, out);
+  function parseAttrs(str) {
+    var o = {}, re = /([\w-]+)="([^"]*)"/g, m;
+    while ((m = re.exec(str))) o[m[1]] = m[2];
+    return o;
+  }
+  var OPEN = /^\s*sc-(for|if)\b([\s\S]*)$/, CLOSE = /^\s*\/sc-(for|if)\s*$/;
+  function renderChildren(node, scope, out) { renderRange(node.firstChild, null, scope, out); }
+  function renderRange(start, end, scope, out) {
+    var c = start;
+    while (c && c !== end) {
+      if (c.nodeType === 8) { // comment: <!--sc-for list="…" as="…"--> … <!--/sc-for-->
+        var m = c.nodeValue.match(OPEN);
+        if (m && !CLOSE.test(c.nodeValue)) {
+          var kind = m[1], attrs = parseAttrs(m[2]);
+          var depth = 1, e = c.nextSibling;
+          while (e) {
+            if (e.nodeType === 8) {
+              if (CLOSE.test(e.nodeValue)) { depth--; if (depth === 0) break; }
+              else if (OPEN.test(e.nodeValue)) depth++;
+            }
+            e = e.nextSibling;
+          }
+          var bodyStart = c.nextSibling;
+          if (kind === 'if') {
+            if (interp(attrs.value || '', scope)) renderRange(bodyStart, e, scope, out);
+          } else {
+            var list = interp(attrs.list || '', scope) || [];
+            var as = attrs.as || 'item';
+            for (var i = 0; i < list.length; i++) {
+              var s = Object.create(scope);
+              s[as] = list[i]; s.$index = i;
+              renderRange(bodyStart, e, s, out);
+            }
+          }
+          c = e ? e.nextSibling : null;
+          continue;
+        }
+        c = c.nextSibling; continue;
+      }
+      render(c, scope, out);
+      c = c.nextSibling;
+    }
   }
 
   window.DCLogic = function (props) { this.props = props || {}; this.state = {}; };

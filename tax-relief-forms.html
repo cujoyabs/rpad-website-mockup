@@ -63,9 +63,9 @@ body{padding-bottom:40px}
 <aside style="flex: 1 1 220px; max-width: 280px; display: flex; flex-direction: column; gap: 18px">
 <nav aria-label="Tax Relief and Forms pages" style="border: 1px solid #d6d6d6; display: flex; flex-direction: column">
 <button type="button" onClick="{{goMain}}" aria-current="{{mainCurrent}}" style="{{menuHeadStyle}}">Tax Relief &amp; Forms</button>
-<sc-for list="{{menu}}" as="m" hint-placeholder-count="10">
+<!--sc-for list="{{menu}}" as="m" hint-placeholder-count="10"-->
 <button type="button" onClick="{{m.go}}" aria-expanded="{{m.expanded}}" style="{{m.style}}">{{m.label}}</button>
-</sc-for>
+<!--/sc-for-->
 </nav>
 <div style="background: #f2f2f2; padding: 16px">
 <div style="font-size: 15px; font-weight: 800; margin-bottom: 10px">Key dates</div>
@@ -90,9 +90,9 @@ body{padding-bottom:40px}
 <h1 style="font-size: 30px; font-weight: 800; color: #0b3b5c; margin: 4px 0 16px">{{title}}</h1>
 
 <!-- LANDING -->
-<sc-if value="{{isMain}}" hint-placeholder-val="{{ true }}">
+<!--sc-if value="{{isMain}}" hint-placeholder-val="{{ true }}"-->
 <p style="font-size: 16px; line-height: 1.7; margin: 0 0 14px; max-width: 760px"><strong>Tax relief programs</strong> offer a reduction in property taxes due to various qualified exemptions and dedications. Choose a program type below.</p>
-<sc-if value="{{showSummary}}" hint-placeholder-val="{{ true }}">
+<!--sc-if value="{{showSummary}}" hint-placeholder-val="{{ true }}"-->
 <div style="background: #f2f2f2; padding: 16px 20px; margin: 0 0 26px; max-width: 760px">
 <div style="font-size: 15px; font-weight: 800; color: #0b3b5c; margin-bottom: 8px">Summary</div>
 <ul style="margin: 0; padding-left: 20px; font-size: 15px; line-height: 1.7">
@@ -101,98 +101,98 @@ body{padding-bottom:40px}
 <li><strong>Affordable Housing</strong> and <strong>Miscellaneous Forms</strong> cover rental housing projects, address/status changes, disaster remission and Enterprise Zones.</li>
 </ul>
 </div>
-</sc-if>
+<!--/sc-if-->
 
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px">
-<sc-for list="{{groupCards}}" as="g" hint-placeholder-count="4">
+<!--sc-for list="{{groupCards}}" as="g" hint-placeholder-count="4"-->
 <button type="button" class="tr-card" onClick="{{g.go}}" style="text-align: left; font: inherit; color: #1c1c1c; background: #ffffff; border: 1px solid #d5dde8; border-top: 5px solid #2c4a7a; padding: 20px; cursor: pointer; display: flex; flex-direction: column; gap: 8px">
 <span style="font-size: 19px; font-weight: 800; color: #0b3b5c">{{g.label}}</span>
 <span style="font-size: 14px; line-height: 1.6">{{g.desc}}</span>
 <span style="font-size: 13px; color: #555555">{{g.count}}</span>
 <span style="font-size: 14px; font-weight: 700; color: #1f4f8a; margin-top: 4px">See {{g.short}} »</span>
 </button>
-</sc-for>
+<!--/sc-for-->
 </div>
 
 <div style="margin-top: 30px; padding: 16px 20px; border-left: 4px solid #2c4a7a; background: #eef3f9; font-size: 15px; line-height: 1.6; max-width: 760px">
 <strong>Deadline:</strong> Home exemption claims submitted by <strong>September 30</strong> and approved take effect in the following tax year. [Add other key deadlines – e.g., dedication petitions – confirm dates.]
 </div>
-</sc-if>
+<!--/sc-if-->
 
 <!-- GROUP OVERVIEW -->
-<sc-if value="{{isGroup}}" hint-placeholder-val="{{ false }}">
-<sc-if value="{{groupHead}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isGroup}}" hint-placeholder-val="{{ false }}"-->
+<!--sc-if value="{{groupHead}}" hint-placeholder-val="{{ false }}"-->
 <h2 style="font-size: 18px; font-weight: 800; color: #2c4a7a; margin: 0 0 8px">{{groupHead}}</h2>
-</sc-if>
+<!--/sc-if-->
 <p style="font-size: 16px; line-height: 1.7; margin: 0 0 12px; max-width: 760px">{{groupDesc}}</p>
-<sc-if value="{{groupExtra}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{groupExtra}}" hint-placeholder-val="{{ false }}"-->
 <p style="font-size: 16px; line-height: 1.7; margin: 0 0 12px; max-width: 760px">{{groupExtra}}</p>
-</sc-if>
+<!--/sc-if-->
 <div style="display: flex; flex-wrap: wrap; gap: 8px 20px; margin: 0 0 22px">
-<sc-for list="{{groupLaws}}" as="gl" hint-placeholder-count="0">
+<!--sc-for list="{{groupLaws}}" as="gl" hint-placeholder-count="0"-->
 <a href="#" style="display: inline-flex; gap: 8px; align-items: center; font-size: 14px; font-weight: 700; text-decoration: none"><span style="font-size: 10px; font-weight: 800; padding: 3px 5px; color: #ffffff; background: #2c4a7a">ROH</span>{{gl}}</a>
-</sc-for>
+<!--/sc-for-->
 </div>
-<sc-for list="{{groupSections}}" as="s" hint-placeholder-count="2">
+<!--sc-for list="{{groupSections}}" as="s" hint-placeholder-count="2"-->
 <section style="margin-bottom: 26px">
-<sc-if value="{{s.heading}}" hint-placeholder-val="{{ true }}">
+<!--sc-if value="{{s.heading}}" hint-placeholder-val="{{ true }}"-->
 <h2 style="font-size: 18px; font-weight: 800; color: #2c4a7a; margin: 0 0 6px">{{s.heading}}</h2>
-</sc-if>
+<!--/sc-if-->
 <div style="border-top: 1px solid #d9d9d9">
-<sc-for list="{{s.items}}" as="it" hint-placeholder-count="4">
+<!--sc-for list="{{s.items}}" as="it" hint-placeholder-count="4"-->
 <button type="button" class="tr-row" onClick="{{it.go}}" style="width: 100%; text-align: left; font: inherit; background: none; border: none; border-bottom: 1px solid #d9d9d9; padding: 12px 6px; min-height: 48px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px">
 <span style="font-size: 15px; font-weight: 700; color: #1f4f8a">{{it.label}}</span>
 <span style="flex: none; font-size: 13px; color: #555555">{{it.form}}  ›</span>
 </button>
-</sc-for>
+<!--/sc-for-->
 </div>
 </section>
-</sc-for>
-<sc-if value="{{groupCallout}}" hint-placeholder-val="{{ false }}">
+<!--/sc-for-->
+<!--sc-if value="{{groupCallout}}" hint-placeholder-val="{{ false }}"-->
 <div style="border-left: 4px solid #2c4a7a; background: #eef3f9; padding: 16px 20px; margin-top: 8px; max-width: 760px; font-size: 15px; line-height: 1.6">
 <strong>{{groupCallout}}</strong><br><a href="#" style="font-weight: 700">Go to DPP Affordable Housing ↗</a> <span style="font-size: 13px; color: #555555">(honolulu.gov/dpp/planning/affordable-housing)</span>
 </div>
-</sc-if>
-<sc-if value="{{groupDisclaimer}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--sc-if value="{{groupDisclaimer}}" hint-placeholder-val="{{ false }}"-->
 <div style="background: #f6ecdf; border: 1px solid #e6d4bd; padding: 16px 20px; margin-top: 8px; max-width: 760px">
 <div style="font-size: 14px; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 6px">LEGAL DISCLAIMER</div>
 <p style="margin: 0; font-size: 14px; line-height: 1.6">{{groupDisclaimer}}</p>
 </div>
-</sc-if>
-</sc-if>
+<!--/sc-if-->
+<!--/sc-if-->
 
 <!-- DETAIL PAGE -->
-<sc-if value="{{isDetail}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isDetail}}" hint-placeholder-val="{{ false }}"-->
 <div style="display: flex; flex-wrap: wrap; gap: 28px; align-items: flex-start">
 <div style="flex: 999 1 420px; min-width: 0">
-<sc-if value="{{d.onlineBtn}}" hint-placeholder-val="{{ true }}">
+<!--sc-if value="{{d.onlineBtn}}" hint-placeholder-val="{{ true }}"-->
 <a href="#" style="display: inline-block; font-size: 15px; font-weight: 700; background: #2c4a7a; color: #ffffff; text-decoration: none; padding: 13px 22px; margin-bottom: 20px">{{d.onlineLabel}} »</a>
-</sc-if>
-<sc-if value="{{d.onlineCard}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--sc-if value="{{d.onlineCard}}" hint-placeholder-val="{{ false }}"-->
 <a href="#" class="tr-card" style="display: flex; flex-direction: column; gap: 6px; max-width: 320px; text-decoration: none; color: #1c1c1c; border: 1px solid #d5dde8; border-top: 5px solid #2c4a7a; padding: 14px 16px; margin-bottom: 20px">
 <span style="font-size: 12px; font-weight: 800; letter-spacing: 0.5px; color: #555555">ONLINE FORM</span>
 <span style="font-size: 16px; font-weight: 800; color: #0b3b5c">{{d.onlineLabel}}</span>
 <span style="font-size: 13px; font-weight: 700; color: #1f4f8a">File online »</span>
 </a>
-</sc-if>
-<sc-for list="{{d.links}}" as="lk" hint-placeholder-count="1">
-<p style="margin: 0 0 14px"><a href="#" style="display: inline-flex; gap: 8px; align-items: center; font-size: 15px; font-weight: 700"><sc-if value="{{lk.hasTag}}" hint-placeholder-val="{{ true }}"><span style="{{lk.tagStyle}}">{{lk.tag}}</span></sc-if>{{lk.t}}</a></p>
-</sc-for>
-<sc-if value="{{d.noDesc}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--sc-for list="{{d.links}}" as="lk" hint-placeholder-count="1"-->
+<p style="margin: 0 0 14px"><a href="#" style="display: inline-flex; gap: 8px; align-items: center; font-size: 15px; font-weight: 700"><!--sc-if value="{{lk.hasTag}}" hint-placeholder-val="{{ true }}"--><span style="{{lk.tagStyle}}">{{lk.tag}}</span><!--/sc-if-->{{lk.t}}</a></p>
+<!--/sc-for-->
+<!--sc-if value="{{d.noDesc}}" hint-placeholder-val="{{ false }}"-->
 <div style="border: 2px dashed #b8c6d9; background: #f7f9fc; padding: 14px 16px; font-size: 14px; line-height: 1.6; margin-bottom: 14px">[No description on the current page – suggest adding 1–2 sentences on who qualifies and what the dedication does (e.g., from the brochure).]</div>
-</sc-if>
-<sc-if value="{{d.hasChoices}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--sc-if value="{{d.hasChoices}}" hint-placeholder-val="{{ false }}"-->
 <div style="font-size: 15px; font-weight: 800; color: #0b3b5c; margin: 0 0 10px">What do you need to change? File online:</div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-bottom: 20px">
-<sc-for list="{{d.choices}}" as="ch" hint-placeholder-count="3">
+<!--sc-for list="{{d.choices}}" as="ch" hint-placeholder-count="3"-->
 <a href="#" class="tr-card" style="display: flex; flex-direction: column; gap: 6px; text-decoration: none; color: #1c1c1c; border: 1px solid #d5dde8; border-top: 5px solid #2c4a7a; padding: 14px 16px">
 <span style="font-size: 16px; font-weight: 800; color: #0b3b5c">{{ch.t}}</span>
 <span style="font-size: 13px; font-weight: 700; color: #1f4f8a; margin-top: auto">File online »</span>
 </a>
-</sc-for>
+<!--/sc-for-->
 </div>
-</sc-if>
-<sc-if value="{{rohOpen}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--sc-if value="{{rohOpen}}" hint-placeholder-val="{{ false }}"-->
 <section aria-label="Ordinance text" style="border: 1px solid #b8c6d9; border-top: 5px solid #2c4a7a; background: #ffffff; margin: 0 0 22px">
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; background: #eef3f9; padding: 12px 16px">
 <div><span style="font-size: 10px; font-weight: 800; padding: 3px 5px; color: #ffffff; background: #2c4a7a">ROH</span> <strong style="font-size: 15px; color: #0b3b5c">{{rohTitle}}</strong></div>
@@ -204,46 +204,46 @@ body{padding-bottom:40px}
 </div>
 <div style="padding: 10px 16px; border-top: 1px solid #e3e3e3; font-size: 13px"><a href="#">Open the full Revised Ordinances of Honolulu ↗</a></div>
 </section>
-</sc-if>
-<sc-if value="{{d.sub}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--sc-if value="{{d.sub}}" hint-placeholder-val="{{ false }}"-->
 <h2 style="font-size: 18px; font-weight: 800; color: #2c4a7a; margin: 0 0 8px">{{d.sub}}</h2>
-</sc-if>
-<sc-for list="{{d.paras}}" as="p" hint-placeholder-count="3">
+<!--/sc-if-->
+<!--sc-for list="{{d.paras}}" as="p" hint-placeholder-count="3"-->
 <p style="font-size: 15px; line-height: 1.7; margin: 0 0 12px">{{p}}</p>
-</sc-for>
-<sc-if value="{{d.howTo}}" hint-placeholder-val="{{ true }}">
+<!--/sc-for-->
+<!--sc-if value="{{d.howTo}}" hint-placeholder-val="{{ true }}"-->
 <p style="font-size: 15px; line-height: 1.7; margin: 14px 0 0; font-weight: 700">{{d.howTo}}</p>
-</sc-if>
-<sc-if value="{{d.learn}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--sc-if value="{{d.learn}}" hint-placeholder-val="{{ false }}"-->
 <p style="font-size: 15px; margin: 14px 0 0"><a href="help-resources.html" style="font-weight: 700">Learn more about home exemptions (FAQ) »</a></p>
-</sc-if>
+<!--/sc-if-->
 </div>
 
 <aside style="flex: 1 1 260px; max-width: 320px; display: flex; flex-direction: column; gap: 18px">
-<sc-if value="{{d.hasFacts}}" hint-placeholder-val="{{ true }}">
+<!--sc-if value="{{d.hasFacts}}" hint-placeholder-val="{{ true }}"-->
 <div style="background: #eef3f9; border-top: 4px solid #2c4a7a; padding: 16px 18px">
 <div style="font-size: 13px; font-weight: 800; letter-spacing: 0.5px; color: #0b3b5c; margin-bottom: 8px">AT A GLANCE</div>
-<sc-for list="{{d.facts}}" as="f" hint-placeholder-count="3">
+<!--sc-for list="{{d.facts}}" as="f" hint-placeholder-count="3"-->
 <div style="padding: 7px 0; border-bottom: 1px solid #d5dde8"><div style="font-size: 12px; color: #555555">{{f.k}}</div><div style="font-size: 15px; font-weight: 700">{{f.v}}</div></div>
-</sc-for>
+<!--/sc-for-->
 </div>
-</sc-if>
+<!--/sc-if-->
 <div style="border: 1px solid #d5dde8; padding: 16px 18px">
 <div style="font-size: 13px; font-weight: 800; letter-spacing: 0.5px; color: #0b3b5c; margin-bottom: 6px">FORMS &amp; DOCUMENTS</div>
-<sc-for list="{{d.docs}}" as="doc" hint-placeholder-count="3">
+<!--sc-for list="{{d.docs}}" as="doc" hint-placeholder-count="3"-->
 <a href="#" onClick="{{doc.open}}" style="display: flex; gap: 10px; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid #ececec; text-decoration: none; color: #1c1c1c">
 <span style="{{doc.tagStyle}}">{{doc.tag}}</span>
 <span style="font-size: 14px; font-weight: 600; line-height: 1.4">{{doc.label}}</span>
 </a>
-</sc-for>
+<!--/sc-for-->
 <div style="font-size: 11px; color: #555555; margin-top: 10px; line-height: 1.6">PDF = opens a PDF · ROH = City ordinance · WEB ↗ = another website</div>
 </div>
 </aside>
 </div>
-</sc-if>
+<!--/sc-if-->
 
 <!-- EXEMPTION FORMS: searchable table -->
-<sc-if value="{{isForms}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isForms}}" hint-placeholder-val="{{ false }}"-->
 <p style="font-size: 15px; line-height: 1.6; margin: 0 0 16px; max-width: 760px">{{formIntro}}</p>
 <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px">
 <label style="display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700">Search
@@ -251,8 +251,8 @@ body{padding-bottom:40px}
 </label>
 <div style="font-size: 13px; color: #555555">Showing {{formCount}} of {{formTotal}} forms</div>
 </div>
-<sc-for list="{{formGroups}}" as="fg" hint-placeholder-count="2">
-<sc-if value="{{fg.show}}" hint-placeholder-val="{{ true }}">
+<!--sc-for list="{{formGroups}}" as="fg" hint-placeholder-count="2"-->
+<!--sc-if value="{{fg.show}}" hint-placeholder-val="{{ true }}"-->
 <h2 style="font-size: 18px; font-weight: 800; color: #2c4a7a; margin: 18px 0 4px">{{fg.head}}</h2>
 <div style="font-size: 13px; color: #555555; margin: 0 0 8px">{{fg.sub}}</div>
 <div style="overflow-x: auto">
@@ -263,41 +263,41 @@ body{padding-bottom:40px}
 <th scope="col" style="padding: 10px 12px; width: 110px">Download</th>
 </tr></thead>
 <tbody>
-<sc-for list="{{fg.rows}}" as="f" hint-placeholder-count="6">
+<!--sc-for list="{{fg.rows}}" as="f" hint-placeholder-count="6"-->
 <tr style="{{f.rowStyle}}">
 <td style="padding: 10px 12px; font-weight: 700; white-space: nowrap">{{f.no}}</td>
 <td style="padding: 10px 12px; line-height: 1.45">{{f.desc}}</td>
 <td style="padding: 10px 12px"><a href="#" style="display: inline-flex; gap: 6px; align-items: center; font-weight: 700; text-decoration: none"><span style="font-size: 10px; font-weight: 800; padding: 2px 5px; color: #2c4a7a; background: #ffffff; border: 1px solid #2c4a7a">PDF</span>Download</a></td>
 </tr>
-</sc-for>
+<!--/sc-for-->
 </tbody>
 </table>
 </div>
-</sc-if>
-</sc-for>
-<sc-if value="{{noForms}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--/sc-for-->
+<!--sc-if value="{{noForms}}" hint-placeholder-val="{{ false }}"-->
 <p style="font-size: 15px; padding: 14px 4px; margin: 0">No forms match “{{formQ}}”.</p>
-</sc-if>
-<sc-if value="{{isXf}}" hint-placeholder-val="{{ true }}">
+<!--/sc-if-->
+<!--sc-if value="{{isXf}}" hint-placeholder-val="{{ true }}"-->
 <p style="font-size: 13px; color: #555555; margin: 14px 0 0">** [Footnote – the current page marks two forms with ** but doesn’t say what it means. Add the explanation or remove the marks.]</p>
-</sc-if>
-</sc-if>
+<!--/sc-if-->
+<!--/sc-if-->
 
 <!-- EXEMPTION FAQ = link to FAQ anchor -->
-<sc-if value="{{isFaqLink}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isFaqLink}}" hint-placeholder-val="{{ false }}"-->
 <div style="border: 1px solid #d5dde8; border-left: 5px solid #2c4a7a; background: #eef3f9; padding: 20px 22px; max-width: 760px">
 <div style="font-size: 13px; font-weight: 800; letter-spacing: 0.5px; color: #0b3b5c; margin-bottom: 6px">THIS MENU ITEM IS A LINK, NOT A PAGE</div>
 <p style="font-size: 15px; line-height: 1.7; margin: 0 0 14px">On the live site, clicking <strong>{{faqItem}}</strong> jumps straight to <strong>Help &amp; Resources › FAQ</strong>, scrolled to the <strong>{{faqSection}}</strong> section{{faqToday}}. The answers live in one place, the FAQ, so they never have to be updated twice.</p>
 <a href="help-resources.html" style="display: inline-block; font-size: 15px; font-weight: 700; background: #2c4a7a; color: #ffffff; text-decoration: none; padding: 12px 20px">Go to FAQ – {{faqSection}} section »</a>
 </div>
-</sc-if>
+<!--/sc-if-->
 
 <!-- NOT MOCKED YET -->
-<sc-if value="{{isTodo}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isTodo}}" hint-placeholder-val="{{ false }}"-->
 <div style="border: 2px dashed #b8c6d9; background: #f7f9fc; padding: 22px; font-size: 15px; line-height: 1.7; max-width: 760px">
 Same layout as <strong>Home Exemption</strong>: File Online button (if available) → description from the current page → “At a glance” box and Forms &amp; Documents list on the right. Content would carry over from <em>realproperty.honolulu.gov</em>.
 </div>
-</sc-if>
+<!--/sc-if-->
 
 </main>
 </div>

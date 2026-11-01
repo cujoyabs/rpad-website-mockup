@@ -78,9 +78,9 @@ body{padding-bottom:40px}
 <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; background: #f2f2f2; padding: 16px 20px; margin-bottom: 28px">
 <label for="year" style="font-size: 16px; font-weight: 700">Tax year</label>
 <select id="year" value="{{year}}" onChange="{{pickYear}}" style="font-family: inherit; font-size: 16px; padding: 10px 14px; min-height: 44px; border: 1px solid #999999; background: #ffffff; min-width: 180px">
-<sc-for list="{{years}}" as="y" hint-placeholder-count="5">
+<!--sc-for list="{{years}}" as="y" hint-placeholder-count="5"-->
 <option value="{{y}}">{{y}}</option>
-</sc-for>
+<!--/sc-for-->
 </select>
 <span style="font-size: 14px; color: #555555">Reports available back to 1981-82</span>
 </div>
@@ -88,23 +88,23 @@ body{padding-bottom:40px}
 <div style="display: flex; flex-wrap: wrap; gap: 28px">
 <section style="flex: 1 1 400px">
 <h2 style="font-size: 20px; font-weight: 800; margin: 0 0 12px; padding-bottom: 8px; border-bottom: 3px solid #2c4a7a">{{year}} Statewide Reports</h2>
-<sc-for list="{{statewide}}" as="r" hint-placeholder-count="4">
+<!--sc-for list="{{statewide}}" as="r" hint-placeholder-count="4"-->
 <a href="docushare-example.html" style="display: flex; align-items: center; gap: 12px; padding: 14px 4px; border-bottom: 1px solid #dddddd; text-decoration: none; color: #1c1c1c">
 <span style="flex: none; background: #b3261e; color: #ffffff; font-size: 11px; font-weight: 800; padding: 4px 6px">PDF</span>
 <span style="font-size: 16px; font-weight: 600; color: #1f5a9a; text-decoration: underline">{{r}}</span>
 <span style="margin-left: auto; flex: none; font-size: 12px; color: #555555">opens in DocuShare ↗</span>
 </a>
-</sc-for>
+<!--/sc-for-->
 </section>
 <section style="flex: 1 1 400px">
 <h2 style="font-size: 20px; font-weight: 800; margin: 0 0 12px; padding-bottom: 8px; border-bottom: 3px solid #42619d">{{year}} County Reports</h2>
-<sc-for list="{{county}}" as="r" hint-placeholder-count="4">
+<!--sc-for list="{{county}}" as="r" hint-placeholder-count="4"-->
 <a href="docushare-example.html" style="display: flex; align-items: center; gap: 12px; padding: 14px 4px; border-bottom: 1px solid #dddddd; text-decoration: none; color: #1c1c1c">
 <span style="flex: none; background: #b3261e; color: #ffffff; font-size: 11px; font-weight: 800; padding: 4px 6px">PDF</span>
 <span style="font-size: 16px; font-weight: 600; color: #1f5a9a; text-decoration: underline">{{r}}</span>
 <span style="margin-left: auto; flex: none; font-size: 12px; color: #555555">opens in DocuShare ↗</span>
 </a>
-</sc-for>
+<!--/sc-for-->
 </section>
 </div>
 

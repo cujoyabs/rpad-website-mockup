@@ -76,12 +76,12 @@ body{padding-bottom:40px}
 <section style="max-width: 1200px; margin: 0 auto; padding: 28px 24px 24px">
 <h2 style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Quick links</h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px">
-<sc-for list="{{tiles}}" as="t" hint-placeholder-count="4">
+<!--sc-for list="{{tiles}}" as="t" hint-placeholder-count="4"-->
 <a href="#" class="tile" style="background: {{t.bg}}; color: {{t.fg}}; text-decoration: none; padding: 24px 20px; display: flex; align-items: center; gap: 16px; transition: box-shadow .15s, transform .15s">
 <span aria-hidden="true" style="flex: none; width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,0.22); display: flex; align-items: center; justify-content: center; font-size: 24px">{{t.icon}}</span>
 <span><span style="display: block; font-size: 19px; font-weight: 800">{{t.title}}</span><span style="display: block; font-size: 13px; margin-top: 3px; color: {{t.sub}}">{{t.text}}</span></span>
 </a>
-</sc-for>
+<!--/sc-for-->
 </div>
 </section>
 
@@ -94,17 +94,17 @@ body{padding-bottom:40px}
 <div style="font-size: 30px; font-weight: 800; line-height: 1.2">{{slide.title}}</div>
 <div style="font-size: 16px; line-height: 1.6; max-width: 720px">{{slide.text}}</div>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 8px">
-<sc-for list="{{slide.buttons}}" as="b" hint-placeholder-count="1">
+<!--sc-for list="{{slide.buttons}}" as="b" hint-placeholder-count="1"-->
 <a href="#" style="background: {{b.bg}}; color: {{b.fg}}; border: 2px solid {{b.border}}; padding: 12px 18px; font-size: 13px; font-weight: 700; text-decoration: none; text-transform: uppercase; text-shadow: none; text-align: center">{{b.label}}</a>
-</sc-for>
+<!--/sc-for-->
 </div>
 </div>
 <button type="button" aria-label="Next slide" onClick="{{next}}" style="align-self: stretch; min-width: 52px; background: rgba(0,0,0,0.25); color: #ffffff; border: none; font-size: 28px; cursor: pointer">›</button>
 </div>
 <div style="display: flex; justify-content: center; gap: 8px; margin-top: 12px">
-<sc-for list="{{dots}}" as="dot" hint-placeholder-count="4">
+<!--sc-for list="{{dots}}" as="dot" hint-placeholder-count="4"-->
 <button type="button" aria-label="{{dot.label}}" onClick="{{dot.go}}" style="width: 14px; height: 14px; border-radius: 50%; border: 2px solid #2c4a7a; background: {{dot.fill}}; padding: 0; cursor: pointer"></button>
-</sc-for>
+<!--/sc-for-->
 </div>
 </div>
 </section>
@@ -114,50 +114,50 @@ body{padding-bottom:40px}
 <div style="max-width: 1200px; margin: 0 auto; padding: 40px 24px; display: flex; flex-wrap: wrap; gap: 36px">
 <div style="flex: 1 1 320px">
 <h2 style="font-size: 24px; font-weight: 800; color: #0b3b5c; margin: 0 0 16px">I want to…</h2>
-<sc-for list="{{wants}}" as="w" hint-placeholder-count="6">
+<!--sc-for list="{{wants}}" as="w" hint-placeholder-count="6"-->
 <a href="{{w.href}}" style="display: flex; justify-content: space-between; align-items: center; gap: 10px; padding: 11px 4px; border-bottom: 1px solid #c9d3e0; text-decoration: none; color: #0b3b5c"><span><span style="display: block; font-size: 16px; font-weight: 600">{{w.t}}</span><span style="display: block; font-size: 12px; color: #555555; margin-top: 2px">{{w.to}}</span></span><span aria-hidden="true">›</span></a>
-</sc-for>
+<!--/sc-for-->
 </div>
 <div style="flex: 1 1 440px">
 <h2 style="font-size: 24px; font-weight: 800; color: #0b3b5c; margin: 0 0 16px">Important Dates</h2>
 <div style="background: #0b3b5c; color: #ffffff; padding: 14px 18px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 14px">
 <span style="font-size: 15px; font-weight: 700">Appeal deadline – January 15</span>
-<span style="display: flex; gap: 8px"><sc-for list="{{countdown}}" as="c" hint-placeholder-count="4"><span style="background: #14527d; padding: 6px 10px; text-align: center; min-width: 46px"><span style="display: block; font-size: 20px; font-weight: 800">{{c.n}}</span><span style="font-size: 11px">{{c.label}}</span></span></sc-for></span>
+<span style="display: flex; gap: 8px"><!--sc-for list="{{countdown}}" as="c" hint-placeholder-count="4"--><span style="background: #14527d; padding: 6px 10px; text-align: center; min-width: 46px"><span style="display: block; font-size: 20px; font-weight: 800">{{c.n}}</span><span style="font-size: 11px">{{c.label}}</span></span><!--/sc-for--></span>
 </div>
-<sc-for list="{{deadlines}}" as="d" hint-placeholder-count="4">
+<!--sc-for list="{{deadlines}}" as="d" hint-placeholder-count="4"-->
 <div style="display: flex; gap: 14px; align-items: center; background: #ffffff; border: 1px solid #d5dde8; padding: 12px 14px; margin-bottom: 10px">
 <div style="flex: none; width: 58px; text-align: center; border-right: 1px solid #d5dde8; padding-right: 12px"><div style="font-size: 12px; font-weight: 800; color: #4a7d4a">{{d.mon}}</div><div style="font-size: 24px; font-weight: 800; color: #0b3b5c; line-height: 1.1">{{d.day}}</div></div>
 <div style="font-size: 15px; font-weight: 600">{{d.title}}</div>
 </div>
-</sc-for>
+<!--/sc-for-->
 <div style="font-size: 12px; color: #555555">Countdown shows only during appeal season (Dec 15 – Jan 15) · example numbers</div>
 </div>
 </div>
 </section>
 
-<sc-if value="{{showNews}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{showNews}}" hint-placeholder-val="{{ false }}"-->
 <section id="whats-new" style="max-width: 1200px; margin: 0 auto; padding: 40px 24px 8px">
 <div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 10px; margin-bottom: 16px">
 <h2 style="font-size: 24px; font-weight: 800; color: #0b3b5c; margin: 0">{{newsLabel}}</h2>
 <a href="help-resources.html" style="font-size: 14px; font-weight: 700">View all news »</a>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 18px">
-<sc-for list="{{news}}" as="n" hint-placeholder-count="2">
+<!--sc-for list="{{news}}" as="n" hint-placeholder-count="2"-->
 <a href="{{n.href}}" style="display: flex; gap: 16px; align-items: center; border: 1px solid #d5dde8; padding: 14px; text-decoration: none; color: #1c1c1c">
-<sc-if value="{{n.hasImg}}" hint-placeholder-val="{{ true }}"><img src="img/93d27d61112bdee1e8469a3c7f90ea0e.png" alt="Title slide: {{n.title}}" style="flex: none; width: 150px; height: 101px; object-fit: contain; border: 1px solid #e3e3e3; background: #ffffff"></sc-if>
-<sc-if value="{{n.noImg}}" hint-placeholder-val="{{ false }}"><div style="flex: none; width: 150px; height: 101px; background: #f2f2f2; border: 1px dashed #b8c6d9; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #555555; text-align: center">[Title slide]</div></sc-if>
+<!--sc-if value="{{n.hasImg}}" hint-placeholder-val="{{ true }}"--><img src="img/93d27d61112bdee1e8469a3c7f90ea0e.png" alt="Title slide: {{n.title}}" style="flex: none; width: 150px; height: 101px; object-fit: contain; border: 1px solid #e3e3e3; background: #ffffff"><!--/sc-if-->
+<!--sc-if value="{{n.noImg}}" hint-placeholder-val="{{ false }}"--><div style="flex: none; width: 150px; height: 101px; background: #f2f2f2; border: 1px dashed #b8c6d9; display: flex; align-items: center; justify-content: center; font-size: 11px; color: #555555; text-align: center">[Title slide]</div><!--/sc-if-->
 <div><div style="font-size: 12px; font-weight: 700; color: #2c4a7a">{{n.date}} · {{n.kind}}</div><div style="font-size: 16px; font-weight: 800; color: #0b3b5c; margin-top: 4px">{{n.title}}</div><div style="font-size: 13px; margin-top: 4px">{{n.text}}</div><div style="font-size: 13px; font-weight: 700; color: #1f4f8a; margin-top: 6px">{{n.cta}} »</div></div>
 </a>
-</sc-for>
+<!--/sc-for-->
 </div>
 </section>
-</sc-if>
+<!--/sc-if-->
 
 <section style="max-width: 1200px; margin: 0 auto; padding: 36px 24px">
 <h2 style="font-size: 22px; font-weight: 800; text-align: center; margin: 0 0 6px">Informational Videos</h2>
 <p style="text-align: center; font-size: 15px; margin: 0 0 20px">Short guides to how assessments, exemptions and appeals work.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 20px">
-<sc-for list="{{videos}}" as="v" hint-placeholder-count="3">
+<!--sc-for list="{{videos}}" as="v" hint-placeholder-count="3"-->
 <a href="#" style="flex: 1 1 300px; background: #f2f2f2; text-decoration: none; color: #1c1c1c; display: flex; flex-direction: column">
 <div style="aspect-ratio: 16 / 9; background: #1c1c1c; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px">
 <svg aria-hidden="true" width="56" height="40" viewBox="0 0 56 40"><rect width="56" height="40" rx="9" fill="#d32f2f"></rect><path d="M23 12l12 8-12 8z" fill="#ffffff"></path></svg>
@@ -165,7 +165,7 @@ body{padding-bottom:40px}
 </div>
 <div style="padding: 14px"><div style="font-size: 16px; font-weight: 800">{{v.title}}</div><div style="font-size: 13px; margin-top: 4px">{{v.desc}}</div></div>
 </a>
-</sc-for>
+<!--/sc-for-->
 </div>
 </section>
 
@@ -192,7 +192,7 @@ body{padding-bottom:40px}
 
 
 <div style="position: fixed; right: 20px; bottom: 20px; z-index: 50; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; font-family: Montserrat, Arial, sans-serif">
-<sc-if value="{{chatOpen}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{chatOpen}}" hint-placeholder-val="{{ false }}"-->
 <div role="dialog" aria-label="Ask RPAD chat" style="width: 320px; max-width: calc(100vw - 40px); background: #ffffff; border: 1px solid #c9d3e0; box-shadow: 0 8px 24px rgba(0,0,0,0.18); overflow: hidden">
 <div style="background: #0b3b5c; color: #ffffff; padding: 12px 14px; display: flex; justify-content: space-between; align-items: center"><span style="font-weight: 800">Ask RPAD</span><button type="button" aria-label="Close chat" onClick="{{toggleChat}}" style="background: none; border: none; color: #ffffff; font-size: 20px; cursor: pointer; min-width: 36px; min-height: 36px">×</button></div>
 <div style="padding: 14px; font-size: 14px; line-height: 1.5; background: #f4f6f9">
@@ -206,7 +206,7 @@ body{padding-bottom:40px}
 <div style="display: flex; border-top: 1px solid #dde3ea"><span style="flex: 1; padding: 12px; font-size: 13px; color: #767676">Type your question…</span><span style="padding: 12px 14px; background: #2c4a7a; color: #ffffff; font-weight: 700; font-size: 13px">Send</span></div>
 <div style="font-size: 11px; color: #555555; padding: 6px 12px 10px">[Mockup – our current chatbot (Revacomm) or a City option like CSD's "Ask CSD"; ask DIT]</div>
 </div>
-</sc-if>
+<!--/sc-if-->
 <button type="button" onClick="{{toggleChat}}" aria-expanded="{{chatExpanded}}" style="display: inline-flex; align-items: center; gap: 8px; background: #0b3b5c; color: #ffffff; border: 2px solid #ffffff; border-radius: 28px; padding: 12px 18px; min-height: 48px; font: inherit; font-size: 15px; font-weight: 800; cursor: pointer; box-shadow: 0 4px 14px rgba(0,0,0,0.28)"><svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H9l-5 4z"></path></svg>Ask RPAD</button>
 </div>
 </div>

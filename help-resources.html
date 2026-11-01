@@ -60,9 +60,9 @@ body{padding-bottom:40px}
 <aside style="flex: 1 1 220px; max-width: 280px; display: flex; flex-direction: column; gap: 18px">
 <nav aria-label="Help and Resources pages" style="border: 1px solid #d6d6d6; display: flex; flex-direction: column">
 <div style="background: #2c4a7a; color: #ffffff; padding: 12px 16px; font-size: 15px; font-weight: 800">Help &amp; Resources</div>
-<sc-for list="{{menu}}" as="m" hint-placeholder-count="12">
+<!--sc-for list="{{menu}}" as="m" hint-placeholder-count="12"-->
 <button type="button" onClick="{{m.go}}" style="{{m.style}}">{{m.label}}</button>
-</sc-for>
+<!--/sc-for-->
 </nav>
 <div style="background: #f2f2f2; padding: 16px">
 <div style="font-size: 15px; font-weight: 800; margin-bottom: 10px">Need help?</div>
@@ -81,63 +81,63 @@ body{padding-bottom:40px}
 <div style="font-size: 13px; color: #555555">Help &amp; Resources</div>
 <h1 style="font-size: 30px; font-weight: 800; color: #0b3b5c; margin: 4px 0 16px">{{title}}</h1>
 
-<sc-if value="{{isFaq}}" hint-placeholder-val="{{ true }}">
+<!--sc-if value="{{isFaq}}" hint-placeholder-val="{{ true }}"-->
 <div style="background: #f6ecdf; border: 1px solid #e6d4bd; padding: 16px 20px; margin-bottom: 22px">
 <div style="font-size: 14px; font-weight: 800; letter-spacing: 0.5px; margin-bottom: 6px">LEGAL DISCLAIMER</div>
 <p style="margin: 0; font-size: 14px; line-height: 1.6">The responses given within the FAQ's are not legal or professional advice. The Real Property Assessment Division (RPAD) provides general information regarding real property tax assessments. Any persons with specific inquiries regarding ownership, real property tax law and the appraisal process are urged to consult with an attorney or appropriate professional. Mahalo.</p>
 </div>
 <p style="font-size: 15px; line-height: 1.6; margin: 0 0 20px">Click a question to see the answer. Question wording below is from the current FAQ; answers would carry over as-is.</p>
-<sc-for list="{{faq}}" as="s" hint-placeholder-count="3">
+<!--sc-for list="{{faq}}" as="s" hint-placeholder-count="3"-->
 <section style="margin-bottom: 22px">
 <h2 style="font-size: 20px; font-weight: 800; color: #0b3b5c; margin: 0 0 8px">{{s.name}} <span style="font-size: 14px; color: #666666; font-weight: 600">({{s.count}} questions)</span></h2>
-<sc-for list="{{s.qs}}" as="q" hint-placeholder-count="3">
+<!--sc-for list="{{s.qs}}" as="q" hint-placeholder-count="3"-->
 <div>
 <button type="button" onClick="{{q.toggle}}" style="width: 100%; text-align: left; background: none; border: none; padding: 7px 2px; min-height: 40px; font: inherit; font-size: 15px; font-weight: 700; color: #1c1c1c; cursor: pointer; display: flex; justify-content: flex-start; align-items: baseline; gap: 10px"><span aria-hidden="true" style="flex: none; width: 16px; font-size: 13px; color: #0f6b74">{{q.icon}}</span><span style="flex: none; min-width: 24px; font-weight: 800; color: #1c1c1c">{{q.num}}.</span><span style="white-space: pre-line">{{q.text}}</span></button>
-<sc-if value="{{q.open}}" hint-placeholder-val="{{ false }}">
-<sc-if value="{{q.hasAns}}" hint-placeholder-val="{{ true }}">
+<!--sc-if value="{{q.open}}" hint-placeholder-val="{{ false }}"-->
+<!--sc-if value="{{q.hasAns}}" hint-placeholder-val="{{ true }}"-->
 <div style="margin: 0; padding: 0 2px 12px 60px; font-size: 14px; line-height: 1.7; color: #333333">
-<sc-for list="{{q.ans}}" as="ap" hint-placeholder-count="2">
+<!--sc-for list="{{q.ans}}" as="ap" hint-placeholder-count="2"-->
 <p style="margin: 0 0 8px; white-space: pre-line; overflow-wrap: anywhere">{{ap.text}}</p>
-</sc-for>
+<!--/sc-for-->
 </div>
-</sc-if>
-<sc-if value="{{q.noAns}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--sc-if value="{{q.noAns}}" hint-placeholder-val="{{ false }}"-->
 <p style="margin: 0; padding: 0 2px 12px 60px; font-size: 14px; line-height: 1.7; color: #333333">[Answer from current FAQ]</p>
-</sc-if>
-</sc-if>
+<!--/sc-if-->
+<!--/sc-if-->
 </div>
-</sc-for>
-<sc-if value="{{s.more}}" hint-placeholder-val="{{ true }}">
+<!--/sc-for-->
+<!--sc-if value="{{s.more}}" hint-placeholder-val="{{ true }}"-->
 <div style="font-size: 13px; color: #666666; padding-top: 8px">+ {{s.moreCount}} more questions in this section</div>
-</sc-if>
+<!--/sc-if-->
 </section>
-</sc-for>
-</sc-if>
+<!--/sc-for-->
+<!--/sc-if-->
 
-<sc-if value="{{isCodes}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isCodes}}" hint-placeholder-val="{{ false }}"-->
 <p style="font-size: 15px; line-height: 1.6; margin: 0 0 22px">Examples of the property records available to taxpayers on request, and the codes used on them. Click a document to open the PDF.</p>
 <h2 style="font-size: 20px; font-weight: 800; color: #0b3b5c; margin: 0 0 12px">Record Examples</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-bottom: 28px">
-<sc-for list="{{records}}" as="d" hint-placeholder-count="5">
+<!--sc-for list="{{records}}" as="d" hint-placeholder-count="5"-->
 <a href="#" style="flex: 0 1 150px; text-decoration: none; color: #1c1c1c; display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center">
 <div style="width: 120px; height: 155px; border: 1px solid #999999; background: #ffffff; box-shadow: 0 2px 6px rgba(0,0,0,0.15); display: flex; flex-direction: column; gap: 6px; padding: 14px 12px; box-sizing: border-box"><div style="height: 6px; background: #c9d3dc"></div><div style="height: 6px; background: #c9d3dc; width: 70%"></div><div style="height: 40px; background: #e8edf2; margin-top: 6px"></div><div style="height: 6px; background: #c9d3dc"></div><div style="height: 6px; background: #c9d3dc; width: 60%"></div></div>
 <span style="font-size: 13px; font-weight: 600; line-height: 1.4">{{d}}</span>
 </a>
-</sc-for>
+<!--/sc-for-->
 </div>
 <h2 style="font-size: 20px; font-weight: 800; color: #0b3b5c; margin: 0 0 12px">Codes</h2>
 <div style="display: flex; flex-wrap: wrap; gap: 16px">
-<sc-for list="{{codes}}" as="d" hint-placeholder-count="4">
+<!--sc-for list="{{codes}}" as="d" hint-placeholder-count="4"-->
 <a href="#" style="flex: 0 1 150px; text-decoration: none; color: #1c1c1c; display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center">
 <div style="width: 120px; height: 155px; border: 1px solid #999999; background: #ffffff; box-shadow: 0 2px 6px rgba(0,0,0,0.15); display: flex; flex-direction: column; gap: 5px; padding: 14px 12px; box-sizing: border-box"><div style="height: 6px; background: #c9d3dc"></div><div style="height: 5px; background: #e1e6eb"></div><div style="height: 5px; background: #e1e6eb"></div><div style="height: 5px; background: #e1e6eb"></div><div style="height: 5px; background: #e1e6eb"></div><div style="height: 5px; background: #e1e6eb"></div><div style="height: 5px; background: #e1e6eb"></div></div>
 <span style="font-size: 13px; font-weight: 600; line-height: 1.4">{{d}}</span>
 </a>
-</sc-for>
+<!--/sc-for-->
 </div>
-</sc-if>
+<!--/sc-if-->
 
-<sc-if value="{{isVideos}}" hint-placeholder-val="{{ false }}">
-<sc-for list="{{videos}}" as="v" hint-placeholder-count="3">
+<!--sc-if value="{{isVideos}}" hint-placeholder-val="{{ false }}"-->
+<!--sc-for list="{{videos}}" as="v" hint-placeholder-count="3"-->
 <section style="border-top: 2px dotted #999999; padding-top: 20px; margin-bottom: 26px">
 <h2 style="font-size: 20px; font-weight: 800; color: #2c4a7a; margin: 0 0 8px; text-align: center">{{v.title}}</h2>
 <p style="font-size: 15px; line-height: 1.6; margin: 0 0 14px; text-align: center">{{v.desc}}</p>
@@ -146,13 +146,13 @@ body{padding-bottom:40px}
 <span style="font-size: 12px; color: #d9d9d9">[YouTube video plays here]</span>
 </div>
 </section>
-</sc-for>
-</sc-if>
+<!--/sc-for-->
+<!--/sc-if-->
 
-<sc-if value="{{isGuides}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isGuides}}" hint-placeholder-val="{{ false }}"-->
 <p style="font-size: 15px; line-height: 1.6; margin: 0 0 22px">Guides to help you understand your assessment and property taxes. Each button is a picture of the guide’s cover (placeholders shown) – click it to open the PDF.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 24px">
-<sc-for list="{{guides}}" as="g" hint-placeholder-count="4">
+<!--sc-for list="{{guides}}" as="g" hint-placeholder-count="4"-->
 <button type="button" onClick="{{g.go}}" style="flex: 0 1 180px; background: none; border: none; padding: 0; font: inherit; cursor: pointer; display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center; color: #1c1c1c">
 <div style="width: 150px; height: 195px; background: {{g.color}}; color: #ffffff; box-shadow: 0 3px 8px rgba(0,0,0,0.2); display: flex; flex-direction: column; justify-content: space-between; padding: 16px 14px; box-sizing: border-box; text-align: left">
 <img src="img/250bc961682ebb096452e7fce7a9e114.png" alt="" style="width: 40px; height: 40px; object-fit: contain">
@@ -161,14 +161,14 @@ body{padding-bottom:40px}
 </div>
 <span style="font-size: 14px; font-weight: 700; color: #1f5a9a; text-decoration: underline">{{g.title}}</span>
 </button>
-</sc-for>
+<!--/sc-for-->
 </div>
-</sc-if>
+<!--/sc-if-->
 
-<sc-if value="{{isBrochures}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isBrochures}}" hint-placeholder-val="{{ false }}"-->
 <p style="font-size: 15px; line-height: 1.6; margin: 0 0 22px">Click a brochure to open and download it (PDF). Each button is a picture of the brochure's real cover (placeholders shown) – click it to open the PDF.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 24px">
-<sc-for list="{{brochures}}" as="b" hint-placeholder-count="5">
+<!--sc-for list="{{brochures}}" as="b" hint-placeholder-count="5"-->
 <a href="#" style="flex: 0 1 170px; text-decoration: none; color: #1c1c1c; display: flex; flex-direction: column; gap: 10px; align-items: center; text-align: center">
 <div style="width: 150px; height: 200px; display: flex; box-shadow: 0 3px 8px rgba(0,0,0,0.2)">
 <div style="flex: 1; background: #e9edf3"></div>
@@ -180,18 +180,18 @@ body{padding-bottom:40px}
 <span style="font-size: 14px; font-weight: 700; color: #1f5a9a; text-decoration: underline">{{b.title}}</span>
 <span style="font-size: 12px; color: #555555">PDF · Open / download</span>
 </a>
-</sc-for>
+<!--/sc-for-->
 </div>
 <div style="margin-top: 26px; font-size: 14px; color: #555555">Idea from DPR's Rules &amp; Regulations page: if any brochure gets translated, list the language versions beside its cover.</div>
-</sc-if>
+<!--/sc-if-->
 
-<sc-if value="{{isLaws}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isLaws}}" hint-placeholder-val="{{ false }}"-->
 <div role="tablist" style="display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 20px">
-<sc-for list="{{lawTabs}}" as="t" hint-placeholder-count="3">
+<!--sc-for list="{{lawTabs}}" as="t" hint-placeholder-count="3"-->
 <button type="button" role="tab" onClick="{{t.go}}" style="{{t.style}}">{{t.label}}</button>
-</sc-for>
+<!--/sc-for-->
 </div>
-<sc-if value="{{isRoh}}" hint-placeholder-val="{{ true }}">
+<!--sc-if value="{{isRoh}}" hint-placeholder-val="{{ true }}"-->
 <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
 <div style="flex: 0 0 170px; display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center">
 <a href="#" style="width: 140px; height: 180px; border: 1px solid #999999; background: #ffffff; box-shadow: 0 2px 6px rgba(0,0,0,0.15); display: flex; flex-direction: column; gap: 6px; padding: 16px 12px; box-sizing: border-box; text-decoration: none; color: #1c1c1c"><span style="font-size: 11px; font-weight: 800; text-align: center">ROH CHAPTER 8</span><span style="font-size: 9px; text-align: center">Real Property Tax</span><span style="height: 5px; background: #e1e6eb; margin-top: 8px"></span><span style="height: 5px; background: #e1e6eb"></span><span style="height: 5px; background: #e1e6eb"></span><span style="height: 5px; background: #e1e6eb"></span></a>
@@ -225,8 +225,8 @@ body{padding-bottom:40px}
 </ul>
 </div>
 </div>
-</sc-if>
-<sc-if value="{{isCharter}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--sc-if value="{{isCharter}}" hint-placeholder-val="{{ false }}"-->
 <div style="display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start">
 <div style="flex: 0 0 170px; display: flex; flex-direction: column; gap: 8px; align-items: center; text-align: center">
 <a href="#" style="width: 140px; height: 180px; border: 1px solid #999999; background: #ffffff; box-shadow: 0 2px 6px rgba(0,0,0,0.15); display: flex; flex-direction: column; gap: 6px; padding: 16px 12px; box-sizing: border-box; text-decoration: none; color: #1c1c1c"><span style="font-size: 11px; font-weight: 800; text-align: center">REVISED CHARTER</span><span style="font-size: 9px; text-align: center">City and County of Honolulu</span><span style="height: 5px; background: #e1e6eb; margin-top: 8px"></span><span style="height: 5px; background: #e1e6eb"></span><span style="height: 5px; background: #e1e6eb"></span><span style="height: 5px; background: #e1e6eb"></span></a>
@@ -237,24 +237,24 @@ body{padding-bottom:40px}
 <a href="#" style="display: inline-block; background: #2c4a7a; color: #ffffff; padding: 12px 18px; font-size: 14px; font-weight: 700; text-decoration: none">View the Revised Charter on honolulu.gov ↗</a>
 </div>
 </div>
-</sc-if>
-<sc-if value="{{isRules}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--sc-if value="{{isRules}}" hint-placeholder-val="{{ false }}"-->
 <p style="font-size: 15px; line-height: 1.6; margin: 0 0 14px">Administrative rules for real property assessment. Click a chapter to open the PDF.</p>
 <div style="border-top: 1px solid #dddddd">
-<sc-for list="{{rules}}" as="r" hint-placeholder-count="7">
+<!--sc-for list="{{rules}}" as="r" hint-placeholder-count="7"-->
 <a href="#" style="display: flex; flex-wrap: wrap; align-items: center; gap: 12px; padding: 12px 4px; border-bottom: 1px solid #dddddd; text-decoration: none; color: #1c1c1c">
 <span style="flex: none; background: #b3261e; color: #ffffff; font-size: 11px; font-weight: 800; padding: 4px 6px">PDF</span>
 <span style="flex: none; width: 96px; font-size: 14px; font-weight: 800; color: #0b3b5c">{{r.ch}}</span>
 <span style="flex: 1 1 260px; font-size: 15px; font-weight: 600">{{r.title}}</span>
 <span style="flex: none; font-size: 13px; color: #555555">{{r.date}}</span>
 </a>
-</sc-for>
+<!--/sc-for-->
 </div>
 <div style="margin-top: 18px; padding: 12px 16px; border-left: 4px solid #c9962b; background: #fbf6ea; font-size: 14px; line-height: 1.6"><strong>Disclaimer:</strong> This information is provided as a free public service, without warranties. Please verify any information you rely on. Rules adopted before January 1, 2011 may not be fully posted online.</div>
-</sc-if>
-</sc-if>
+<!--/sc-if-->
+<!--/sc-if-->
 
-<sc-if value="{{isResA}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isResA}}" hint-placeholder-val="{{ false }}"-->
 <p style="font-size: 15px; line-height: 1.7; margin: 0 0 16px">Residential A is a tax classification for higher-value residential property without a home exemption. It was created by Ordinance 13-33 (effective for tax years starting July 1, 2014) and clarified by Ordinance 13-41 for vacant residential land.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 22px">
 <a href="#" style="background: #2c4a7a; color: #ffffff; padding: 12px 18px; font-size: 14px; font-weight: 700; text-decoration: none">Residential A Brochure (PDF)</a>
@@ -302,9 +302,9 @@ body{padding-bottom:40px}
 </div>
 </div>
 <p style="font-size: 13px; color: #555555; margin: 12px 0 0">Examples match the current Residential A page – confirm rates and exemption amount are still current before moving.</p>
-</sc-if>
+<!--/sc-if-->
 
-<sc-if value="{{isBills}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isBills}}" hint-placeholder-val="{{ false }}"-->
 <div style="border: 1px solid #d6d6d6; padding: 24px; display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; max-width: 760px">
 <div style="flex: 1 1 340px">
 <div style="font-size: 18px; font-weight: 800; margin-bottom: 6px">Tax bills, payments and the tax credit are handled by the Treasury Division</div>
@@ -318,31 +318,31 @@ body{padding-bottom:40px}
 <p style="margin: 0; font-size: 14px; line-height: 1.6">The Real Property Assessment Division (RPAD) provides general information regarding real property tax assessments; it is not legal or professional advice. Any persons with specific inquiries regarding ownership, real property tax law and the appraisal process are urged to consult with an attorney or appropriate professional. Mahalo.</p>
 <p style="margin: 8px 0 0; font-size: 12px; color: #6b5a44">[Confirm wording matches the disclaimer on our current Tax Bills page]</p>
 </div>
-</sc-if>
+<!--/sc-if-->
 
-<sc-if value="{{isNews}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isNews}}" hint-placeholder-val="{{ false }}"-->
 <p style="font-size: 15px; line-height: 1.6; margin: 0 0 20px">Recent presentations and announcements from RPAD, newest first. Click a title slide to open the presentation.</p>
-<sc-for list="{{news}}" as="n" hint-placeholder-count="2">
+<!--sc-for list="{{news}}" as="n" hint-placeholder-count="2"-->
 <a href="#" style="display: flex; flex-wrap: wrap; gap: 18px; align-items: center; border: 1px solid #d6d6d6; padding: 16px; margin-bottom: 14px; text-decoration: none; color: #1c1c1c">
-<sc-if value="{{n.hasImg}}" hint-placeholder-val="{{ true }}">
+<!--sc-if value="{{n.hasImg}}" hint-placeholder-val="{{ true }}"-->
 <img src="img/93d27d61112bdee1e8469a3c7f90ea0e.png" alt="Title slide: {{n.title}}" style="flex: 0 0 200px; width: 200px; height: 135px; object-fit: contain; background: #ffffff; border: 1px solid #d6d6d6">
-</sc-if>
-<sc-if value="{{n.noImg}}" hint-placeholder-val="{{ false }}">
+<!--/sc-if-->
+<!--sc-if value="{{n.noImg}}" hint-placeholder-val="{{ false }}"-->
 <div style="flex: 0 0 200px; height: 112px; background: #2c4a7a; color: #ffffff; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 6px; text-align: center; padding: 8px; box-sizing: border-box">
 <img src="img/250bc961682ebb096452e7fce7a9e114.png" alt="" style="width: 36px; height: 36px; object-fit: contain">
 <span style="font-size: 11px; font-weight: 700">[Title slide]</span>
 </div>
-</sc-if>
+<!--/sc-if-->
 <div style="flex: 1 1 260px">
 <div style="font-size: 13px; font-weight: 700; color: #0b3b5c">{{n.date}} · PRESENTATION</div>
 <div style="font-size: 18px; font-weight: 800; color: #0b3b5c; margin-top: 4px">{{n.title}}</div>
 <div style="font-size: 14px; margin-top: 4px">{{n.text}}</div>
 </div>
 </a>
-</sc-for>
-</sc-if>
+<!--/sc-for-->
+<!--/sc-if-->
 
-<sc-if value="{{isAct}}" hint-placeholder-val="{{ false }}">
+<!--sc-if value="{{isAct}}" hint-placeholder-val="{{ false }}"-->
 <p style="font-size: 15px; line-height: 1.7; margin: 0 0 18px">Under Act 187, protected personal information of covered public servants can be removed from RPAD's website. Requests must come from an authorized agency official – the public servant can't submit directly.</p>
 <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 24px">
 <a href="#" style="background: #2e7d4f; color: #ffffff; padding: 12px 18px; font-size: 14px; font-weight: 700; text-decoration: none">Download Request Form (Excel)</a>
@@ -355,7 +355,7 @@ body{padding-bottom:40px}
 <li><strong>Email it</strong> from the official's address to <a href="#">bfsrpmailbox@honolulu.gov</a> with <strong>"ACT 187"</strong> in the subject line.</li>
 <li><strong>Deadline:</strong> requests are due by the 1st of each month.</li>
 </ol>
-</sc-if>
+<!--/sc-if-->
 
 </main>
 </div>
