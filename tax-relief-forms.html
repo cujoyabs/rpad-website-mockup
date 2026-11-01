@@ -179,7 +179,7 @@ body{padding-bottom:40px}
 <p style="margin: 0 0 14px"><a href="#" style="display: inline-flex; gap: 8px; align-items: center; font-size: 15px; font-weight: 700"><!--sc-if value="{{lk.hasTag}}" hint-placeholder-val="{{ true }}"--><span style="{{lk.tagStyle}}">{{lk.tag}}</span><!--/sc-if-->{{lk.t}}</a></p>
 <!--/sc-for-->
 <!--sc-if value="{{d.noDesc}}" hint-placeholder-val="{{ false }}"-->
-<div style="border: 2px dashed #b8c6d9; background: #f7f9fc; padding: 14px 16px; font-size: 14px; line-height: 1.6; margin-bottom: 14px">[No description on the current page – suggest adding 1–2 sentences on who qualifies and what the dedication does (e.g., from the brochure).]</div>
+<div style="border: 2px dashed #b8c6d9; background: #f7f9fc; padding: 14px 16px; font-size: 14px; line-height: 1.6; margin-bottom: 14px">[Description to be written – 1–2 sentences on who qualifies and what the dedication does (e.g., from the brochure).]</div>
 <!--/sc-if-->
 <!--sc-if value="{{d.hasChoices}}" hint-placeholder-val="{{ false }}"-->
 <div style="font-size: 15px; font-weight: 800; color: #0b3b5c; margin: 0 0 10px">What do you need to change? File online:</div>
@@ -279,7 +279,7 @@ body{padding-bottom:40px}
 <p style="font-size: 15px; padding: 14px 4px; margin: 0">No forms match “{{formQ}}”.</p>
 <!--/sc-if-->
 <!--sc-if value="{{isXf}}" hint-placeholder-val="{{ true }}"-->
-<p style="font-size: 13px; color: #555555; margin: 14px 0 0">** [Footnote – the current page marks two forms with ** but doesn’t say what it means. Add the explanation or remove the marks.]</p>
+<p style="font-size: 13px; color: #555555; margin: 14px 0 0">** [Explanation of the asterisk to be added]</p>
 <!--/sc-if-->
 <!--/sc-if-->
 
@@ -531,7 +531,7 @@ class Component extends DCLogic {
       goD4: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'd4', open: 'de', formQ: '' }); },
       goMain: (e) => { if (e && e.preventDefault) e.preventDefault(); this.setState({ view: 'main', open: null, roh: null }); },
       isMain: isMain, isGroup: isGroup, isDetail: isDetail, isTodo: !isMain && !isGroup && !isDetail && v !== 'xf' && v !== 'xq' && v !== 'a1' && v !== 'd4', isForms: v === 'xf' || v === 'd4', isXf: v === 'xf',
-      formIntro: v === 'd4' ? 'All dedication forms in one place, including the historic property forms. Type a form number or a word (e.g. “agricultural”, “annual”, “historic”) to filter the list.' : 'All exemption claim forms in one place. Type a form number or a word (e.g. “veteran”, “annual”) to filter the list.', isFaqLink: v === 'xq' || v === 'a1', faqItem: v === 'a1' ? 'Affordable Rental Housing FAQ' : 'Exemption FAQ', faqSection: v === 'a1' ? 'Affordable Rental Housing Project' : 'Home Exemption', faqToday: v === 'a1' ? '' : ' (same as today’s /help-resources/faq/#exemptions)',
+      formIntro: v === 'd4' ? 'All dedication forms in one place, including the historic property forms. Type a form number or a word (e.g. “agricultural”, “annual”, “historic”) to filter the list.' : 'All exemption claim forms in one place. Type a form number or a word (e.g. “veteran”, “annual”) to filter the list.', isFaqLink: v === 'xq' || v === 'a1', faqItem: v === 'a1' ? 'Affordable Rental Housing FAQ' : 'Exemption FAQ', faqSection: v === 'a1' ? 'Affordable Rental Housing Project' : 'Home Exemption', faqToday: v === 'a1' ? '' : '',
       formQ: S.formQ || '', setFormQ: (e) => this.setState({ formQ: e.target.value }),
       formTotal: formSet.length, formCount: shownForms.length, noForms: shownForms.length === 0,
       formGroups: (() => {
