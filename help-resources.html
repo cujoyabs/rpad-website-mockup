@@ -412,7 +412,7 @@ class Component extends DCLogic {
       { label: 'What’s New', v: 'news' },
       { label: 'Act 187', v: 'act' }
     ];
-    const faqOpen = this.state.faqOpen !== false;
+    const faqOpen = this.state.faqOpen === true;
     const menu = items.filter((it) => (!it.sub || this.state.guidesOpen) && (!it.faqSub || faqOpen)).map((it) => {
       const active = it.faqSub ? (view === 'faq' && this.state.faqSec === it.fs) : (it.v === view && !(it.v === 'faq' && this.state.faqSec));
       const pad = (it.sub || it.faqSub) ? 'padding: 9px 16px 9px 32px; font-size: 14px; ' : 'padding: 12px 16px; ';
