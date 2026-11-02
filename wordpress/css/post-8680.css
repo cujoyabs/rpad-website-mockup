@@ -1,0 +1,8 @@
+#elementor-popup-modal-8680 .dialog-widget-content{animation-duration:1s;border-radius:5px 5px 5px 5px;}#elementor-popup-modal-8680{background-color:rgba(0,0,0,.8);justify-content:center;align-items:center;pointer-events:all;}#elementor-popup-modal-8680 .dialog-message{width:50vw;height:auto;padding:5% 0% 5% 0%;}#elementor-popup-modal-8680 .dialog-close-button{display:flex;top:15px;font-size:20px;}body:not(.rtl) #elementor-popup-modal-8680 .dialog-close-button{right:15px;}body.rtl #elementor-popup-modal-8680 .dialog-close-button{left:15px;}#elementor-popup-modal-8680 .dialog-close-button i{color:#000000;}#elementor-popup-modal-8680 .dialog-close-button svg{fill:#000000;}#elementor-popup-modal-8680 .dialog-close-button:hover i{color:#0E4BD5;}@media(max-width:1024px){#elementor-popup-modal-8680 .dialog-message{width:90vw;padding:10% 0% 10% 0%;}}@media(max-width:767px){#elementor-popup-modal-8680{align-items:center;}}/* Start custom CSS for shortcode, class: .elementor-element-4394b04 */.frm_button_submit.frm_final_submit {
+    font-weight: 700 !important;
+    min-inline-size: -webkit-fill-available;
+}
+#frm_field_11_container {
+    align-content: center;
+    margin-bottom: 0;
+}/* End custom CSS */
