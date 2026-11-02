@@ -259,3 +259,5 @@ body{padding-bottom:34px}
 /* mission band at the bottom, above the footer */
 .rpad-mission .elementor-element-a343ec7{padding:34px 24px !important}
 .elementor-rpad .rpad-videos{padding-bottom:48px !important}
+/* What's New stripe: its own color so it stands apart from the navy banner (secondary blue from the City guide) */
+.elementor-rpad .rpad-news{background:#3860A2 !important}
