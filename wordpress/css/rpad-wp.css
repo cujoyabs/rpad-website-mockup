@@ -248,3 +248,14 @@ body{padding-bottom:34px}
 .rpad-sidenav .sub-menu li:not(.menu-item-has-children):not(.rpad-navhead)>a.hfe-menu-item{padding-left:48px}
 .rpad-sidenav .sub-menu .menu-item-has-children>a.hfe-menu-item,.rpad-sidenav .sub-menu .rpad-navhead>.hfe-menu-item{padding-left:26px}
 .rpad-sidenav .sub-menu .sub-menu li>a.hfe-menu-item{padding-left:60px}
+/* homepage spacing: What's New bar, then a gap, the alert, a gap, the tiles */
+.elementor-rpad .rpad-alert-row{padding-top:24px !important;padding-bottom:4px}
+.elementor-rpad .rpad-tiles{padding-top:20px !important}
+.elementor-rpad .rpad-alert-row .elementor-alert{display:flex;align-items:center;gap:6px;flex-wrap:wrap;padding:18px 48px 18px 18px;position:relative;border:1px solid #e8a7a2;border-left:5px solid #c62828;background:#fdecea}
+.elementor-rpad .rpad-alert-row .elementor-alert-title{display:inline !important;margin:0 !important;color:#7a1712;font-weight:700}
+.elementor-rpad .rpad-alert-row .elementor-alert-title::after{content:":"}
+.elementor-rpad .rpad-alert-row .elementor-alert-description{display:inline !important;color:#5c1410;font-size:15px}
+.elementor-rpad .rpad-alert-row .elementor-alert-dismiss{position:absolute;right:16px;top:50%;transform:translateY(-50%)}
+/* mission band at the bottom, above the footer */
+.rpad-mission .elementor-element-a343ec7{padding:34px 24px !important}
+.elementor-rpad .rpad-videos{padding-bottom:48px !important}
