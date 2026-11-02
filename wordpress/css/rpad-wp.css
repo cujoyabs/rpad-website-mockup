@@ -261,3 +261,17 @@ body{padding-bottom:34px}
 .elementor-rpad .rpad-videos{padding-bottom:48px !important}
 /* What's New stripe: its own color so it stands apart from the navy banner (secondary blue from the City guide) */
 .elementor-rpad .rpad-news{background:#3860A2 !important}
+/* slideshow: picture sits at the right at full height (not stretched), color fades into it – as on the live mockup */
+.elementor-rpad .rpad-slides .swiper-slide-bg{background-repeat:no-repeat,no-repeat !important;background-position:left top,right center !important;background-size:100% 100%,auto 100% !important;background-color:var(--rpad-slide)}
+.elementor-rpad .rpad-slides .elementor-background-overlay{display:none}
+.elementor-rpad .rpad-slides .swiper-slide[hidden]{display:none !important}
+.elementor-rpad .rpad-slides .swiper-slide-contents{max-width:640px}
+.elementor-rpad .rpad-slides .elementor-slide-heading{font-size:28px;line-height:1.2}
+.rpad-slide-btns{display:flex;flex-wrap:wrap;gap:10px}
+.elementor-rpad .rpad-slides .rpad-slide-outline{background:#fff;color:#000;border:1px solid #000}
+.elementor-rpad .rpad-slides .swiper-pagination-bullet{cursor:pointer}
+.elementor-rpad .rpad-slides .elementor-swiper-button{cursor:pointer}
+.elementor-rpad .rpad-slides .elementor-swiper-button:focus-visible,.elementor-rpad .rpad-slides .swiper-pagination-bullet:focus-visible{outline:3px solid #EDA938}
+@media(max-width:767px){.elementor-rpad .rpad-slides .swiper-slide-bg{background-image:none !important}}
+.elementor-rpad .rpad-slides .swiper,.elementor-rpad .rpad-slides .swiper-slide{height:auto !important;min-height:290px}
+.elementor-rpad .rpad-slides .swiper-slide-inner{min-height:290px;padding:36px 80px !important}
