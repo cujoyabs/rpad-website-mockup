@@ -1,0 +1,124 @@
+/* RPAD page styles – written the way Elementor writes a page's post-*.css: CSS variables on each element.
+   Palette and type from the City Design Style Guide (DIT, June 2023). */
+:root{--e-global-color-primary:#19446F;--e-global-color-secondary:#FFFFFF;--rpad-blue:#3860A2;--rpad-teal:#58AEA6;--rpad-gold:#EDA938;--rpad-plum:#6B2D6C;--rpad-orange:#EC6C39;--rpad-sky:#C3E6F6;--rpad-green:#3E9A55}
+body{font-family:'Noto Sans',sans-serif}
+.elementor-639 .elementor-element.elementor-element-a343ec7{--min-height:100px;}
+.elementor-639 .elementor-element.elementor-element-a343ec7:not(.elementor-motion-effects-element-type-background){background-color:#3860A2 !important}
+.elementor-639 .elementor-element.elementor-element-a343ec7 .elementor-heading-title{font-family:'Noto Sans',sans-serif;font-size:17px;font-weight:400;line-height:1.6;color:#fff;max-width:1140px;margin:0 auto}
+/* banner (a67f0d3) – full width, 390px desktop per guide */
+.elementor-639 .elementor-element.elementor-element-a67f0d3.rpad-banner{--min-height:390px;--flex-direction:row;--align-items:center;background:linear-gradient(to right,#19446F 0%,#19446F 40%,rgba(25,68,111,0) 68%),url(../img/banner.jpg) right center/auto 100% no-repeat #19446F !important}
+.rpad-banner-inner{--flex-direction:row;--align-items:center;--gap:28px;max-width:1200px;margin:0 auto;padding:40px 24px !important;width:100%}
+.rpad-banner-text{--gap:6px;--width:auto}
+.rpad-banner h1.elementor-heading-title{font-family:Montserrat,sans-serif;font-size:44px;font-weight:700;line-height:1.12;color:#fff;text-transform:uppercase;letter-spacing:1px;text-shadow:0 1px 3px rgba(0,0,0,.45)}
+.rpad-banner .rpad-dept .elementor-heading-title{color:#fff;font-size:16px;font-family:'Noto Sans',sans-serif}
+.rpad-banner .rpad-haw .elementor-heading-title{color:#fff;font-size:24px;font-style:italic;font-family:'Noto Sans',sans-serif;line-height:1.3}
+.rpad-seal img{width:160px;height:160px;object-fit:contain}
+/* content */
+.elementor-rpad .e-con-boxed > .e-con-inner{max-width:1200px;padding:0 24px}
+.elementor-rpad .rpad-news{background:#19446F;--padding-top:10px;--padding-bottom:10px}
+.elementor-rpad .rpad-news > .e-con-inner{--flex-direction:row;--align-items:center;--gap:16px}
+.elementor-rpad .rpad-news .elementor-button{background:#EDA938;color:#000;border-radius:3px;font-family:'Noto Sans',sans-serif;font-size:16px;font-weight:700;padding:15px 20px}
+.elementor-rpad .rpad-news .elementor-button:hover{background:#fff;color:#19446F}
+.elementor-rpad .rpad-news p{color:#fff;margin:0;font-size:14px}
+.elementor-rpad .rpad-alert-row{--padding-top:20px}
+.elementor-rpad .rpad-alert .elementor-alert{border-left-width:5px;font-size:15px}
+.elementor-rpad .rpad-alert .elementor-alert-title{display:inline;margin-right:6px}
+.elementor-rpad .rpad-alert .elementor-alert-description{display:inline}
+.elementor-rpad .rpad-tiles{--padding-top:24px;--padding-bottom:24px}
+.elementor-rpad .rpad-tiles > .e-con-inner{--flex-direction:row;--gap:16px;--flex-wrap:wrap}
+.elementor-rpad .rpad-tile{--width:calc(25% - 12px);--padding-top:22px;--padding-bottom:22px;--padding-left:18px;--padding-right:18px}
+.elementor-rpad .rpad-tile.t1{background:#58AEA6}.elementor-rpad .rpad-tile.t2{background:#6B2D6C}.elementor-rpad .rpad-tile.t3{background:#EC6C39}.elementor-rpad .rpad-tile.t4{background:#EDA938}
+.elementor-rpad .rpad-tile .elementor-icon{background:rgba(255,255,255,.25);fill:currentColor;color:#000;width:52px;height:52px;font-size:22px;padding:14px}
+.elementor-rpad .rpad-tile.t2 .elementor-icon{color:#fff}
+.elementor-rpad .rpad-tile .elementor-icon svg{width:24px;height:24px}
+.elementor-rpad .rpad-tile .elementor-icon-box-title{font-family:Montserrat,sans-serif;font-size:19px;font-weight:700;margin:0 0 4px}
+.elementor-rpad .rpad-tile .elementor-icon-box-title a{color:#000}.elementor-rpad .rpad-tile.t2 .elementor-icon-box-title a,.elementor-rpad .rpad-tile.t2 .elementor-icon-box-description{color:#fff}
+.elementor-rpad .rpad-tile .elementor-icon-box-description{color:#1a1a1a;font-size:13px;margin:0}
+.elementor-rpad .rpad-tile .elementor-icon-box-wrapper{display:flex;align-items:center;gap:14px;text-align:left}
+.elementor-rpad .rpad-slides .swiper{position:relative;overflow:hidden;height:290px}
+.elementor-rpad .rpad-slides .swiper-slide{position:relative;height:290px;width:100%}
+.elementor-rpad .rpad-slides .swiper-slide-bg{position:absolute;inset:0;background-size:cover;background-position:right center}
+.elementor-rpad .rpad-slides .elementor-background-overlay{position:absolute;inset:0;background:linear-gradient(to right,#19446F 0%,#19446F 62%,rgba(25,68,111,0) 82%)}
+.elementor-rpad .rpad-slides .swiper-slide-inner{position:relative;display:flex;align-items:center;height:100%;padding:36px 80px}
+.elementor-rpad .rpad-slides .swiper-slide-contents{max-width:700px}
+.elementor-rpad .rpad-slides .elementor-slide-heading{font-family:Montserrat,sans-serif;font-size:30px;font-weight:700;color:#fff;margin-bottom:12px}
+.elementor-rpad .rpad-slides .elementor-slide-description{color:#fff;font-size:16px;line-height:1.6;margin-bottom:18px}
+.elementor-rpad .rpad-slides .elementor-slide-button{background:#C3E6F6;color:#000;border:0;border-radius:3px;font-family:'Noto Sans',sans-serif;font-size:16px;padding:15px 20px}
+.elementor-rpad .rpad-slides .elementor-swiper-button{position:absolute;top:50%;transform:translateY(-50%);color:#fff;width:22px;z-index:2}.elementor-rpad .rpad-slides .elementor-swiper-button svg{fill:#fff;width:18px}
+.elementor-rpad .rpad-slides .elementor-swiper-button-prev{left:24px}.elementor-rpad .rpad-slides .elementor-swiper-button-next{right:24px}
+.elementor-rpad .rpad-slides .swiper-pagination{position:absolute;bottom:-26px;left:0;right:0;text-align:center}
+.elementor-rpad .rpad-slides .swiper-pagination-bullet{display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid #19446F;margin:0 4px;background:transparent;opacity:1}
+.elementor-rpad .rpad-slides .swiper-pagination-bullet-active{background:#19446F}
+.elementor-rpad .rpad-slides-row{--padding-bottom:48px}
+.elementor-rpad .rpad-twocol{background:#F4F4F2;--padding-top:40px;--padding-bottom:40px}
+.elementor-rpad .rpad-twocol > .e-con-inner{--flex-direction:row;--gap:40px;--flex-wrap:wrap}
+.elementor-rpad .rpad-col-left{--width:calc(45% - 20px)}.elementor-rpad .rpad-col-right{--width:calc(55% - 20px)}
+.elementor-rpad h2.elementor-heading-title{font-family:Montserrat,sans-serif;font-size:36px;font-weight:700;color:#19446F;margin:0 0 14px}
+.elementor-rpad .rpad-iwant .elementor-icon-list-item a{display:flex;gap:12px;align-items:center;padding:10px 4px;border-bottom:1px solid #C3E6F6;color:#19446F}
+.elementor-rpad .rpad-iwant .elementor-icon-list-icon svg{width:9px;fill:#3860A2}
+.elementor-rpad .rpad-iwant strong{font-size:16px;font-weight:700}.elementor-rpad .rpad-iwant small{color:#555;font-size:12px}
+.elementor-rpad .rpad-cd-title h3{font-family:Montserrat,sans-serif;font-size:18px;color:#000;margin:0 0 8px}
+.elementor-rpad .rpad-countdown .elementor-countdown-wrapper{display:flex;gap:8px}
+.elementor-rpad .rpad-countdown .elementor-countdown-item{background:#3860A2;color:#fff;padding:8px 12px;text-align:center;min-width:64px;border-radius:3px}
+.elementor-rpad .rpad-countdown .elementor-countdown-digits{font-family:Montserrat,sans-serif;font-size:24px;font-weight:700;display:block}.elementor-rpad .rpad-countdown .elementor-countdown-label{font-size:11px;display:block}
+.elementor-rpad .rpad-dates{list-style:none;margin:14px 0 0;padding:0}
+.elementor-rpad .rpad-dates li{display:flex;gap:14px;align-items:center;padding:8px 0;border-bottom:1px solid #ddd}
+.elementor-rpad .rpad-date{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;width:58px;height:58px;background:#19446F;color:#fff;border-radius:3px;flex:none}
+.elementor-rpad .rpad-date b{font-size:12px;letter-spacing:1px}.elementor-rpad .rpad-date i{font-style:normal;font-family:Montserrat,sans-serif;font-size:22px;font-weight:700}
+.elementor-rpad .rpad-videos{--padding-top:40px;--padding-bottom:48px}
+.elementor-rpad .rpad-videos h2,.elementor-rpad .rpad-vid-intro{text-align:center}
+.elementor-rpad .rpad-vid-row{--flex-direction:row;--gap:20px;--flex-wrap:wrap}
+.elementor-rpad .rpad-vid{--width:calc(33.333% - 14px);background:#f2f2f2}
+.elementor-rpad .rpad-vid a{position:relative;display:block}.elementor-rpad .rpad-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
+.elementor-rpad .rpad-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,.6);color:#fff;border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.elementor-rpad .rpad-vid h3{font-family:Montserrat,sans-serif;font-size:16px;color:#19446F;margin:12px 14px 4px}.elementor-rpad .rpad-vid p{margin:0 14px 14px;font-size:13px}
+.rpad-chat{position:fixed;right:20px;bottom:60px;z-index:60;background:#19446F;color:#fff;border-radius:30px;padding:12px 18px;font-weight:700;font-family:'Noto Sans',sans-serif;box-shadow:0 3px 10px rgba(0,0,0,.3);text-decoration:none}
+.rpad-mockbar{position:fixed;left:0;right:0;bottom:0;z-index:70;background:#1c1c1c;color:#fff;font:13px 'Noto Sans',Arial,sans-serif;padding:7px 14px}
+body{padding-bottom:34px}
+@media(max-width:1024px){.elementor-rpad .rpad-tile{--width:calc(50% - 8px)}.elementor-rpad .rpad-col-left,.elementor-rpad .rpad-col-right{--width:100%}.elementor-rpad .rpad-vid{--width:100%}.rpad-banner h1.elementor-heading-title{font-size:32px}.elementor-639 .elementor-element.elementor-element-a67f0d3.rpad-banner{--min-height:194px}}
+@media(max-width:767px){.elementor-rpad .rpad-tile{--width:100%}.rpad-banner-inner{--flex-direction:column}.rpad-seal img{width:96px;height:96px}.elementor-639 .elementor-element.elementor-element-a67f0d3.rpad-banner{background:#19446F !important}}
+
+/* Elementor writes --display:flex for every container in the page CSS */
+.elementor-rpad .e-con{--display:flex;--flex-direction:column;--gap:12px;gap:var(--gap)}
+.elementor-rpad .e-con-boxed > .e-con-inner{gap:var(--gap);width:100%;margin:0 auto}
+.elementor-rpad .rpad-news,.elementor-rpad .rpad-tiles>.e-con-inner,.elementor-rpad .rpad-twocol>.e-con-inner,.elementor-rpad .rpad-vid-row{--flex-direction:row}
+.elementor-rpad .rpad-news{--flex-direction:column}.elementor-rpad .rpad-news>.e-con-inner{--flex-direction:row}
+.elementor-rpad .rpad-tiles>.e-con-inner,.elementor-rpad .rpad-twocol>.e-con-inner,.elementor-rpad .rpad-vid-row{flex-wrap:wrap}
+.elementor-rpad .rpad-tile,.elementor-rpad .rpad-col-left,.elementor-rpad .rpad-col-right,.elementor-rpad .rpad-vid{width:var(--width);flex:none}
+#masthead .hfe-nav-menu .menu-item a.hfe-menu-item{padding-left:14px !important;padding-right:14px !important}
+#masthead .hfe-nav-menu{flex-wrap:nowrap !important}
+
+.rpad-banner,.rpad-banner-inner,.rpad-banner-text{--display:flex}
+.rpad-banner-inner{--flex-direction:row !important;flex-direction:row;align-items:center;justify-content:flex-start}
+.rpad-banner-text{--flex-direction:column;flex-direction:column;align-items:flex-start}
+#masthead .elementor-nav-menu--main .elementor-nav-menu{flex-wrap:nowrap}
+#masthead .elementor-nav-menu--main .elementor-nav-menu>li>a.elementor-item{padding-left:13px;padding-right:13px;white-space:nowrap}
+.elementor-rpad .rpad-tile .elementor-icon-box-wrapper{display:flex !important;flex-direction:row !important;align-items:center}
+.elementor-rpad .rpad-tile .elementor-icon-box-icon{margin:0 !important;flex:none}
+.elementor-rpad .rpad-tile .elementor-icon{display:flex;align-items:center;justify-content:center;border-radius:50%}
+
+/* spacing between rows */
+.elementor-rpad .rpad-tiles{--padding-bottom:28px;padding-bottom:28px}
+.elementor-rpad .rpad-slides-row{padding-bottom:48px}
+.elementor-rpad .rpad-thumb{object-fit:contain;background:#fff}
+/* Astra footer builder: 3 equal columns above, policy strip below (as on City sites) */
+.site-above-footer-wrap .ast-builder-grid-row{display:grid !important;grid-template-columns:repeat(3,1fr);gap:30px;padding:10px 24px}
+.site-above-footer-wrap .site-footer-section{display:block !important;grid-column:auto !important;grid-row:1 !important;width:auto !important}
+.site-primary-footer-wrap .ast-builder-grid-row{display:flex !important;justify-content:center;padding:6px 24px}
+.site-primary-footer-wrap .ast-nav-menu,.site-primary-footer-wrap ul.menu{display:flex !important;flex-wrap:wrap;gap:4px 26px;justify-content:center}
+@media(max-width:767px){.site-above-footer-wrap .ast-builder-grid-row{grid-template-columns:1fr}}
+/* phone: the menu button icon (Elementor's icon font isn't bundled in this mockup) */
+#masthead .elementor-menu-toggle{background:#19446F;color:#fff;width:44px;height:40px;display:flex;align-items:center;justify-content:center;border-radius:3px}
+#masthead .elementor-menu-toggle i,#masthead .elementor-menu-toggle svg{display:none}
+#masthead .elementor-menu-toggle::before{content:"";width:22px;height:16px;background:linear-gradient(#fff 0 0) 0 0/100% 3px no-repeat,linear-gradient(#fff 0 0) 0 50%/100% 3px no-repeat,linear-gradient(#fff 0 0) 0 100%/100% 3px no-repeat}
+@media(max-width:767px){
+.elementor-rpad .rpad-news>.e-con-inner{--flex-direction:column;align-items:flex-start;padding-top:8px;padding-bottom:8px}
+.elementor-rpad .rpad-slides .swiper,.elementor-rpad .rpad-slides .swiper-slide{height:auto;min-height:420px}
+.elementor-rpad .rpad-slides .swiper-slide-inner{padding:30px 44px}
+.elementor-rpad .rpad-slides .elementor-background-overlay{background:rgba(25,68,111,.92)}
+.elementor-rpad .rpad-slides .elementor-slide-heading{font-size:22px}
+.elementor-rpad .rpad-slides .elementor-slide-description{font-size:15px}
+.elementor-rpad .rpad-slides .elementor-swiper-button-prev{left:10px}.elementor-rpad .rpad-slides .elementor-swiper-button-next{right:10px}
+.elementor-rpad h2.elementor-heading-title{font-size:28px}
+.rpad-mockbar{font-size:11px}
+}
