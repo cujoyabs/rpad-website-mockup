@@ -240,3 +240,11 @@ body{padding-bottom:34px}
 .elementor-rpad .rpad-alert .elementor-alert-title{color:#1c1c1c}
 .elementor-rpad .rpad-h .elementor-heading-title .rpad-muted{margin-left:8px;font-family:'Noto Sans',sans-serif}
 .elementor-rpad .rpad-text select{margin:0 8px}
+
+/* + / − on the left, like the live mockup; items without sub-pages line up with the text */
+.rpad-sidenav .hfe-menu-item{display:flex !important;justify-content:flex-start !important;align-items:baseline;gap:6px}
+.rpad-sidenav .sub-arrow{order:-1;width:16px;flex:none;text-align:left}
+.rpad-sidenav .hfe-nav-menu>li:not(.menu-item-has-children)>a.hfe-menu-item{padding-left:36px}
+.rpad-sidenav .sub-menu li:not(.menu-item-has-children):not(.rpad-navhead)>a.hfe-menu-item{padding-left:48px}
+.rpad-sidenav .sub-menu .menu-item-has-children>a.hfe-menu-item,.rpad-sidenav .sub-menu .rpad-navhead>.hfe-menu-item{padding-left:26px}
+.rpad-sidenav .sub-menu .sub-menu li>a.hfe-menu-item{padding-left:60px}
