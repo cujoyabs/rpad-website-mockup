@@ -444,3 +444,4 @@ body,.rpad-sidenav .hfe-menu-item,.rpad-child-dept .elementor-heading-title,foot
 .rpad-raw .rpad-cover-grid img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
 .rpad-raw a:hover>.rpad-cover-grid{box-shadow:0 6px 14px rgba(0,0,0,.25)}
 .rpad-raw img.rpad-cover-sm{width:120px;height:156px}
+.rpad-sidenav .hfe-menu-item .sub-arrow{font-weight:inherit !important}
