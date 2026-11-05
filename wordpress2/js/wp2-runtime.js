@@ -73,3 +73,12 @@
   m.addEventListener("click", function (e) { if (e.target === m) close(); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !m.hidden) close(); });
 })();
+
+/* Side menu group labels (not pages, e.g. "For homeowners"): clicking the words opens/closes them too (HFE: click opens sub-menu) */
+(function () {
+  function toggle(li, e) { var ul = li.querySelector(":scope > ul"); if (!ul) return; e.preventDefault(); ul.hidden = !ul.hidden; var s = li.querySelector(":scope > * .sub-arrow i, :scope > * .sub-arrow, :scope > .hfe-has-submenu-container .sub-arrow"); if (s) { var t = s.querySelector("i") || s; t.textContent = ul.hidden ? "+" : "−"; } }
+  document.querySelectorAll(".hfe-nav-menu__layout-vertical a.hfe-menu-item[href=\"#\"], .hfe-nav-menu__layout-vertical a.hfe-sub-menu-item[href=\"#\"]").forEach(function (a) { a.addEventListener("click", function (e) { if (e.target.closest(".sub-arrow")) return; toggle(a.closest("li"), e); }); });
+  document.querySelectorAll(".rpad-sidenav .rpad-navhead > .hfe-menu-item").forEach(function (sp) { sp.style.cursor = "pointer"; sp.setAttribute("role", "button"); sp.setAttribute("tabindex", "0");
+    function go(e) { if (e.target.closest(".sub-arrow")) return; toggle(sp.closest("li"), e); }
+    sp.addEventListener("click", go); sp.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") go(e); }); });
+})();
