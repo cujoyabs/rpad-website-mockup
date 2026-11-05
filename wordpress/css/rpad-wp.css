@@ -378,3 +378,21 @@ footer .site-above-footer-wrap[data-section] .ast-builder-grid-row.ast-builder-g
 .elementor-rpad .rpad-tile:hover{filter:brightness(1.07)}
 .elementor-rpad .rpad-tile:focus-within{outline:3px solid #19446F;outline-offset:3px}
 .elementor-rpad .rpad-tile .elementor-icon-box-title a:focus{outline:none}
+/* 11/05 footer lined up like the mockup: same edges as the page, policy links on one line, copyright on the right */
+footer .site-above-footer-wrap,footer .site-primary-footer-wrap{padding-left:0 !important;padding-right:0 !important}
+footer .site-above-footer-wrap>.ast-builder-grid-row-container-inner,footer .site-primary-footer-wrap>.ast-builder-grid-row-container-inner{max-width:none;margin:0;padding:0}
+footer .site-above-footer-wrap[data-section] .ast-builder-grid-row.ast-builder-grid-row{max-width:1200px;margin:0 auto;box-sizing:border-box;padding:10px 24px !important;grid-template-columns:1fr 1.6fr auto !important;column-gap:30px}
+footer .site-above-footer-wrap .site-footer-section{font-size:14px;line-height:1.6}
+footer .site-primary-footer-wrap .site-footer-primary-section-1{box-sizing:border-box;padding:12px 24px !important;width:100%}
+footer .site-primary-footer-wrap .site-footer-primary-section-1>.ast-builder-layout-element{width:100%;display:flex !important;justify-content:space-between;align-items:center;gap:8px 24px;flex-wrap:wrap}
+footer .rpad-policy{flex:1 1 auto}
+footer .site-primary-footer-wrap .ast-footer-copyright{flex:none;width:auto !important;text-align:right}
+footer .rpad-policy a,footer .site-primary-footer-wrap .ast-footer-copyright p{font-size:13px}
+@media(max-width:767px){footer .site-primary-footer-wrap .ast-footer-copyright{text-align:left}footer .site-above-footer-wrap[data-section] .ast-builder-grid-row.ast-builder-grid-row{grid-template-columns:1fr !important;padding:10px 16px !important}footer .site-primary-footer-wrap .site-footer-primary-section-1{padding:12px 16px !important}}
+footer .site-primary-footer-wrap .site-footer-primary-section-1>.ast-builder-layout-element{min-width:0;max-width:100%}
+footer .rpad-policy,footer .rpad-policy *{min-width:0;max-width:100%}
+footer .rpad-policy .footer-nav-wrap ul{flex-direction:row !important;flex-wrap:wrap !important}
+@media(max-width:767px){footer .site-primary-footer-wrap .site-footer-primary-section-1>.ast-builder-layout-element{flex-direction:column;align-items:flex-start}footer .rpad-policy{flex:none;width:100%}}
+@media(max-width:767px){footer .site-footer-section,footer .site-footer-section *{text-align:left !important}footer .rpad-policy .footer-nav-wrap ul{justify-content:flex-start !important}}
+footer .site-primary-footer-wrap .site-footer-primary-section-1>.ast-builder-layout-element.ast-footer-copyright{flex:1 1 100% !important;width:100% !important;text-align:left;justify-content:space-between !important}
+footer .site-primary-footer-wrap .site-footer-primary-section-1>.ast-builder-layout-element>.ast-footer-copyright{margin-left:auto}
