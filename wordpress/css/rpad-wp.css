@@ -406,3 +406,11 @@ footer .site-primary-footer-wrap .site-footer-primary-section-1>.ast-builder-lay
 /* City standard fonts: Montserrat for headings, Noto Sans for body */
 body,.rpad-sidenav .hfe-menu-item,.rpad-child-dept .elementor-heading-title,footer{font-family:'Noto Sans',Arial,sans-serif}
 .rpad-child-banner h1.elementor-heading-title,.rpad-sidenav .rpad-navtop>a.hfe-menu-item{font-family:Montserrat,Arial,sans-serif !important}
+/* FAQ questions exactly like the mockup: teal ▶ / ▼, number in its own column, no lines */
+.elementor-rpad .rpad-toggle .elementor-toggle-item{border-bottom:0 !important}
+.elementor-rpad .rpad-toggle .elementor-tab-title{gap:10px;padding:7px 2px;min-height:40px;box-sizing:border-box;font-size:15px;font-weight:700;color:#1c1c1c}
+.elementor-rpad .rpad-toggle .elementor-toggle-icon{width:16px;font-size:13px;color:#0f6b74;font-weight:400}
+.elementor-rpad .rpad-toggle .elementor-toggle-title{display:flex;gap:10px;align-items:baseline;text-decoration:none}
+.elementor-rpad .rpad-toggle .rpad-qnum{flex:none;min-width:24px;font-weight:800}
+.elementor-rpad .rpad-toggle .elementor-tab-content{padding:0 2px 12px 60px;font-size:14px;line-height:1.7;color:#333}
+.elementor-rpad .rpad-h .elementor-heading-title .rpad-muted,.rpad-raw h2 span{margin-left:0}
