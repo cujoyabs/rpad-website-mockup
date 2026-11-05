@@ -428,3 +428,6 @@ body,.rpad-sidenav .hfe-menu-item,.rpad-child-dept .elementor-heading-title,foot
 .elementor-rpad .rpad-left .rpad-raw>.elementor-widget-container{display:flex;flex-direction:column;gap:18px}
 /* links look like the mockup's (underlined unless the mockup turns it off) */
 .rpad-raw a{text-decoration:underline}
+.rpad-raw a.rpad-video{text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.18);transition:filter .15s}
+.rpad-raw a.rpad-video:hover{filter:brightness(1.08)}
+.rpad-raw a.rpad-video:focus-visible{outline:3px solid #19446F;outline-offset:3px}
