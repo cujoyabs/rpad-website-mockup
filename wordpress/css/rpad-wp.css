@@ -396,3 +396,13 @@ footer .rpad-policy .footer-nav-wrap ul{flex-direction:row !important;flex-wrap:
 @media(max-width:767px){footer .site-footer-section,footer .site-footer-section *{text-align:left !important}footer .rpad-policy .footer-nav-wrap ul{justify-content:flex-start !important}}
 footer .site-primary-footer-wrap .site-footer-primary-section-1>.ast-builder-layout-element.ast-footer-copyright{flex:1 1 100% !important;width:100% !important;text-align:left;justify-content:space-between !important}
 footer .site-primary-footer-wrap .site-footer-primary-section-1>.ast-builder-layout-element>.ast-footer-copyright{margin-left:auto}
+/* side menu levels, exact sizes from the mockup */
+.rpad-sidenav .rpad-navtop-link>a.hfe-menu-item{text-decoration:underline !important;text-underline-offset:3px}
+.rpad-sidenav .sub-menu .rpad-navhead>.hfe-menu-item,.rpad-sidenav .sub-menu .menu-item-has-children>a.hfe-menu-item{font-size:14px !important;font-weight:700 !important;padding:10px 16px 10px 32px !important;min-height:40px}
+.rpad-sidenav .sub-menu li:not(.menu-item-has-children)>a.hfe-menu-item{font-size:14px !important;padding:9px 16px 9px 32px !important;min-height:40px}
+.rpad-sidenav .sub-menu .sub-menu li>a.hfe-menu-item{font-size:13px !important;padding:8px 16px 8px 50px !important;min-height:40px}
+.rpad-sidenav .hfe-menu-item{gap:0 !important}
+.rpad-sidenav .hfe-menu-item .sub-arrow{margin-right:.35em !important}
+/* City standard fonts: Montserrat for headings, Noto Sans for body */
+body,.rpad-sidenav .hfe-menu-item,.rpad-child-dept .elementor-heading-title,footer{font-family:'Noto Sans',Arial,sans-serif}
+.rpad-child-banner h1.elementor-heading-title,.rpad-sidenav .rpad-navtop>a.hfe-menu-item{font-family:Montserrat,Arial,sans-serif !important}
