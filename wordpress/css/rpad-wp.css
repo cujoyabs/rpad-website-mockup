@@ -459,3 +459,14 @@ body,.rpad-sidenav .hfe-menu-item,.rpad-child-dept .elementor-heading-title,foot
 .elementor-639 .elementor-element.elementor-element-4184cda{--container-widget-flex-grow:1;flex-grow:1;width:auto;max-width:none}
 .elementor-639 .elementor-element.elementor-element-4184cda .elementor-nav-menu--main .elementor-item{padding-left:10px;padding-right:10px}
 @media(max-width:1180px){.elementor-639 .elementor-element.elementor-element-4184cda .elementor-nav-menu--main .elementor-item{padding-left:6px;padding-right:6px;font-size:15px}}
+
+/* Search pop-up (Elementor Pro Popup + Search Form; live, Elementor Pro opens it) */
+.rpad-search-modal{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:16px}
+.rpad-search-modal[hidden]{display:none}
+.rpad-search-modal .dialog-widget-content{position:relative;background:#fff;width:640px;max-width:100%;padding:40px 10px 56px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.rpad-search-modal .dialog-close-button{position:absolute;top:8px;right:14px;background:none;border:0;font-size:28px;line-height:1;cursor:pointer;color:#000;padding:0 4px}
+.rpad-search-modal .elementor-search-form{display:flex;gap:14px;align-items:stretch}
+.rpad-search-modal .elementor-search-form__input{flex:1;min-width:0;font:inherit;font-size:14px;padding:8px 10px;border:1px solid #ccc;border-radius:3px;min-height:36px}
+.rpad-search-modal .elementor-search-form__submit{background:#3860A2;color:#fff;border:0;border-radius:2px;padding:0 48px;font:inherit;font-weight:700;font-size:14px;text-transform:uppercase;cursor:pointer}
+.rpad-search-modal .elementor-search-form__submit:hover{background:#19446F}
+@media(max-width:600px){.rpad-search-modal .elementor-search-form{flex-direction:column}.rpad-search-modal .elementor-search-form__submit{padding:12px}}

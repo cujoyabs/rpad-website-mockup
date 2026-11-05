@@ -58,3 +58,14 @@
   function show() { heads.forEach(function (h) { h.textContent = h.textContent.trim().replace(/^\d{4}-\d{2}/, sel.value); }); }
   sel.addEventListener('change', show); show();
 })();
+
+/* Search pop-up: the magnifying glass opens it, × / Esc / clicking outside closes it */
+(function () {
+  var m = document.querySelector(".rpad-search-modal"); if (!m) return; var last;
+  function open(e) { e.preventDefault(); last = document.activeElement; m.hidden = false; m.querySelector("input").focus(); }
+  function close() { m.hidden = true; if (last) last.focus(); }
+  document.querySelectorAll("a[aria-label=\"Open site search\"]").forEach(function (a) { a.addEventListener("click", open); });
+  m.querySelector(".dialog-close-button").addEventListener("click", close);
+  m.addEventListener("click", function (e) { if (e.target === m) close(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !m.hidden) close(); });
+})();
