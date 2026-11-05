@@ -414,3 +414,17 @@ body,.rpad-sidenav .hfe-menu-item,.rpad-child-dept .elementor-heading-title,foot
 .elementor-rpad .rpad-toggle .rpad-qnum{flex:none;min-width:24px;font-weight:800}
 .elementor-rpad .rpad-toggle .elementor-tab-content{padding:0 2px 12px 60px;font-size:14px;line-height:1.7;color:#333}
 .elementor-rpad .rpad-h .elementor-heading-title .rpad-muted,.rpad-raw h2 span{margin-left:0}
+/* side column like the mockup: 220px, grows up to 280px when its content needs it (e.g. the email address on Contact Us) */
+.elementor-rpad .rpad-left{width:auto !important;flex:1 1 220px !important;min-width:220px;max-width:280px}
+.elementor-rpad .rpad-main{flex:999 1 520px !important}
+.elementor-rpad .rpad-left a[href^="mailto:"]{overflow-wrap:anywhere}
+@media(max-width:900px){.elementor-rpad .rpad-left{max-width:none;flex-basis:100% !important}}
+.elementor-rpad .rpad-left{min-width:auto !important}
+.elementor-rpad .rpad-left a[href^="mailto:"]{overflow-wrap:normal;white-space:nowrap}
+@media(max-width:400px){.elementor-rpad .rpad-left a[href^="mailto:"]{white-space:normal;overflow-wrap:anywhere}}
+.elementor-rpad .rpad-email{white-space:nowrap}
+@media(max-width:400px){.elementor-rpad .rpad-email{white-space:normal;overflow-wrap:anywhere}}
+/* side column boxes: 18px apart, like the mockup's left pane */
+.elementor-rpad .rpad-left .rpad-raw>.elementor-widget-container{display:flex;flex-direction:column;gap:18px}
+/* links look like the mockup's (underlined unless the mockup turns it off) */
+.rpad-raw a{text-decoration:underline}
