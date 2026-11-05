@@ -50,3 +50,11 @@
       x.addEventListener('click', go); x.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } }); });
   });
 })();
+
+/* Statewide Reports: picking a tax year updates the report headings (like the mockup) */
+(function () {
+  var sel = document.querySelector('.rpad-main select#year'); if (!sel) return;
+  var heads = [].slice.call(document.querySelectorAll('.rpad-main h2')).filter(function (h) { return /^\d{4}-\d{2} (Statewide|County) Reports$/.test(h.textContent.trim()); });
+  function show() { heads.forEach(function (h) { h.textContent = h.textContent.trim().replace(/^\d{4}-\d{2}/, sel.value); }); }
+  sel.addEventListener('change', show); show();
+})();
