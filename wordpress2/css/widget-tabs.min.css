@@ -1,0 +1,20 @@
+/* Elementor classic Tabs widget – base rules re-typed from Elementor's widget-tabs.min.css (not in the saved City pages). */
+.elementor-widget-tabs .elementor-tab-content,.elementor-widget-tabs .elementor-tab-title,.elementor-widget-tabs .elementor-tab-title:after,.elementor-widget-tabs .elementor-tab-title:before,.elementor-widget-tabs .elementor-tabs-content-wrapper{border:1px #d5d8dc}
+.elementor-widget-tabs .elementor-tabs{text-align:start}
+.elementor-widget-tabs .elementor-tabs-wrapper{overflow:hidden}
+.elementor-widget-tabs .elementor-tab-title{cursor:pointer;outline:var(--focus-outline,none)}
+.elementor-widget-tabs .elementor-tab-desktop-title{font-weight:700;line-height:1;padding:20px 25px;position:relative}
+.elementor-widget-tabs .elementor-tab-desktop-title a{color:inherit}
+.elementor-widget-tabs .elementor-tab-desktop-title.elementor-active{border-color:#d5d8dc}
+.elementor-widget-tabs .elementor-tab-desktop-title.elementor-active:after,.elementor-widget-tabs .elementor-tab-desktop-title.elementor-active:before{border-style:solid;bottom:0;content:"";display:block;position:absolute}
+.elementor-widget-tabs .elementor-tab-mobile-title{cursor:pointer;padding:10px}
+.elementor-widget-tabs .elementor-tab-content{display:none;padding:20px}
+.elementor-widget-tabs .elementor-tab-content.elementor-active{display:block}
+.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title{display:table-cell}
+.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active{border-bottom-style:none}
+.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active:after,.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active:before{border-bottom-width:1px;height:0;width:999em}
+.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active:before{inset-inline-end:100%}
+.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-desktop-title.elementor-active:after{inset-inline-start:100%}
+.elementor-widget-tabs.elementor-tabs-view-horizontal .elementor-tab-content{border-top-style:none}
+@media (max-width:767px){.elementor-widget-tabs .elementor-tabs-wrapper{display:none}.elementor-widget-tabs .elementor-tab-mobile-title{display:block;border-style:solid;border-width:0 1px 1px}.elementor-widget-tabs .elementor-tab-content{border-style:solid;border-width:0 1px 1px}.elementor-widget-tabs .elementor-tabs-content-wrapper{border-top-style:solid;border-top-width:1px}}
+@media (min-width:768px){.elementor-widget-tabs .elementor-tab-mobile-title{display:none}}

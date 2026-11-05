@@ -445,3 +445,12 @@ body,.rpad-sidenav .hfe-menu-item,.rpad-child-dept .elementor-heading-title,foot
 .rpad-raw a:hover>.rpad-cover-grid{box-shadow:0 6px 14px rgba(0,0,0,.25)}
 .rpad-raw img.rpad-cover-sm{width:120px;height:156px}
 .rpad-sidenav .hfe-menu-item .sub-arrow{font-weight:inherit !important}
+
+/* Elementor Nav Menu: sub-menus open on hover / keyboard focus (Elementor's SmartMenus script does this live) */
+#masthead .elementor-nav-menu--main .elementor-nav-menu li.menu-item-has-children:hover>ul,#masthead .elementor-nav-menu--main .elementor-nav-menu li.menu-item-has-children:focus-within>ul{display:block;top:100%;left:0;z-index:100;background:#fff;box-shadow:0 6px 14px rgba(0,0,0,.15);min-width:15em;width:auto}
+#masthead .elementor-nav-menu--main .elementor-nav-menu ul a.elementor-sub-item{white-space:nowrap;padding:12px 20px;border-bottom:1px solid #e3e3e3;color:#19446F}
+#masthead .elementor-nav-menu--main .elementor-nav-menu ul a.elementor-sub-item:hover,#masthead .elementor-nav-menu--main .elementor-nav-menu ul a.elementor-sub-item:focus{background:#E8EEF6;color:#0B3B5C}
+#masthead .elementor-nav-menu--main .sub-arrow{padding-inline-start:6px}
+#masthead nav.elementor-nav-menu--dropdown .sub-menu{display:block;position:static}
+#masthead nav.elementor-nav-menu--dropdown .sub-menu a{padding-left:34px}
+#masthead nav.elementor-nav-menu--dropdown .sub-arrow{display:none}

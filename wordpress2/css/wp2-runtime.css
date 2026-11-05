@@ -1,0 +1,83 @@
+/* Stand-ins for what WordPress/Elementor/HFE do with their own scripts on a live site.
+   This static copy has no WordPress behind it, so these few rules make the same things happen. No page design here. */
+.elementor-tab-content[hidden],.elementor-toggle .elementor-tab-content[hidden]{display:none !important}
+.elementor-toggle .elementor-tab-content:not([hidden]){display:block !important}
+.elementor-toggle .elementor-toggle-icon-opened{display:none}
+.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-opened{display:block}
+.elementor-toggle .elementor-tab-title.elementor-active .elementor-toggle-icon-closed{display:none}
+/* HFE vertical menu: sub-menus open/close in place (HFE's script does this live) */
+.hfe-nav-menu__layout-vertical .sub-menu{position:static !important;visibility:visible !important;opacity:1 !important;display:block !important;width:auto !important;box-shadow:none !important;left:auto !important;top:auto !important;transform:none !important}
+.hfe-nav-menu__layout-vertical .sub-menu[hidden]{display:none !important}
+.hfe-nav-menu__layout-vertical .hfe-nav-menu,.hfe-nav-menu__layout-vertical li{display:block !important;float:none !important}
+.hfe-nav-menu__layout-vertical .hfe-has-submenu-container a{display:flex;justify-content:space-between;align-items:center}
+.hfe-nav-menu__layout-vertical .sub-arrow{padding:0 0 0 10px;cursor:pointer}
+.hfe-nav-menu__layout-vertical .sub-arrow i.fa{font-style:normal}
+/* TablePress search box is added by its DataTables script live */
+.dt-container .dt-search{display:flex;justify-content:flex-end;margin-bottom:8px}
+.dt-container .dt-search input{margin-left:8px}
+.elementor-widget-shortcode .dt-container{overflow-x:auto}
+/* Elementor lazy-loads container backgrounds; live it adds e-lazyloaded after load */
+.rpad-recaptcha-placeholder{width:304px;max-width:100%;height:78px;border:1px solid #d3d3d3;background:#f9f9f9;display:flex;align-items:center;justify-content:center;font-size:12px;color:#555}
+.hfe-nav-menu__layout-vertical .hfe-has-submenu-container a{display:flex !important;justify-content:space-between !important}
+.elementor-accordion .elementor-tab-content[hidden]{display:none !important}
+.elementor-accordion .elementor-tab-content:not([hidden]){display:block !important}
+.elementor-accordion .elementor-accordion-icon-opened{display:none}
+.elementor-accordion .elementor-tab-title.elementor-active .elementor-accordion-icon-opened{display:block}
+.elementor-accordion .elementor-tab-title.elementor-active .elementor-accordion-icon-closed{display:none}
+.hfe-nav-menu__layout-vertical .hfe-nav-menu,.hfe-nav-menu__layout-vertical ul,.hfe-nav-menu__layout-vertical li,.hfe-nav-menu__layout-vertical .sub-menu{height:auto !important;max-height:none !important;overflow:visible !important}
+.hfe-nav-menu__layout-vertical li{position:relative !important;width:auto !important}
+
+
+
+
+
+
+
+
+/* Video widget base (Elementor's widget-video CSS: overlay sits over the player box) */
+.elementor-widget-video .elementor-wrapper{position:relative;overflow:hidden}
+.elementor-widget-video .elementor-custom-embed-play{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+.elementor-widget-video .elementor-custom-embed-play svg{filter:drop-shadow(1px 0 6px rgba(0,0,0,.3));opacity:.85;width:56px;height:56px}
+
+
+/* Slides widget base (Elementor's swiper layout, normally in its own script/CSS) */
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper{position:relative;overflow:hidden;height:290px}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide{position:relative;height:290px;width:100%}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide-bg{position:absolute;inset:0px;background-size:cover;background-position:right center}
+.elementor-639 .elementor-element.elementor-element-5a00250 .elementor-background-overlay{position:absolute;inset:0px;background:linear-gradient(to right, rgb(25, 68, 111) 0%, rgb(25, 68, 111) 62%, rgba(25, 68, 111, 0) 82%)}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide-inner{position:relative;display:flex;align-items:center;height:100%;padding:36px 80px}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide-contents{max-width:700px}
+.elementor-639 .elementor-element.elementor-element-5a00250 .elementor-swiper-button{position:absolute;top:50%;color:rgb(255, 255, 255);width:22px;z-index:2}
+.elementor-639 .elementor-element.elementor-element-5a00250 .elementor-swiper-button svg{fill:rgb(255, 255, 255);width:18px}
+.elementor-639 .elementor-element.elementor-element-5a00250 .elementor-swiper-button-prev{left:24px}
+.elementor-639 .elementor-element.elementor-element-5a00250 .elementor-swiper-button-next{right:24px}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-pagination{position:absolute;bottom:-26px;left:0px;right:0px;text-align:center}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-pagination-bullet{display:inline-block;width:11px;height:11px;border-radius:50%;border:2px solid rgb(25, 68, 111);margin:0px 4px;background:transparent;opacity:1}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-pagination-bullet-active{background:rgb(25, 68, 111)}
+@media (max-width: 767px){.elementor-639 .elementor-element.elementor-element-5a00250 .swiper{height:auto;min-height:420px}}
+@media (max-width: 767px){.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide{height:auto;min-height:420px}}
+@media (max-width: 767px){.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide-inner{padding:30px 44px}}
+@media (max-width: 767px){.elementor-639 .elementor-element.elementor-element-5a00250 .elementor-background-overlay{background:rgba(25, 68, 111, 0.92)}}
+@media (max-width: 767px){.elementor-639 .elementor-element.elementor-element-5a00250 .elementor-swiper-button-prev{left:10px}}
+@media (max-width: 767px){.elementor-639 .elementor-element.elementor-element-5a00250 .elementor-swiper-button-next{right:10px}}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide-bg{background-color:var(--rpad-slide);background-repeat:no-repeat, no-repeat !important;background-position:left top, right center !important;background-size:100% 100%, auto 100% !important}
+.elementor-639 .elementor-element.elementor-element-5a00250 .elementor-background-overlay{display:none}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide[hidden]{display:none !important}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide-contents{max-width:640px}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-pagination-bullet{cursor:pointer}
+.elementor-639 .elementor-element.elementor-element-5a00250 .elementor-swiper-button{cursor:pointer}
+.elementor-639 .elementor-element.elementor-element-5a00250 .elementor-swiper-button:focus-visible{outline:rgb(237, 169, 56) solid 3px}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-pagination-bullet:focus-visible{outline:rgb(237, 169, 56) solid 3px}
+@media (max-width: 767px){.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide-bg{background-image:none !important}}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper{height:auto !important;min-height:290px}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide{height:auto !important;min-height:290px}
+.elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide-inner{min-height:290px;padding:36px 80px !important}
+
+/* Elementor Nav Menu: sub-menus open on hover / keyboard focus (Elementor's SmartMenus script does this live) */
+#masthead .elementor-nav-menu--main .elementor-nav-menu li.menu-item-has-children:hover>ul,#masthead .elementor-nav-menu--main .elementor-nav-menu li.menu-item-has-children:focus-within>ul{display:block;top:100%;left:0;z-index:100;background:#fff;box-shadow:0 6px 14px rgba(0,0,0,.15);min-width:15em;width:auto}
+#masthead .elementor-nav-menu--main .elementor-nav-menu ul a.elementor-sub-item{white-space:nowrap;padding:12px 20px;border-bottom:1px solid #e3e3e3;color:#19446F}
+#masthead .elementor-nav-menu--main .elementor-nav-menu ul a.elementor-sub-item:hover,#masthead .elementor-nav-menu--main .elementor-nav-menu ul a.elementor-sub-item:focus{background:#E8EEF6;color:#0B3B5C}
+#masthead .elementor-nav-menu--main .sub-arrow{padding-inline-start:6px}
+#masthead nav.elementor-nav-menu--dropdown .sub-menu{display:block;position:static}
+#masthead nav.elementor-nav-menu--dropdown .sub-menu a{padding-left:34px}
+#masthead nav.elementor-nav-menu--dropdown .sub-arrow{display:none}
