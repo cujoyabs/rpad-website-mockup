@@ -40,6 +40,7 @@
 .elementor-widget-video .elementor-custom-embed-play svg{filter:drop-shadow(1px 0 6px rgba(0,0,0,.3));opacity:.85;width:56px;height:56px}
 
 
+
 /* Slides widget base (Elementor's swiper layout, normally in its own script/CSS) */
 .elementor-639 .elementor-element.elementor-element-5a00250 .swiper{position:relative;overflow:hidden;height:290px}
 .elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide{position:relative;height:290px;width:100%}
@@ -72,23 +73,3 @@
 .elementor-639 .elementor-element.elementor-element-5a00250 .swiper{height:auto !important;min-height:290px}
 .elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide{height:auto !important;min-height:290px}
 .elementor-639 .elementor-element.elementor-element-5a00250 .swiper-slide-inner{min-height:290px;padding:36px 80px !important}
-
-/* Elementor Nav Menu: sub-menus open on hover / keyboard focus (Elementor's SmartMenus script does this live) */
-#masthead .elementor-nav-menu--main .elementor-nav-menu li.menu-item-has-children:hover>ul,#masthead .elementor-nav-menu--main .elementor-nav-menu li.menu-item-has-children:focus-within>ul{display:block;top:100%;left:0;z-index:100;background:#fff;box-shadow:0 6px 14px rgba(0,0,0,.15);min-width:15em;width:auto}
-#masthead .elementor-nav-menu--main .elementor-nav-menu ul a.elementor-sub-item{white-space:nowrap;padding:12px 20px;border-bottom:1px solid #e3e3e3;color:#19446F}
-#masthead .elementor-nav-menu--main .elementor-nav-menu ul a.elementor-sub-item:hover,#masthead .elementor-nav-menu--main .elementor-nav-menu ul a.elementor-sub-item:focus{background:#E8EEF6;color:#0B3B5C}
-#masthead .elementor-nav-menu--main .sub-arrow{padding-inline-start:6px}
-#masthead nav.elementor-nav-menu--dropdown .sub-menu{display:block;position:static}
-#masthead nav.elementor-nav-menu--dropdown .sub-menu a{padding-left:34px}
-#masthead nav.elementor-nav-menu--dropdown .sub-arrow{display:none}
-
-/* Search pop-up (Elementor Pro Popup + Search Form; live, Elementor Pro opens it) */
-.rpad-search-modal{position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:16px}
-.rpad-search-modal[hidden]{display:none}
-.rpad-search-modal .dialog-widget-content{position:relative;background:#fff;width:640px;max-width:100%;padding:40px 10px 56px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
-.rpad-search-modal .dialog-close-button{position:absolute;top:8px;right:14px;background:none;border:0;font-size:28px;line-height:1;cursor:pointer;color:#000;padding:0 4px}
-.rpad-search-modal .elementor-search-form{display:flex;gap:14px;align-items:stretch}
-.rpad-search-modal .elementor-search-form__input{flex:1;min-width:0;font:inherit;font-size:14px;padding:8px 10px;border:1px solid #ccc;border-radius:3px;min-height:36px}
-.rpad-search-modal .elementor-search-form__submit{background:#3860A2;color:#fff;border:0;border-radius:2px;padding:0 48px;font:inherit;font-weight:700;font-size:14px;text-transform:uppercase;cursor:pointer}
-.rpad-search-modal .elementor-search-form__submit:hover{background:#19446F}
-@media(max-width:600px){.rpad-search-modal .elementor-search-form{flex-direction:column}.rpad-search-modal .elementor-search-form__submit{padding:12px}}
