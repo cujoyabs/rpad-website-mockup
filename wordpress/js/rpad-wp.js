@@ -35,3 +35,18 @@
     play();
   });
 })();
+/* search boxes inside the page content filter the tables on that page (TablePress does this on the real site) */
+(function () {
+  document.querySelectorAll('.rpad-raw input[type=search], .rpad-raw input[type=text]').forEach(function (i) {
+    i.addEventListener('input', function () { var q = i.value.trim().toLowerCase();
+      document.querySelectorAll('.rpad-main table tbody tr, .rpad-main table tr').forEach(function (tr) { if (tr.querySelector('th')) return; tr.hidden = q && tr.textContent.toLowerCase().indexOf(q) < 0; }); });
+  });
+})();
+/* Elementor Tabs (mockup) */
+(function () {
+  document.querySelectorAll('.elementor-tabs').forEach(function (w) {
+    var t = w.querySelectorAll('.elementor-tab-title'), c = w.querySelectorAll('.elementor-tab-content');
+    t.forEach(function (x, i) { function go() { t.forEach(function (y, j) { y.classList.toggle('elementor-active', j === i); y.setAttribute('aria-selected', j === i); }); c.forEach(function (y, j) { y.hidden = j !== i; y.classList.toggle('elementor-active', j === i); }); }
+      x.addEventListener('click', go); x.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); go(); } }); });
+  });
+})();
