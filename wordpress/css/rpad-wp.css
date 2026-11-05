@@ -431,3 +431,8 @@ body,.rpad-sidenav .hfe-menu-item,.rpad-child-dept .elementor-heading-title,foot
 .rpad-raw a.rpad-video{text-decoration:none;box-shadow:0 2px 8px rgba(0,0,0,.18);transition:filter .15s}
 .rpad-raw a.rpad-video:hover{filter:brightness(1.08)}
 .rpad-raw a.rpad-video:focus-visible{outline:3px solid #19446F;outline-offset:3px}
+/* page width exactly like the mockup: 1200px of content (side column 220 + 36px gap + main), 24px edges on smaller screens */
+.elementor-rpad .rpad-layout>.e-con-inner,.rpad-crumbs,.rpad-child-inner,footer .site-above-footer-wrap[data-section] .ast-builder-grid-row.ast-builder-grid-row,footer .site-primary-footer-wrap .site-footer-primary-section-1{max-width:1248px !important;padding-left:24px !important;padding-right:24px !important;box-sizing:border-box}
+.elementor-rpad .rpad-layout>.e-con-inner{gap:36px !important}
+.elementor-rpad .rpad-main{padding:0 !important;--padding-left:0;--padding-right:0}
+@media(max-width:600px){.elementor-rpad .rpad-layout>.e-con-inner,.rpad-crumbs,.rpad-child-inner{padding-left:16px !important;padding-right:16px !important}}
