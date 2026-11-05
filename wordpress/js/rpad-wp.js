@@ -8,7 +8,7 @@
   });
   // Side menu: + / − opens a section without leaving the page
   document.querySelectorAll('.rpad-sidenav .sub-arrow').forEach(function (s) {
-    s.addEventListener('click', function (e) { e.preventDefault(); e.stopPropagation(); var ul = s.closest('li').querySelector(':scope > ul'); if (!ul) return; ul.hidden = !ul.hidden; s.textContent = ul.hidden ? '+' : '−'; });
+    s.addEventListener('click', function (e) { if (s.closest('a')) return; /* a page link: go to the page (it opens there, like the mockup) */ e.preventDefault(); e.stopPropagation(); var ul = s.closest('li').querySelector(':scope > ul'); if (!ul) return; ul.hidden = !ul.hidden; s.textContent = ul.hidden ? '+' : '−'; });
   });
   // TablePress search box filters its own table; the page search box filters every table on the page
   function filter(tables, q) { q = q.trim().toLowerCase(); tables.forEach(function (tb) { tb.querySelectorAll('tbody tr').forEach(function (tr) { tr.hidden = q && tr.textContent.toLowerCase().indexOf(q) < 0; }); }); }
