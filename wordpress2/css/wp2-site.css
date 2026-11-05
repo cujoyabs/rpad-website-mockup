@@ -9,7 +9,7 @@ body{padding-bottom:34px}
 #masthead .hfe-nav-menu .menu-item a.hfe-menu-item{padding-left:14px !important;padding-right:14px !important}
 #masthead .hfe-nav-menu{flex-wrap:nowrap !important}
 #masthead .elementor-nav-menu--main .elementor-nav-menu{flex-wrap:nowrap}
-#masthead .elementor-nav-menu--main .elementor-nav-menu>li>a.elementor-item{padding-left:13px;padding-right:13px;white-space:nowrap}
+#masthead .elementor-nav-menu--main .elementor-nav-menu>li>a.elementor-item{white-space:nowrap}
 .site-above-footer-wrap .ast-builder-grid-row{display:grid !important;grid-template-columns:repeat(3,1fr);gap:30px;padding:10px 24px}
 .site-above-footer-wrap .site-footer-section{display:block !important;grid-column:auto !important;grid-row:1 !important;width:auto !important}
 .site-primary-footer-wrap .ast-builder-grid-row{display:flex !important;justify-content:center;padding:6px 24px}
@@ -68,3 +68,8 @@ body,.rpad-sidenav .hfe-menu-item,.rpad-child-dept .elementor-heading-title,foot
 @media(max-width:400px){.elementor-rpad .rpad-email{white-space:normal;overflow-wrap:anywhere}}
 .elementor-rpad .rpad-layout>.e-con-inner,.rpad-crumbs,.rpad-child-inner,footer .site-above-footer-wrap[data-section] .ast-builder-grid-row.ast-builder-grid-row,footer .site-primary-footer-wrap .site-footer-primary-section-1{max-width:1248px !important;padding-left:24px !important;padding-right:24px !important;box-sizing:border-box}
 @media(max-width:600px){.elementor-rpad .rpad-layout>.e-con-inner,.rpad-crumbs,.rpad-child-inner{padding-left:16px !important;padding-right:16px !important}}
+
+/* Header menu (Nav Menu block 4184cda): Align = Justify, block width = grow (Elementor settings) */
+.elementor-639 .elementor-element.elementor-element-4184cda{--container-widget-flex-grow:1;flex-grow:1;width:auto;max-width:none}
+.elementor-639 .elementor-element.elementor-element-4184cda .elementor-nav-menu--main .elementor-item{padding-left:10px;padding-right:10px}
+@media(max-width:1180px){.elementor-639 .elementor-element.elementor-element-4184cda .elementor-nav-menu--main .elementor-item{padding-left:6px;padding-right:6px;font-size:15px}}

@@ -92,7 +92,7 @@ body{padding-bottom:34px}
 .rpad-banner-inner{--flex-direction:row !important;flex-direction:row;align-items:center;justify-content:flex-start}
 .rpad-banner-text{--flex-direction:column;flex-direction:column;align-items:flex-start}
 #masthead .elementor-nav-menu--main .elementor-nav-menu{flex-wrap:nowrap}
-#masthead .elementor-nav-menu--main .elementor-nav-menu>li>a.elementor-item{padding-left:13px;padding-right:13px;white-space:nowrap}
+#masthead .elementor-nav-menu--main .elementor-nav-menu>li>a.elementor-item{white-space:nowrap}
 .elementor-rpad .rpad-tile .elementor-icon-box-wrapper{display:flex !important;flex-direction:row !important;align-items:center}
 .elementor-rpad .rpad-tile .elementor-icon-box-icon{margin:0 !important;flex:none}
 .elementor-rpad .rpad-tile .elementor-icon{display:flex;align-items:center;justify-content:center;border-radius:50%}
@@ -454,3 +454,8 @@ body,.rpad-sidenav .hfe-menu-item,.rpad-child-dept .elementor-heading-title,foot
 #masthead nav.elementor-nav-menu--dropdown .sub-menu{display:block;position:static}
 #masthead nav.elementor-nav-menu--dropdown .sub-menu a{padding-left:34px}
 #masthead nav.elementor-nav-menu--dropdown .sub-arrow{display:none}
+
+/* Header menu (Nav Menu block 4184cda): Align = Justify, block width = grow (Elementor settings) */
+.elementor-639 .elementor-element.elementor-element-4184cda{--container-widget-flex-grow:1;flex-grow:1;width:auto;max-width:none}
+.elementor-639 .elementor-element.elementor-element-4184cda .elementor-nav-menu--main .elementor-item{padding-left:10px;padding-right:10px}
+@media(max-width:1180px){.elementor-639 .elementor-element.elementor-element-4184cda .elementor-nav-menu--main .elementor-item{padding-left:6px;padding-right:6px;font-size:15px}}
