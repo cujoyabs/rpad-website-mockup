@@ -5,13 +5,14 @@
 .elementor-2037 .elementor-element.elementor-element-7f5002{margin-top:4px}
 .elementor-2037 .elementor-element.elementor-element-7f5003{font-family:"Noto Sans", sans-serif;font-size:16px;font-weight:400;text-transform:none;line-height:1.7;color:#1C1C1C}
 .elementor-2037 .elementor-element.elementor-element-7f5003 p{margin-block-end:0px}
-.elementor-2037 .elementor-element.elementor-element-7f5003{margin-top:16px}
+.elementor-2037 .elementor-element.elementor-element-7f5003{margin-top:16px;--container-widget-width:100%;--container-widget-flex-grow:0;width:var( --container-widget-width, 100% );max-width:760px}
 .elementor-2037 .elementor-element.elementor-element-7f5004{font-family:"Noto Sans", sans-serif;font-size:16px;font-weight:400;text-transform:none;line-height:1.7;color:#1C1C1C}
 .elementor-2037 .elementor-element.elementor-element-7f5004 p{margin-block-end:0px}
-.elementor-2037 .elementor-element.elementor-element-7f5004{margin-top:12px}
+.elementor-2037 .elementor-element.elementor-element-7f5004{margin-top:12px;--container-widget-width:100%;--container-widget-flex-grow:0;width:var( --container-widget-width, 100% );max-width:760px}
 .elementor-2037 .elementor-element.elementor-element-7f5005{font-family:"Noto Sans", sans-serif;font-size:10px;font-weight:800;text-transform:none;line-height:1.6;color:#FFFFFF}
 .elementor-2037 .elementor-element.elementor-element-7f5005 p{margin-block-end:0px}
 .elementor-2037 .elementor-element.elementor-element-7f5005 > .elementor-widget-container{padding-top:3px;padding-right:5px;padding-bottom:3px;padding-left:5px;background-color:#2C4A7A}
+.elementor-2037 .elementor-element.elementor-element-7f5005{--flex-shrink:0;flex-shrink:0}
 .elementor-2037 .elementor-element.elementor-element-7f5006{font-family:"Noto Sans", sans-serif;font-size:14px;font-weight:700;text-transform:none;line-height:1.6;color:#0073E6}
 .elementor-2037 .elementor-element.elementor-element-7f5006 p{margin-block-end:0px}
 .elementor-2037 .elementor-element.elementor-element-7f5007{--display:flex;--flex-direction:row;--align-items:center;--gap:8px 8px;--row-gap:8px;--column-gap:8px;--padding-top:0px;--padding-right:0px;--padding-bottom:0px;--padding-left:0px;--width:auto}
@@ -19,6 +20,7 @@
 .elementor-2037 .elementor-element.elementor-element-7f5008{font-family:"Noto Sans", sans-serif;font-size:10px;font-weight:800;text-transform:none;line-height:1.6;color:#FFFFFF}
 .elementor-2037 .elementor-element.elementor-element-7f5008 p{margin-block-end:0px}
 .elementor-2037 .elementor-element.elementor-element-7f5008 > .elementor-widget-container{padding-top:3px;padding-right:5px;padding-bottom:3px;padding-left:5px;background-color:#2C4A7A}
+.elementor-2037 .elementor-element.elementor-element-7f5008{--flex-shrink:0;flex-shrink:0}
 .elementor-2037 .elementor-element.elementor-element-7f5009{font-family:"Noto Sans", sans-serif;font-size:14px;font-weight:700;text-transform:none;line-height:1.6;color:#0073E6}
 .elementor-2037 .elementor-element.elementor-element-7f5009 p{margin-block-end:0px}
 .elementor-2037 .elementor-element.elementor-element-7f500a{--display:flex;--flex-direction:row;--align-items:center;--gap:8px 8px;--row-gap:8px;--column-gap:8px;--padding-top:0px;--padding-right:0px;--padding-bottom:0px;--padding-left:0px;--width:auto}
@@ -28,24 +30,28 @@
 .elementor-2037 .elementor-element.elementor-element-7f500c p{margin-block-end:0px}
 .elementor-2037 .elementor-element.elementor-element-7f500d{font-family:"Noto Sans", sans-serif;font-size:13px;font-weight:400;text-transform:none;line-height:1.6;color:#555555}
 .elementor-2037 .elementor-element.elementor-element-7f500d p{margin-block-end:0px}
+.elementor-2037 .elementor-element.elementor-element-7f500d{--flex-shrink:0;flex-shrink:0}
 .elementor-2037 .elementor-element.elementor-element-7f500e{border-style:solid;border-width:0px 0px 1px 0px;border-color:#D9D9D9;--display:flex;--flex-direction:row;--justify-content:space-between;--align-items:center;--gap:16px 16px;--row-gap:16px;--column-gap:16px;--padding-top:12px;--padding-right:6px;--padding-bottom:12px;--padding-left:6px;--width:100%;--min-height:48px}
 .elementor-2037 .elementor-element.elementor-element-7f500e{color:#0073E6;text-decoration:none}
 .elementor-2037 .elementor-element.elementor-element-7f500f{font-family:"Noto Sans", sans-serif;font-size:15px;font-weight:700;text-transform:none;line-height:1.6;color:#1F4F8A}
 .elementor-2037 .elementor-element.elementor-element-7f500f p{margin-block-end:0px}
 .elementor-2037 .elementor-element.elementor-element-7f5010{font-family:"Noto Sans", sans-serif;font-size:13px;font-weight:400;text-transform:none;line-height:1.6;color:#555555}
 .elementor-2037 .elementor-element.elementor-element-7f5010 p{margin-block-end:0px}
+.elementor-2037 .elementor-element.elementor-element-7f5010{--flex-shrink:0;flex-shrink:0}
 .elementor-2037 .elementor-element.elementor-element-7f5011{border-style:solid;border-width:0px 0px 1px 0px;border-color:#D9D9D9;--display:flex;--flex-direction:row;--justify-content:space-between;--align-items:center;--gap:16px 16px;--row-gap:16px;--column-gap:16px;--padding-top:12px;--padding-right:6px;--padding-bottom:12px;--padding-left:6px;--width:100%;--min-height:48px}
 .elementor-2037 .elementor-element.elementor-element-7f5011{color:#0073E6;text-decoration:none}
 .elementor-2037 .elementor-element.elementor-element-7f5012{font-family:"Noto Sans", sans-serif;font-size:15px;font-weight:700;text-transform:none;line-height:1.6;color:#1F4F8A}
 .elementor-2037 .elementor-element.elementor-element-7f5012 p{margin-block-end:0px}
 .elementor-2037 .elementor-element.elementor-element-7f5013{font-family:"Noto Sans", sans-serif;font-size:13px;font-weight:400;text-transform:none;line-height:1.6;color:#555555}
 .elementor-2037 .elementor-element.elementor-element-7f5013 p{margin-block-end:0px}
+.elementor-2037 .elementor-element.elementor-element-7f5013{--flex-shrink:0;flex-shrink:0}
 .elementor-2037 .elementor-element.elementor-element-7f5014{border-style:solid;border-width:0px 0px 1px 0px;border-color:#D9D9D9;--display:flex;--flex-direction:row;--justify-content:space-between;--align-items:center;--gap:16px 16px;--row-gap:16px;--column-gap:16px;--padding-top:12px;--padding-right:6px;--padding-bottom:12px;--padding-left:6px;--width:100%;--min-height:48px}
 .elementor-2037 .elementor-element.elementor-element-7f5014{color:#0073E6;text-decoration:none}
 .elementor-2037 .elementor-element.elementor-element-7f5015{font-family:"Noto Sans", sans-serif;font-size:15px;font-weight:700;text-transform:none;line-height:1.6;color:#1F4F8A}
 .elementor-2037 .elementor-element.elementor-element-7f5015 p{margin-block-end:0px}
 .elementor-2037 .elementor-element.elementor-element-7f5016{font-family:"Noto Sans", sans-serif;font-size:13px;font-weight:400;text-transform:none;line-height:1.6;color:#555555}
 .elementor-2037 .elementor-element.elementor-element-7f5016 p{margin-block-end:0px}
+.elementor-2037 .elementor-element.elementor-element-7f5016{--flex-shrink:0;flex-shrink:0}
 .elementor-2037 .elementor-element.elementor-element-7f5017{border-style:solid;border-width:0px 0px 1px 0px;border-color:#D9D9D9;--display:flex;--flex-direction:row;--justify-content:space-between;--align-items:center;--gap:16px 16px;--row-gap:16px;--column-gap:16px;--padding-top:12px;--padding-right:6px;--padding-bottom:12px;--padding-left:6px;--width:100%;--min-height:48px}
 .elementor-2037 .elementor-element.elementor-element-7f5017{color:#0073E6;text-decoration:none}
 .elementor-2037 .elementor-element.elementor-element-7f5018{border-style:solid;border-width:1px 0px 0px 0px;border-color:#D9D9D9;--display:flex;--flex-direction:column;--gap:0px 0px;--row-gap:0px;--column-gap:0px;--padding-top:0px;--padding-right:0px;--padding-bottom:0px;--padding-left:0px}
