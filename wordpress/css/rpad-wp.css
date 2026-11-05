@@ -340,3 +340,41 @@ footer .site-above-footer-wrap[data-section] .ast-builder-grid-row.ast-builder-g
 .rpad-tabs .elementor-tab-mobile-title{display:none}
 .rpad-tabs .elementor-tab-content{display:block !important;border:0;padding:0;font-size:16px;line-height:1.6}
 .rpad-tabs .elementor-tab-content[hidden]{display:none !important}
+
+/* ===== 11/05: banner + side menu exactly like the mockup sent to DIT ===== */
+.rpad-child-banner{min-height:0;--min-height:0;background-color:#2c4a7a;background-image:linear-gradient(to right,#2c4a7a 0%,#2c4a7a 45%,rgba(44,74,122,0) 70%),url(../img/banner-rpad.jpg);background-repeat:no-repeat,no-repeat;background-position:left top,right center;background-size:100% 100%,auto 100%}
+.rpad-child-inner{--flex-direction:row;flex-direction:row;align-items:center;gap:16px;padding:32px 24px}
+.rpad-child-seal img{width:72px;height:72px;object-fit:contain;display:block}
+.rpad-child-seal{flex:none}
+.rpad-child-text{--flex-direction:column;flex-direction:column;gap:4px;min-width:0}
+.rpad-child-dept .elementor-heading-title{font-family:inherit;font-size:13px;font-weight:700;letter-spacing:1px;color:#fff}
+.rpad-child-banner h1.elementor-heading-title{font-family:inherit;font-size:34px;font-weight:800}
+@media(max-width:600px){.rpad-child-seal img{width:52px;height:52px}.rpad-child-inner{padding:22px 16px}}
+/* side menu */
+.elementor-rpad .rpad-left{width:220px}
+.rpad-sidenav .hfe-nav-menu{border:1px solid #d6d6d6 !important}
+.rpad-sidenav li{border-top:1px solid #e3e3e3 !important}
+.rpad-sidenav .hfe-nav-menu>li:first-child{border-top:0 !important}
+.rpad-sidenav .hfe-menu-item,.rpad-sidenav .rpad-navhead>.hfe-menu-item{box-sizing:border-box;min-height:44px;align-items:baseline;padding:12px 16px !important;font-family:inherit;font-size:15px !important;font-weight:400 !important;line-height:1.25;color:#1c1c1c !important;background:#fff;border-left:4px solid transparent;text-transform:none;letter-spacing:normal}
+.rpad-sidenav .sub-arrow{width:auto;font-weight:400;margin-right:2px}
+.rpad-sidenav .sub-menu .hfe-menu-item,.rpad-sidenav .sub-menu .rpad-navhead>.hfe-menu-item{padding:9px 16px 9px 32px !important;font-size:14px !important}
+.rpad-sidenav .sub-menu .sub-menu .hfe-menu-item{padding-left:48px !important}
+.rpad-sidenav a.hfe-menu-item:hover{background:#f3f6fa}
+.rpad-sidenav .current-menu-item>a.hfe-menu-item,.rpad-sidenav .current-menu-ancestor>a.hfe-menu-item{background:#fff;color:#1c1c1c !important;font-weight:400 !important}
+.rpad-sidenav li.current-menu-item:not(.rpad-navtop)>a.hfe-menu-item{background:#e8eef6 !important;color:#0b3b5c !important;font-weight:700 !important;border-left-color:#2c4a7a}
+.rpad-sidenav .hfe-nav-menu>li.rpad-navtop>a.hfe-menu-item,.rpad-sidenav .rpad-navtop.current-menu-item>a.hfe-menu-item{background:#2c4a7a !important;color:#fff !important;font-size:15px !important;font-weight:800 !important;padding:12px 16px !important;text-decoration:none;border-left:0;min-height:0}
+@media(max-width:900px){.elementor-rpad .rpad-left{width:100%}}
+.elementor-rpad .rpad-left{padding:0 !important;--padding-left:0;--padding-right:0}
+.rpad-sidenav .hfe-nav-menu .sub-menu,.rpad-sidenav ul.sub-menu{width:100% !important;min-width:0 !important;max-width:none !important}
+.rpad-sidenav .sub-menu a.hfe-menu-item{width:auto !important}
+.rpad-sidenav .hfe-menu-item .sub-arrow,.rpad-sidenav .hfe-menu-toggle{padding:0 !important;margin:0 4px 0 0 !important;width:auto !important}
+.elementor-rpad .rpad-child-inner{flex-direction:row !important;--flex-direction:row;flex-wrap:nowrap !important;align-items:center !important;gap:16px !important}
+.elementor-rpad .rpad-child-text{padding:0 !important;flex:1 1 auto;width:auto !important}
+.rpad-sidenav ul.hfe-nav-menu{border:0 !important}
+/* homepage tiles: the whole tile is the link (in WordPress: Container > Link setting) */
+.elementor-rpad .rpad-tile{position:relative;cursor:pointer;transition:filter .15s}
+.elementor-rpad .rpad-tile .elementor-element,.elementor-rpad .rpad-tile .elementor-widget-container,.elementor-rpad .rpad-tile .elementor-icon-box-wrapper,.elementor-rpad .rpad-tile .elementor-icon-box-content,.elementor-rpad .rpad-tile .elementor-icon-box-title{position:static !important}
+.elementor-rpad .rpad-tile .elementor-icon-box-title a::after{content:"";position:absolute;inset:0;z-index:1}
+.elementor-rpad .rpad-tile:hover{filter:brightness(1.07)}
+.elementor-rpad .rpad-tile:focus-within{outline:3px solid #19446F;outline-offset:3px}
+.elementor-rpad .rpad-tile .elementor-icon-box-title a:focus{outline:none}
