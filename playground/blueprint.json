@@ -1,0 +1,69 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "meta": {
+    "title": "RPAD website mockup \u2013 WordPress Playground test",
+    "description": "All RPAD mockup pages as Elementor pages (Astra + Elementor + Elementor Header & Footer Builder). Test only \u2013 resets when closed.",
+    "author": "RPAD"
+  },
+  "landingPage": "/",
+  "preferredVersions": {
+    "php": "8.3",
+    "wp": "latest"
+  },
+  "features": {
+    "networking": true
+  },
+  "login": true,
+  "steps": [
+    {
+      "step": "installTheme",
+      "themeData": {
+        "resource": "wordpress.org/themes",
+        "slug": "astra"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "elementor"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "installPlugin",
+      "pluginData": {
+        "resource": "wordpress.org/plugins",
+        "slug": "header-footer-elementor"
+      },
+      "options": {
+        "activate": true
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/rpad-site.json",
+      "data": {
+        "resource": "url",
+        "url": "https://cujoyabs.github.io/rpad-website-mockup/playground/rpad-site.json"
+      }
+    },
+    {
+      "step": "writeFile",
+      "path": "/wordpress/wp-content/rpad-setup.php",
+      "data": {
+        "resource": "url",
+        "url": "https://cujoyabs.github.io/rpad-website-mockup/playground/rpad-setup.php"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php require '/wordpress/wp-content/rpad-setup.php';"
+    }
+  ]
+}
