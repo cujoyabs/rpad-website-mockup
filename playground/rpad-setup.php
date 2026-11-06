@@ -50,6 +50,11 @@ foreach ($pages as $p) {
         $ids[$p['path']] = $id;
         update_post_meta($id, '_wp_page_template', 'elementor_header_footer');
         update_post_meta($id, '_elementor_page_settings', ['hide_title' => 'yes']);
+        // Astra: full width, no sidebar, no theme title (the page has its own banner)
+        update_post_meta($id, 'site-sidebar-layout', 'no-sidebar');
+        update_post_meta($id, 'site-content-layout', 'page-builder');
+        update_post_meta($id, 'ast-site-content-layout', 'full-width-container');
+        update_post_meta($id, 'site-post-title', 'disabled');
         $elementor($id, $p['data'], 'wp-page');
     });
 }
@@ -72,6 +77,15 @@ foreach (['header' => 'type_header', 'footer' => 'type_footer'] as $k => $type) 
         $elementor($id, $site[$k], 'wp-post');
     });
 }
+
+// Astra site-wide: no sidebars, full-width content
+$step('astra', function () {
+    $a = get_option('astra-settings', []); if (!is_array($a)) $a = [];
+    foreach (['site-sidebar-layout', 'single-page-sidebar-layout', 'single-post-sidebar-layout', 'archive-post-sidebar-layout'] as $k) $a[$k] = 'no-sidebar';
+    $a['site-content-layout'] = 'page-builder'; $a['single-page-content-layout'] = 'page-builder';
+    $a['ast-site-content-layout'] = 'full-width-container'; $a['single-page-ast-content-layout-type'] = 'full-width-container';
+    update_option('astra-settings', $a);
+});
 
 // normal page addresses (/appeals/file-an-appeal/), quiet Elementor onboarding, fresh Elementor CSS
 $step('settings', function () {
