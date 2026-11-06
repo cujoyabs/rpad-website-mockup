@@ -60,7 +60,7 @@
       "path": "/wordpress/wp-content/rpad-site.json",
       "data": {
         "resource": "url",
-        "url": "https://cujoyabs.github.io/rpad-website-mockup/playground/rpad-site.json?v=3"
+        "url": "https://cujoyabs.github.io/rpad-website-mockup/playground/rpad-site.json?v=4"
       }
     },
     {
@@ -68,7 +68,7 @@
       "path": "/wordpress/wp-content/rpad-setup.php",
       "data": {
         "resource": "url",
-        "url": "https://cujoyabs.github.io/rpad-website-mockup/playground/rpad-setup.php?v=3"
+        "url": "https://cujoyabs.github.io/rpad-website-mockup/playground/rpad-setup.php?v=4"
       }
     },
     {
